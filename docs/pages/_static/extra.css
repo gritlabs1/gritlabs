@@ -1,0 +1,74 @@
+.md-footer-meta__inner {
+  justify-content: center !important;
+  text-align: center !important;       /* ensure inline text is centered */
+  flex-direction: column !important;   /* stack children vertically if needed */
+}
+
+.md-footer-meta__inner > * {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ─── Content Cleanup: Remove H1, Tighten H2 ─────────────────────────── */
+/* option
+.md-content__inner.md-typeset > h1:first-of-type {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.md-content__inner.md-typeset > h2:first-of-type {
+  margin-top: 0 !important;
+}
+
+.md-main__inner {
+  margin-top: 2px !important;
+  padding-top: 2px !important;
+}
+*/
+
+
+/* ─── Hide only the top-level “Home” heading in the sidebar ───────── */
+
+/* 1  the <label> version (with for="__toc") */
+
+/* option
+label.md-nav__link[for="__toc"]          { display:none !important; } */
+
+
+/* 2  the extra <a href="#"> version that the theme adds */
+
+/* option
+.md-nav__list > li:first-child > a.md-nav__link { display:none !important; }
+*/
+
+
+
+
+/* Hide only the “Articles” sidebar heading */
+/* note: two back-slashes escape the leading underscores */
+/* future option...
+#\__nav_2_label {             
+  display: none !important;
+}
+*/
+
+
+
+/* target the three top-level sidebar headings */
+/* “Articles” sidebar title     */
+/* “GSL” sidebar title          */
+
+/* option but breaks phone layout
+#\__nav_1_label,    
+#\__nav_2_label    
+{
+  font-size: .75rem !important;
+  color: #888 !important;
+  text-transform: uppercase;
+  pointer-events: none;   
+} 
+/*
+
+
+
