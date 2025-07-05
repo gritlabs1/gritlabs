@@ -1,6 +1,7 @@
 # Grit Labs 
 
-**Grit Labs** structured framework designed specifically for iterative execution by language models (LLMs). It emphasizes clear, immediate actions without speculative future planning, using concise markdown **Templates** with strictly defined language to guide the LLM’s reasoning and execution. When goals and dependencies need explicit management, Grit Labs optionally organizes tasks into verifiable structures (`GOALS.md`) and component relationships (`DEPENDENCY_MODELING.md`).
+Grit Labs is a structured framework that guides language models through iterative execution.  
+It focuses on clear, immediate tasks—avoiding speculative planning—and relies on concise Markdown templates with strictly defined language to steer the model’s reasoning. When projects require explicit tracking, Grit Labs can generate verifiable artifacts such as `GOALS.md` for objectives and `DEPENDENCY_MODELING.md` for component relationships.
 
 
 Grit Labs optimizes for:
