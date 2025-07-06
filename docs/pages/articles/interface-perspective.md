@@ -8,6 +8,8 @@ This perspective is grounded in a simple principle:
 
 > **Program to an interface, not to an implementation** — across all levels, from code to communication.
 
+This principle was popularized by the "Gang of Four" — Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides — in their influential 1994 book *Design Patterns: Elements of Reusable Object-Oriented Software*.
+
 
 
 Here, an **interface** is more than just a language feature. It is any system or specification where the patterns below are observed:
