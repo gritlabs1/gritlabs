@@ -96,8 +96,8 @@ In place of ad hoc documentation habits, Knowledge Interfaces provide a durable 
 
 
 
-#### Document-Driven Development (DocDD)  
-  Documents provide the source of truth for planning and shared intent—guiding design before code exists. At its core, this interface is a simple, structured sequence:
+#### Document-Driven Development (DocDD)
+  Documents provide the source of truth for planning and shared intent—guiding design before code exists. At its core, this interface follows a simple, structured sequence:
   
 
 1. **Define the system through documents** 
