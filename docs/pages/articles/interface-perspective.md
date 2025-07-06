@@ -96,29 +96,6 @@ In place of ad hoc documentation habits, Knowledge Interfaces provide a durable 
 
 
 
-#### Document-Driven Development (DocDD)
-  Documents provide the source of truth for planning and shared intent—guiding design before code exists. At its core, this interface follows a simple, structured sequence:
-
-
-1. **Define the system through documents**
-
-	- *documents program people*
-
-2. **Express the system in executable code (as documentation)**
-
-	- *code programs machines and informs people*
-	(The code must remain readable, testable, and clearly reflect the domain.)
-
-3. **Implement the system for execution**
-
-	- *machines obey structure*
-
-#### Structured Documents
-
-
-Structured documents use formal formats—such as XML, JSON, or YAML—to represent information in a consistent, machine-readable way. This approach allows documents to include metadata, follow validation rules, and remain predictable across tools and teams. Documentation templates often build on these ideas so that knowledge is both readable and automation friendly.
-
-
 
 ### 2. Behavior Interfaces
 
