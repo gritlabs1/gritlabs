@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, arm64, gritlabs]
 
     env:
       DEPLOY_PATH: "C:/gritlabs"          # adjust once you decide the IIS path
