@@ -116,11 +116,7 @@ In place of ad hoc documentation habits, Knowledge Interfaces provide a durable 
 #### Structured Documents 
 
 
-Structured documents use formal formats—such as XML, JSON, or YAML—to represent information in a consistent, machine-readable way. This allows documents to include metadata, follow validation rules, and remain predictable across tools and teams.
-
-We can define a language to support this kind of structure, let's call it **Grit Structured Language (GSL)**. GSL would provide a way to describe system elements such as interfaces, behaviors, and constraints in a format that is both human-readable and suitable for automation.
-
-> **The purpose of GSL is shared language through technology.**
+Structured documents use formal formats—such as XML, JSON, or YAML—to represent information in a consistent, machine-readable way. This approach allows documents to include metadata, follow validation rules, and remain predictable across tools and teams. The documentation templates bundled with Grit Labs build on these ideas so that knowledge is both readable and automation friendly.
 
 
 
@@ -309,9 +305,9 @@ By using this Release Cycle, small teams can ship with confidence, learn through
 
 ### Development Flow
 
-1. **Define the System through Documents** — Use structured documents to capture shared understanding before code exists  
-   → *documents program people*  
-   (**DocDD + GSL**, operating at the **Knowledge Interface** layer)
+1. **Define the System through Documents** — Use structured documents to capture shared understanding before code exists
+   → *documents program people*
+   (**DocDD + standardized templates**, operating at the **Knowledge Interface** layer)
 
 2. **Capture Expected Behavior** —Specify expected behavior through stories, criteria, and black-box scenarios  
    → *interfaces define contracts*  
@@ -336,7 +332,7 @@ By using this Release Cycle, small teams can ship with confidence, learn through
 
 * **Grouped by concern:** Developers, product leads, and designers can all participate based on the layer they're in—behavior, knowledge, or integration.
     
-* **Reduces overlap:** By placing DocDD and GSL under "Knowledge Interfaces," it’s clearer that one is philosophy (DocDD) and one is implementation (Structured Docs).
+* **Reduces overlap:** By separating DocDD philosophy from implementation details in the templates, everyone knows where to look for guidance and where to record decisions.
     
 * **Clarifies flow:** It now maps cleanly to how a real team moves from idea to delivery. 
     
