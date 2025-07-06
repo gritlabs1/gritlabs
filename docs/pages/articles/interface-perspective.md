@@ -118,7 +118,7 @@ In place of ad hoc documentation habits, Knowledge Interfaces provide a durable 
 
 Structured documents use formal formats—such as XML, JSON, or YAML—to represent information in a consistent, machine-readable way. This allows documents to include metadata, follow validation rules, and remain predictable across tools and teams.
 
-In the context of Grit Labs, we can define a language to support this kind of structure, let's call it **Grit Structured Language (GSL)**. GSL would provide a way to describe system elements such as interfaces, behaviors, and constraints in a format that is both human-readable and suitable for automation.
+We can define a language to support this kind of structure, let's call it **Grit Structured Language (GSL)**. GSL would provide a way to describe system elements such as interfaces, behaviors, and constraints in a format that is both human-readable and suitable for automation.
 
 > **The purpose of GSL is shared language through technology.**
 
