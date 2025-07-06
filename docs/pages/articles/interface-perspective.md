@@ -2,7 +2,7 @@
 
 ## What is an interface?
 
-Grit Labs isn’t a strict methodology. It’s a flexible way of thinking that helps teams make better decisions—especially when turning ideas into real, working systems.
+Grit Labs is a flexible way of thinking that helps teams make better decisions—especially when turning ideas into real, working systems.
 
 Grit Labs is based around this principle:
 
