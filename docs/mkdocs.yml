@@ -39,7 +39,10 @@ nav:                             # make your own nav order
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
       - Program to an Interface: articles/program_to_an_interface.md
-  - App of the Day: app_of_the_day.md
+  - App of the Day:
+      - app_of_the_day/index.md
+      - Hello World 1: app_of_the_day/hello_world_1.md
+      - Hello World 2: app_of_the_day/hello_world_2.md
   - Changelog: CHANGELOG.md
 
 extra:
