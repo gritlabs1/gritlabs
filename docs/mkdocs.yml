@@ -1,6 +1,6 @@
 site_name: Grit Labs         # title shown in the header
 
-site_url: https://gritlabs.com/      # ← absolute URL of the docs root, end with “/”
+site_url: https://www.gritlabs.com/      # ← absolute URL of the docs root, end with “/”
 
 theme:
   name: material                 # use the Material for MkDocs theme
@@ -37,11 +37,10 @@ nav:                             # make your own nav order
       - GOALS.md: templates1/GOALS.md
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
-  - Articles:                    # TODO: perhaps some day figure out how to add nested categories here  
-      - An Interface Perspective: articles/interface-perspective.md
-      
-  
-      
+  - Articles:
+      - Program to an Interface: articles/program_to_an_interface.md
+  - Changelog: CHANGELOG.md
+
 extra:
   generator: false          # ← hides the “Made with …” line
   
