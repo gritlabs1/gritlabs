@@ -38,7 +38,7 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
-      - Program to an Interface: articles/interface-perspective.md
+      - Program to an Interface: articles/program_to_an_interface.md
 
 extra:
   generator: false          # ← hides the “Made with …” line
