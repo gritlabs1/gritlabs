@@ -37,8 +37,9 @@ nav:                             # make your own nav order
       - GOALS.md: templates1/GOALS.md
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
-  - Articles:                    
+  - Articles:
       - An Interface Perspective: articles/interface-perspective.md
+      - How to Build a Submarine: articles/how-to-build-a-submarine.md
       
   
       
