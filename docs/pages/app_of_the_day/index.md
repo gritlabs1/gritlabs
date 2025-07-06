@@ -11,7 +11,7 @@ The first featured project is a Task List application written in vanilla JavaScr
 <div id="taskModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="task_list.html" title="Task List App"></iframe>
+    <iframe src="~/task_list/task_list.html" title="Task List App"></iframe>
   </div>
 </div>
 
