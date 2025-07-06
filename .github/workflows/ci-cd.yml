@@ -1,0 +1,46 @@
+# .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ work ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      DEPLOY_PATH: "C:/gritlabs"          # adjust once you decide the IIS path
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install MkDocs + deps
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs[material]
+        pip install -r requirements.txt
+
+    - name: Build site
+      run: mkdocs build
+
+    # -----------------  Deployment  -----------------
+    - name: Deploy via SCP
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        DEPLOY_HOST:     ${{ vars.DEPLOY_HOST }}    
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+
+        # choose the correct host variable
+        HOST=${SSH_HOST:-$DEPLOY_HOST}
+
+        scp -o StrictHostKeyChecking=no -r ./site/* \
+            support@$HOST:"$DEPLOY_PATH/"
