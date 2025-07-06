@@ -41,7 +41,7 @@ nav:                             # make your own nav order
       - Program to an Interface: articles/program_to_an_interface.md
   - App of the Day:
       - app_of_the_day/index.md
-      - Hello World 1: app_of_the_day/hello_world_1.md
+      - Hello World 1: app_of_the_day/task_list_07062025.md
   - Changelog: CHANGELOG.md
 
 extra:
