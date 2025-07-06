@@ -290,6 +290,7 @@ This interface is lightweight by design, intended to minimize overhead while pre
 
 
 This simple Release Cycle shows how interface principles come together:
+
 - **Predefined Structure** – Stable cadence and flow
 - **Consistent Naming** – Semantic versioning and tagged releases
 - **Relationships** – Defined paths from dev to prod
