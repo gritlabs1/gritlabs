@@ -1,5 +1,21 @@
 # Task List App - Proof of Concept
 
+### Try It Now
+
+To test the **Task List App** yourself and see the functionality in action, click the link below:
+
+<!-- Button to open modal -->
+<button id="openModalButton" class="cta-btn">Open Task List App</button>
+
+<!-- Modal -->
+<div id="taskModal">
+  <div id="modalContent">
+    <span id="closeModal" class="close">&times;</span>
+    <iframe src="~/task_list/task_list.html" title="Task List App"></iframe>
+  </div>
+</div>
+
+
 ### Overview
 
 The **Task List App** is a lightweight, interactive web application designed to help users manage their tasks. The app allows users to add, mark, and delete tasks, all while utilizing the browser's local storage for persistence. This means that tasks remain even after refreshing or reopening the browser, without requiring an external database or server-side component.
@@ -30,10 +46,70 @@ By utilizing a lightweight structure and browser-side storage, this application 
 3. **Deleting Tasks**: Users can click a delete icon next to a task to remove it from the list entirely. The change is reflected immediately, and the task is removed from local storage as well.
     
 
-### Try It Now
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("taskModal");
+  const openBtn = document.getElementById("openModalButton");
+  const closeBtn = document.getElementById("closeModal");
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+});
+</script>
 
-To test the **Task List App** yourself and see the functionality in action, click the link below:
+<style>
+#taskModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+}
+#modalContent iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+}
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.cta-btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background-color: #e68900;
+}
+</style>
 
-[Open Task List App](#)
+
 
 * * *
