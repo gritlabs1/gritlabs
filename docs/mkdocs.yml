@@ -39,6 +39,7 @@ nav:                             # make your own nav order
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
       - Program to an Interface: articles/program_to_an_interface.md
+  - Changelog: CHANGELOG.md
 
 extra:
   generator: false          # ← hides the “Made with …” line
