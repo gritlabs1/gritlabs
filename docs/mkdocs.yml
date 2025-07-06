@@ -40,7 +40,7 @@ nav:                             # make your own nav order
   - Articles:
       - Program to an Interface: articles/program_to_an_interface.md
   - App of the Day:
-      - app_of_the_day/index.md
+      - Today's App: app_of_the_day/index.md
       - Task List: app_of_the_day/task_list/task_list.md
   - Changelog: CHANGELOG.md
 
