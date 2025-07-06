@@ -42,5 +42,5 @@ jobs:
         # choose the correct host variable
         HOST=${SSH_HOST:-$DEPLOY_HOST}
 
-        scp -o StrictHostKeyChecking=no -r ./site/* \
+         scp -o StrictHostKeyChecking=no -r ./docs/site/* \
             support@$HOST:"$DEPLOY_PATH/"
