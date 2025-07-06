@@ -5,7 +5,7 @@ Welcome to **App of the Day**, a small corner of Grit Labs where we ask Codex to
 The first featured project is a Task List application written in vanilla JavaScript. It stores tasks locally in your browser so no backend is required. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
-<button id="openModalButton">Open Task List App</button>
+<button id="openModalButton" class="cta-btn">Open Task List App</button>
 
 <!-- Modal -->
 <div id="taskModal">
@@ -64,5 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
   right: 15px;
   font-size: 24px;
   cursor: pointer;
+}
+.cta-btn {
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background-color: #e68900;
 }
 </style>
