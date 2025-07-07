@@ -2,7 +2,7 @@
 
 Welcome to **App of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The first featured project is a Mutex Buttons application that demonstrates mutually exclusive button states. It stores its state locally so no backend is required. Click the button below to try it without leaving the page.
+The first featured project is a Mutex Buttons application written in vanilla JavaScript. It includes a power toggle and remembers the last selected input using localStorage. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Mutex Buttons App</button>
