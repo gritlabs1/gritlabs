@@ -42,6 +42,7 @@ nav:                             # make your own nav order
       - Program to an Interface: articles/program_to_an_interface.md
   - App of the Day:
       - Today's App: app_of_the_day/index.md
+      - 7/7/25 Mutex Buttons: app_of_the_day/mutex_buttons.md
       - 7/6/25 Task List: app_of_the_day/task_list.md
   - Changelog: CHANGELOG.md
 
