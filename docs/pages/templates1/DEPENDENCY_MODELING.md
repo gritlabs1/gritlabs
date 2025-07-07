@@ -10,16 +10,16 @@ Grit Labs uses explicit **Dependency Modeling** to structure relationships betwe
 
 ## 📐 Core Concepts
 
-### Component
+#### Component
 
 * Reusable building block.
 * May represent a physical object, concept, or functional unit.
 
-### Dependency
+#### Dependency
 
 * Represents a relationship where understanding or implementing a dependent component requires another component (its dependency).
 
-### Relationships
+#### Relationships
 
 * Always directional "depends-on" relationships.
 * Explicitly defined; no implied hierarchies.
@@ -28,12 +28,12 @@ Grit Labs uses explicit **Dependency Modeling** to structure relationships betwe
 
 ## 📚 Database Structure
 
-### Component Catalog
+#### Component Catalog
 
 * Stores all unique Components.
 * No self-references permitted.
 
-### Component Dependencies
+#### Component Dependencies
 
 * Records explicit dependency relationships between components, using two foreign-key columns:
 
@@ -45,13 +45,13 @@ Grit Labs uses explicit **Dependency Modeling** to structure relationships betwe
 
 ## 🔗 Entity Relationship Overview
 
-<div class="mermaid">
+<div class="mermaid" style="text-align: center; ">
 erDiagram
     ComponentCatalog ||--o{ ComponentDependencies : "DependentComponentId"
     ComponentCatalog ||--o{ ComponentDependencies : "DependencyComponentId"
-    ComponentDependencies }o--|| EntryPoints : "optional"
-    EntryPoints ||--o{ UseCases : ""
-    UseCases ||--|{ ApplicationCases : ""
+    ComponentDependencies ||--o{ EntryPoints : "ComponentDependenciesId"
+    EntryPoints ||--o{ UseCases : "EntryPointsId"
+    UseCases ||--o{ ApplicationCases : "UseCaseId"
 </div>
 
 ---
@@ -83,19 +83,19 @@ erDiagram
 
 Each dependency recorded in `ComponentDependencies` has an explicitly defined dependency type:
 
-### White-box
+#### White-box
 
 * Complete knowledge of internal workings (recursive dependencies).
 * Fully documented dependency relationships.
 * Explicitly understood dependent relationships.
 
-### Black-box
+#### Black-box
 
 * Zero knowledge of internal component workings.
 * Dependency relationship documented.
 * No dependent relationships documented.
 
-### Product
+#### Product
 
 * Partial knowledge of internal workings, specific to supporting particular Use Cases.
 * Dependency relationships fully documented.
