@@ -4,6 +4,7 @@ site_url: https://www.gritlabs.com/      # ← absolute URL of the docs root, en
 
 theme:
   name: material                 # use the Material for MkDocs theme
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   palette:                       # light & dark colour schemes
