@@ -30,13 +30,13 @@ Grit Labs uses explicit **Dependency Modeling** to structure relationships betwe
 
 ### Component Catalog
 
-* Stores all unique Components.
-* No self-references permitted.
+- Stores all unique Components.
+- No self-references permitted.
 
 ### Component Dependencies
 
-* Records explicit dependency relationships between components.
-* Includes an optional Parent Component reference (`ParentComponentId`).
+- Records explicit dependency relationships between components.
+- Includes an optional Parent Component reference (`ParentComponentId`).
 
 ---
 
