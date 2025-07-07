@@ -7,13 +7,15 @@ To test the **Task List App** yourself and see the functionality in action, clic
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Task List App</button>
 
+
 <!-- Modal -->
 <div id="taskModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="task_list.html" title="Task List App"></iframe>
+    <iframe src="../../_static/apps/task_list/task_list.html" title="Task List App"></iframe>
   </div>
 </div>
+
 
 
 ### Overview
