@@ -45,13 +45,13 @@ Grit Labs uses explicit **Dependency Modeling** to structure relationships betwe
 
 ## 🔗 Entity Relationship Overview
 
-```plaintext
-[ComponentCatalog] 1
-    ←――― DependentComponentId ――― 0..* [ComponentDependencies] 0..* ―― DependencyComponentId ―→ 1 [ComponentCatalog]
-                                               |
-                                               └── 0..1 [EntryPoints]
-                                                              |
-                                                              └── 0..* [UseCases] 1 -------- 1..* [ApplicationCases]
+```mermaid
+erDiagram
+    ComponentCatalog ||--o{ ComponentDependencies : "DependentComponentId"
+    ComponentCatalog ||--o{ ComponentDependencies : "DependencyComponentId"
+    ComponentDependencies }o--|| EntryPoints : "optional"
+    EntryPoints ||--o{ UseCases : ""
+    UseCases ||--|{ ApplicationCases : ""
 ```
 
 ---
