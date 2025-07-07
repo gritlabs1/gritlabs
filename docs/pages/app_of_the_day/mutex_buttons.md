@@ -17,24 +17,24 @@ To test the **Mutex Buttons App** yourself and see the functionality in action, 
 
 ### Overview
 
-The **Mutex Buttons App** is a lightweight, interactive web application designed to help users manage content specific to its purpose. It persists data locally using the browser's `localStorage`, eliminating the need for a backend.
+The **Mutex Buttons App** is a lightweight web interface that mimics a small control panel. A power button enables or disables the four input buttons, and the app remembers your selection using the browser's `localStorage`.
 
 ### Features
 
-- **Add Items:** Input and save entries locally.
-- **Mark Items as Completed:** Toggle the state of each entry.
-- **Delete Items:** Remove entries permanently.
-- **Persistent Storage:** Utilizes `localStorage` for data retention.
+- **Power Toggle:** Disables or enables the button panel.
+- **Mutually Exclusive Buttons:** HDMI, VGA, HDMI Audio, and 1/8" Audio—with only one active at a time.
+- **Status Message:** Clearly shows the current selection or that the panel is off.
+- **Persistent State:** Remembers power state and selected button across reloads.
 
 ### Purpose
 
-Demonstrates Codex's ability to generate complete, deployable web applications with client-side storage and minimal setup.
+Demonstrates Codex's ability to generate small, stateful web applications with client-side storage and interactive UI.
 
 ### How It Works
 
-1. **Adding Items:** Enter text and click "Add"; the entry is saved to `localStorage`.
-2. **Marking Completed:** Click the checkbox to toggle the completed state, which persists across reloads.
-3. **Deleting Items:** Click the delete icon to remove the entry from the list and storage.
+1. **Powering On/Off:** Click the Power button to toggle the panel. When off, all buttons are disabled.
+2. **Selecting Inputs:** With power on, choose any button to activate it. Selecting a new one deselects the previous.
+3. **State Persistence:** Both power state and active selection are saved in `localStorage` and restored on page load.
 
 <script>
 // Modal behavior (same as landing page)
@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
   background-color: #e68900;
 }
 </style>
-
 
 
 * * *

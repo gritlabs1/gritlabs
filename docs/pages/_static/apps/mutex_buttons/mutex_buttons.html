@@ -8,8 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- App-specific UI goes here -->
-        <h1>Mutex Buttons</h1>
+        <div class="header">
+            <h1>Mutex Buttons App</h1>
+            <button id="powerButton" class="power-button off">Off</button>
+        </div>
+        <div id="buttonPanel" class="button-panel">
+            <button class="panel-btn" data-value="HDMI">HDMI</button>
+            <button class="panel-btn" data-value="VGA">VGA</button>
+            <button class="panel-btn" data-value="HDMI Audio">HDMI Audio</button>
+            <button class="panel-btn" data-value="1/8\" Audio">1/8" Audio</button>
+        </div>
+        <p id="status">Panel is OFF. Turn on power to use.</p>
     </div>
     <script src="mutex_buttons.js"></script>
 </body>
