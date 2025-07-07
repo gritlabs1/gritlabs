@@ -22,6 +22,7 @@ theme:
 
 plugins:
   - search                       # built-in Lunr.js search
+  - mermaid2 
 
 # Optional: enable a few nice Markdown features
 markdown_extensions:
