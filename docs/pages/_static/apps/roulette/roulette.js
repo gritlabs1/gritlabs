@@ -13,6 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const redNumbers = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
 
+  // Create number labels around the wheel
+  const totalSlots = 37; // numbers 0-36
+  const radius = 90; // distance from center for numbers
+  for (let i = 0; i < totalSlots; i++) {
+    const numEl = document.createElement('div');
+    numEl.className = `wheel-number ${getColor(i)}`;
+    numEl.textContent = i;
+    const angle = i * (360 / totalSlots);
+    numEl.style.transform = `rotate(${angle}deg) translate(${radius}px) rotate(-${angle}deg)`;
+    wheel.appendChild(numEl);
+  }
+
   function getColor(num) {
     if (num === 0) return 'green';
     return redNumbers.includes(num) ? 'red' : 'black';
@@ -46,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const rotation = Math.floor(Math.random() * 360) + 720;
-    wheel.style.transition = 'transform 2s ease-out';
+    const rotation = Math.floor(Math.random() * 360) + 1800; // spin at least 5 times
+    wheel.style.transition = 'transform 4s ease-out';
     wheel.style.transform = `rotate(${rotation}deg)`;
 
     const winningNumber = Math.floor(Math.random() * 37);

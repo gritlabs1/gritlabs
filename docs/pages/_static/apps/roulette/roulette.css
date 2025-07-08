@@ -63,3 +63,20 @@ body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+.wheel-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    transform-origin: center center;
+}
+
+.wheel-number.red { color: red; }
+.wheel-number.black { color: black; }
+.wheel-number.green { color: green; }
