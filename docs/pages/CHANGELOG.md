@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.0 - 2025-07-08
+
+- Added the **RUBE - The Four-Point Design Approach** article and navigation link.
+
 ## v0.3.0 - 2025-07-07
 
 - Implemented the **Mutex Buttons** App of the Day with an interactive demo.
