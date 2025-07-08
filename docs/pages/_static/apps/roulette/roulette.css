@@ -77,6 +77,6 @@ body {
     transform-origin: center center;
 }
 
-.wheel-number.red { color: red; }
-.wheel-number.black { color: black; }
-.wheel-number.green { color: green; }
+.wheel-number.red { color: white; }
+.wheel-number.black { color: white; }
+.wheel-number.green { color: white; }
