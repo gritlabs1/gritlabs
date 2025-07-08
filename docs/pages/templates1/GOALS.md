@@ -6,42 +6,17 @@
 
 <div class="mermaid" style="text-align: center; ">
 flowchart TD
-    subgraph Mission
-        direction TB
-        subgraph Goals
-            direction TB
-            Goal1["Goal"]
-            Goal2["Goal"]
-        end
-    end
-    subgraph SubGoals1["Sub-goals"]
-        direction TB
-        SubGoal1a["Sub-goal"]
-        SubGoal1b["Sub-goal"]
-        subgraph AcceptanceTests1["Acceptance Tests"]
-            direction TB
-            AT1a["Acceptance Test 1"]
-            AT1b["Acceptance Test 2"]
-        end
-    end
-    subgraph SubGoals2["Sub-goals"]
-        direction TB
-        SubGoal2a["Sub-goal"]
-        subgraph AcceptanceTests2["Acceptance Tests"]
-            direction TB
-            AT2a["Acceptance Test 3"]
-        end
-    end
+    Mission["Mission"]
+    Goals["Goals"]
     Mission --> Goals
-    Goals --> Goal1
-    Goals --> Goal2
-    Goal1 --> SubGoals1
-    SubGoals1 --> SubGoal1a
-    SubGoals1 --> SubGoal1b
-    SubGoal1a --> SubGoals2
-    SubGoals2 --> SubGoal2a
-    SubGoals1 --> AcceptanceTests1
-    SubGoals2 --> AcceptanceTests2
+    Goals --> Subgoals
+    subgraph Subgoals["Sub-goals"]
+        direction TB
+        subgoalitem["Sub-goal"]
+        subgoalitem -- Recursion --> subgoalitem
+        subgoalitem --> AccTests["Acceptance Tests"]
+    end
+
     
 </div>
 
