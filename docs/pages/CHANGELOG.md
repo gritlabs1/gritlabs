@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.3.0 - 2025-07-07
+
+- Implemented the **Mutex Buttons** App of the Day with an interactive demo.
+- Added a **Top 10 Website Features** article and navigation link.
+- Added fallback behavior for browsers with JavaScript disabled, including a noscript warning and redirect.
+- Enabled Mermaid diagrams with new charts for Goals and Dependency Modeling.
+
 ## v0.2.0 - 2025-07-06
 
 - Introduced the **App of the Day** section featuring self-contained example applications.
