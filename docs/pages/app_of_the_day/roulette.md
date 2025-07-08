@@ -1,8 +1,8 @@
-# App of the Day
+# Roulette App
 
-Welcome to **App of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The first featured project is a Roulette application written in vanilla JavaScript. It simulates a simple spin of the wheel entirely on the client side. Click the button below to try it without leaving the page.
+To test the **Roulette App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Roulette App</button>
@@ -15,7 +15,29 @@ The first featured project is a Roulette application written in vanilla JavaScri
   </div>
 </div>
 
+### Overview
+
+The **Roulette App** is a lightweight, interactive web application designed to help users manage content specific to its purpose. It persists data locally using the browser's `localStorage`, eliminating the need for a backend.
+
+### Features
+
+- **Add Items:** Input and save entries locally.
+- **Mark Items as Completed:** Toggle the state of each entry.
+- **Delete Items:** Remove entries permanently.
+- **Persistent Storage:** Utilizes `localStorage` for data retention.
+
+### Purpose
+
+Demonstrates Codex's ability to generate complete, deployable web applications with client-side storage and minimal setup.
+
+### How It Works
+
+1. **Adding Items:** Enter text and click "Add"; the entry is saved to `localStorage`.
+2. **Marking Completed:** Click the checkbox to toggle the completed state, which persists across reloads.
+3. **Deleting Items:** Click the delete icon to remove the entry from the list and storage.
+
 <script>
+// Modal behavior (same as landing page)
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("rouletteModal");
   const openBtn = document.getElementById("openModalButton");
@@ -33,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
+// Use the same styles as defined for the landing page modal and button, adjusting the modal ID selector accordingly.
 #rouletteModal {
   position: fixed;
   top: 0;
