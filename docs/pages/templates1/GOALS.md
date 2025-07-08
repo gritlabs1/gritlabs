@@ -11,10 +11,8 @@ flowchart TD
     Mission --> Goals
     Goals --> Subgoals
     subgraph Subgoals["Sub-goals"]
-        AccTests@{ shape: rect, label: "Acceptance Tests", width: 240 }
+        AccTests["              Acceptance Tests              "]
     end
-
-    
 </div>
 
 
