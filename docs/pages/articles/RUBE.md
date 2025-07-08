@@ -21,7 +21,7 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 
 <div style="text-align: center;">
 <br />
-<img class="rube-article" src="RUBE_imgs/rule3_1.png" alt="Rule of Thirds – 1" />
+<img class="rube-article" src="../RUBE_imgs/rule3_1.png" alt="Rule of Thirds – 1" />
 <br />
 </div>
 
@@ -42,7 +42,7 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 
 <figure class="rube-figure">
 <br />
-<img class="rube-article" src="RUBE_imgs/unity.png" alt="unity" />
+<img class="rube-article" src="../RUBE_imgs/unity.png" alt="unity" />
 <figcaption>
 
 *Above: A multilingual UI design system from Wikipedia, showing consistent layouts, icons, and interface behavior across contexts — a perfect example of unity.*
@@ -69,7 +69,7 @@ A balanced layout brings calm. Whether through symmetry or deliberate asymmetry,
 
 <figure class="rube-figure" style="max-width: 650px !important; margin-right: auto; margin-left: auto;">
 <br />
-<img class="rube-article" src="RUBE_imgs/balance.png" alt="balance" style="max-width: 650px !important;" />
+<img class="rube-article" src="../RUBE_imgs/balance.png" alt="balance" style="max-width: 650px !important;" />
 <figcaption style="max-width: 650px !important;">
 
 *Above: A clear, symmetrical wireframe with navigation, hero, features, testimonial, and footer — illustrating balance through equal distribution and alignment.*
@@ -98,7 +98,7 @@ Every page has a goal. Every screen should answer:
 
 <figure class="rube-figure" style="text-align: center;">
 <br />
-<img class="rube-article" src="RUBE_imgs/emphasis.png" alt="emphasis" />
+<img class="rube-article" src="../RUBE_imgs/emphasis.png" alt="emphasis" />
 <figcaption>
 
 *Above: A single dark pawn standing out among lighter pawns, illustrating emphasis through contrast.*
