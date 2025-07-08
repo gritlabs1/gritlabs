@@ -4,6 +4,7 @@ site_url: https://www.gritlabs.com/      # ← absolute URL of the docs root, en
 
 theme:
   name: material                 # use the Material for MkDocs theme
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
   palette:                       # light & dark colour schemes
@@ -21,7 +22,7 @@ theme:
     - navigation.path    # ← enables breadcrumb navigation
 
 plugins:
-  - search                       # built-in Lunr.js search
+  - search                       # built-in Lunr.js search 
 
 # Optional: enable a few nice Markdown features
 markdown_extensions:
@@ -38,10 +39,12 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - Top 10 Website Features: articles/top_10_website_features.md
       - Program to an Interface: articles/program_to_an_interface.md
   - App of the Day:
       - Today's App: app_of_the_day/index.md
-      - Task List: app_of_the_day/task_list/task_list.md
+      - 7/7/25 Mutex Buttons: app_of_the_day/mutex_buttons.md
+      - 7/6/25 Task List: app_of_the_day/task_list.md
   - Changelog: CHANGELOG.md
 
 extra:
@@ -52,6 +55,8 @@ extra_css:                  #  center copyright
 extra_javascript:
   - _static/open-repo-in-new-tab.js
   - _static/control-scrollspy-nav.js
+  - _static/mermaid-init.js  # Custom initialization script
+  - https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js
 
 
   

@@ -1,8 +1,8 @@
-# App of the Day
+# Mutex Buttons App
 
-Welcome to **App of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The first featured project is a Mutex Buttons application written in vanilla JavaScript. It includes a power toggle and remembers the last selected input using localStorage. Click the button below to try it without leaving the page.
+To test the **Mutex Buttons App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Mutex Buttons App</button>
@@ -15,7 +15,29 @@ The first featured project is a Mutex Buttons application written in vanilla Jav
   </div>
 </div>
 
+### Overview
+
+The **Mutex Buttons App** is a lightweight web interface that mimics a small control panel. A power button enables or disables the four input buttons, and the app remembers your selection using the browser's `localStorage`.
+
+### Features
+
+- **Power Toggle:** Disables or enables the button panel.
+- **Mutually Exclusive Buttons:** HDMI, VGA, HDMI Audio, and 1/8" Audio—with only one active at a time.
+- **Status Message:** Clearly shows the current selection or that the panel is off.
+- **Persistent State:** Remembers power state and selected button across reloads.
+
+### Purpose
+
+Demonstrates Codex's ability to generate small, stateful web applications with client-side storage and interactive UI.
+
+### How It Works
+
+1. **Powering On/Off:** Click the Power button to toggle the panel. When off, all buttons are disabled.
+2. **Selecting Inputs:** With power on, choose any button to activate it. Selecting a new one deselects the previous.
+3. **State Persistence:** Both power state and active selection are saved in `localStorage` and restored on page load.
+
 <script>
+// Modal behavior (same as landing page)
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("mutex_buttonsModal");
   const openBtn = document.getElementById("openModalButton");
@@ -33,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
+/* Use the same styles as defined for the landing page modal and button, adjusting the modal ID selector accordingly. */
 #mutex_buttonsModal {
   position: fixed;
   top: 0;
@@ -78,3 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
   background-color: #e68900;
 }
 </style>
+
+
+* * *

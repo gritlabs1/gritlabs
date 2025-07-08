@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutex Buttons App</title>
+    <link rel="stylesheet" href="mutex_buttons.css">
+</head>
+<body>
+    <noscript>
+        <div style="background: #ffdddd; color: #990000; padding: 16px; border: 2px solid #990000; text-align: center; font-weight: bold; margin: 32px auto; max-width: 400px; border-radius: 8px;">
+            ⚠️ JavaScript is required for this app to function.<br>
+            Please enable JavaScript in your browser settings.
+        </div>
+    </noscript>
+    <div class="container">
+        <div class="header">
+            <h1>Mutex Buttons App</h1>
+            <button id="powerButton" class="power-button off">Off</button>
+        </div>
+        <div id="buttonPanel" class="button-panel">
+            <button class="panel-btn" data-value="HDMI">HDMI</button>
+            <button class="panel-btn" data-value="VGA">VGA</button>
+            <button class="panel-btn" data-value="HDMI Audio">HDMI Audio</button>
+            <button class="panel-btn" data-value="1/8\" Audio">1/8" Audio</button>
+        </div>
+        <p id="status">Panel is OFF. Turn on power to use.</p>
+    </div>
+    <script src="mutex_buttons.js"></script>
+</body>
+</html>

@@ -4,12 +4,19 @@
 
 ## 🎯 Goal-Oriented Structure Overview
 
-```plaintext
-[Mission]
-   └─ 1..* [Goals]
-           └─ 0..* [Sub-goals (recursive)]
-                    └─ 1..* [Acceptance Tests]
-```
+<div class="mermaid" style="text-align: center; padding-top: 20px;">
+flowchart TD
+    Mission["Mission"]
+    Goals["Goals"]
+    Mission --> Goals
+    Goals --> Subgoals
+    subgraph Subgoals["Sub-goals"]
+        AccTests@{ shape: rect, label: "Acceptance Tests", width: 240 }
+    end
+
+</div>
+
+
 
 ### Structure Definitions
 
