@@ -151,3 +151,5 @@ img.rube-article {
 }
 
 </style>
+
+**Image attribution:** All images in this article are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page).
