@@ -22,8 +22,7 @@ theme:
     - navigation.path    # ← enables breadcrumb navigation
 
 plugins:
-  - search                       # built-in Lunr.js search
-  - mermaid2 
+  - search                       # built-in Lunr.js search 
 
 # Optional: enable a few nice Markdown features
 markdown_extensions:
@@ -56,6 +55,8 @@ extra_css:                  #  center copyright
 extra_javascript:
   - _static/open-repo-in-new-tab.js
   - _static/control-scrollspy-nav.js
+  - _static/mermaid-init.js  # Custom initialization script
+  - https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js
 
 
   
