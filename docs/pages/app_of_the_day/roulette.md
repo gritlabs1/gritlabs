@@ -17,24 +17,24 @@ To test the **Roulette App** yourself and see the functionality in action, click
 
 ### Overview
 
-The **Roulette App** is a lightweight, interactive web application designed to help users manage content specific to its purpose. It persists data locally using the browser's `localStorage`, eliminating the need for a backend.
+The **Roulette App** is a minimalist roulette simulator written in vanilla JavaScript. It runs entirely in the browser and lets you place simple bets, spin the wheel, and track a virtual balance.
 
 ### Features
 
-- **Add Items:** Input and save entries locally.
-- **Mark Items as Completed:** Toggle the state of each entry.
-- **Delete Items:** Remove entries permanently.
-- **Persistent Storage:** Utilizes `localStorage` for data retention.
+- **Place Bets:** Wager on a single number, a color, or odd/even.
+- **Spinning Animation:** A lightweight CSS wheel spins on each bet.
+- **Payout Calculation:** Wins and losses update your balance instantly.
+- **Client-Side Only:** No backend or server is required.
 
 ### Purpose
 
-Demonstrates Codex's ability to generate complete, deployable web applications with client-side storage and minimal setup.
+Demonstrates Codex's ability to generate a playable mini game with nothing more than HTML, CSS, and JavaScript.
 
 ### How It Works
 
-1. **Adding Items:** Enter text and click "Add"; the entry is saved to `localStorage`.
-2. **Marking Completed:** Click the checkbox to toggle the completed state, which persists across reloads.
-3. **Deleting Items:** Click the delete icon to remove the entry from the list and storage.
+1. **Choose a Bet:** Select a bet type and amount (and a number if applicable).
+2. **Spin the Wheel:** Click **Spin** to animate the wheel and reveal the winning number.
+3. **View Results:** Your balance increases or decreases based on standard roulette payouts.
 
 <script>
 // Modal behavior (same as landing page)

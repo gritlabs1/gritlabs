@@ -8,7 +8,25 @@
 </head>
 <body>
     <div class="container">
-        <!-- App-specific UI goes here -->
+        <h1>Roulette</h1>
+        <div class="balance">Balance: $<span id="balance">100</span></div>
+        <div class="bet-controls">
+            <input id="bet-amount" type="number" min="1" placeholder="Bet amount">
+            <select id="bet-type">
+                <option value="red">Red</option>
+                <option value="black">Black</option>
+                <option value="odd">Odd</option>
+                <option value="even">Even</option>
+                <option value="number">Number</option>
+            </select>
+            <input id="bet-number" type="number" min="0" max="36" placeholder="0-36" style="display:none;">
+            <button id="spin">Spin</button>
+        </div>
+        <div class="wheel-container">
+            <div id="wheel" class="wheel"></div>
+            <div class="pointer">▲</div>
+        </div>
+        <div id="result"></div>
     </div>
     <script src="roulette.js"></script>
 </body>
