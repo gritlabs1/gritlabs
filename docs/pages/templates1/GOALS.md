@@ -4,17 +4,14 @@
 
 ## 🎯 Goal-Oriented Structure Overview
 
-<div class="mermaid" style="text-align: center; ">
+<div class="mermaid" style="text-align: center; padding-top: 20px;">
 flowchart TD
     Mission["Mission"]
     Goals["Goals"]
     Mission --> Goals
     Goals --> Subgoals
     subgraph Subgoals["Sub-goals"]
-        direction TB
-        subgoalitem["Sub-goal"]
-        subgoalitem -- Recursion --> subgoalitem
-        subgoalitem --> AccTests["Acceptance Tests"]
+        AccTests@{ shape: rect, label: "Acceptance Tests", width: 240 }
     end
 
     
