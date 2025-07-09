@@ -2,5 +2,5 @@
 
 Resolved or outdated issues are listed here for historical reference.
 
-| ID | Title | Status | Date Reported | Component | Notes / Workaround |
-|----|-------|--------|---------------|-----------|--------------------|
+| ID | Title | Status | Date Reported | Notes / Workaround |
+|----|-------|--------|---------------|--------------------|
