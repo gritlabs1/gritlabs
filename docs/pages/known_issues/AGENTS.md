@@ -6,19 +6,50 @@ This file defines prompt-executable behaviors for managing the `known_issues/` d
 
 ## Scope
 
-This file governs how issues are routed, listed, and migrated based on file content and metadata. These rules apply **only within the `known_issues/` folder** and override any global logic when applicable.
+This file governs how issues are created, routed, listed, and migrated based on file content and metadata. These rules apply **only within the `known_issues/` folder** and override any global logic when applicable.
 
 ---
 
 ## Execution Rules
 
-An LLM working in this folder should:
+An LLM working in this folder must:
 
-- Read this `AGENTS.md` before modifying `index.md`, `archived_known_issues.md`, or issue detail files
+- Read this `AGENTS.md` before modifying `index.md`, `archived_known_issues.md`, or any issue detail file (`YYYY/MM/NNNNN.md`)
 - Treat all rules as **live prompt checks**, not memory
-- Enforce formatting consistency with Markdown tables and filenames
-- Use 5-digit padded issue IDs (e.g., `00042`) in all listings and links
+- Use **5-digit padded issue IDs** (e.g., `00042`) in both filenames and links
 - Keep issue tables on both pages sorted by descending ID
+- Auto-generate the correct `Date Reported` using today’s date (UTC)
+- Always update table rows to match the associated issue detail file
+
+---
+
+## ✅ Status Types
+
+Valid status values:
+
+- `Open`
+- `In Progress`
+- `Resolved`
+- `Won’t Fix`
+
+No other status values may be used.
+
+---
+
+## 🆕 When Adding a New Issue
+
+When a user says **“Add an issue”**, the LLM should:
+
+1. Assign the next available **padded ID** (e.g., if `00042` is highest, assign `00043`)
+2. Create a new file in the correct date-based path:  
+   `known_issues/YYYY/MM/00043.md`  
+   using today’s UTC date
+3. Populate the issue file with:
+   - `# #00043 — [Title]`
+   - `Status: Open`
+   - `Date Reported: YYYY-MM-DD`
+   - Optional: Component, Description, Workaround
+4. Add a corresponding row to `index.md`, sorted by descending ID
 
 ---
 
@@ -42,5 +73,6 @@ An LLM working in this folder should:
 
 ## Notes
 
-- Do not modify the file paths of issue detail pages — only update listings.
-- All issue IDs must remain 5-digit padded and chronologically sortable.
+- Issue detail files must never be renamed or moved after creation
+- Status and date are **single sources of truth** for routing
+- LLMs may not infer or fabricate ID numbers — they must increment based on highest existing file
