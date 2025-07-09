@@ -59,6 +59,7 @@ extra:
   
 extra_css:                  #  center copyright
   - _static/extra.css?v=20250515
+  - css/known-issues-table.css
 extra_javascript:
   - _static/open-repo-in-new-tab.js
   - _static/control-scrollspy-nav.js
