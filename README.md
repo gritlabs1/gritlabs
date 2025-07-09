@@ -158,7 +158,7 @@ To preview the documentation site locally:
 1. **Install dependencies**
     
     ```bash
-    pip install mkdocs-material
+    pip install -r requirements.txt
     ```
     
 1. **Serve the documentation site**

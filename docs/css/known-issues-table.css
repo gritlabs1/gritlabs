@@ -1,0 +1,17 @@
+.dataTable-table {
+  width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+}
+
+.dataTable-table th,
+.dataTable-table td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: top;
+  text-align: left;
+}
+
+.dataTable-wrapper .dataTable-container {
+  overflow-x: auto;
+}
