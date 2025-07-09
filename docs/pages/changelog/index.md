@@ -1,5 +1,6 @@
 # Changelog
 
+
 ## v0.4.0 - 2025-07-08
 
 - Added a **Roulette** JavaScript of the Day featuring a playable game with improved animation and spin behavior.
