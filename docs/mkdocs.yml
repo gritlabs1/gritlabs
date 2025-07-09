@@ -44,11 +44,12 @@ nav:                             # make your own nav order
       - Top 10 Website Features: articles/top_10_website_features.md
       - Program to an Interface: articles/program_to_an_interface.md
   - JavaScript of the Day:
-    - Today's App: javascript_of_the_day/index.md
-    - 7/9/25 Pong Game: javascript_of_the_day/pong.md
-    - 7/8/25 Roulette: javascript_of_the_day/roulette.md
-    - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
-    - 7/6/25 Task List: javascript_of_the_day/task_list.md
+      - Today's App: javascript_of_the_day/index.md
+      - 7/9/25 Pong Game: javascript_of_the_day/pong.md
+      - 7/8/25 Roulette: javascript_of_the_day/roulette.md
+      - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
+      - 7/6/25 Task List: javascript_of_the_day/task_list.md
+  - Hello World: hello_world.md
   - Changelog: CHANGELOG.md
 
 extra:
