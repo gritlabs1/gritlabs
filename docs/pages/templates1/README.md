@@ -156,7 +156,7 @@ All content in this repository is licensed under the **GNU Affero General Public
 
 > The Grit Structured Language (GSL), including its syntax, structure, and semantics, is proprietary to Grit Labs. Any reuse, adaptation, or integration requires express permission unless covered by AGPL compliance.
 
-See `LICENSE` for full terms.
+See [`LICENSE`](https://github.com/gritlabs1/gritlabs/blob/main/LICENSE) for full terms.
 
 
 
