@@ -49,7 +49,7 @@ nav:                             # make your own nav order
       - 7/8/25 Roulette: javascript_of_the_day/roulette.md
       - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
       - 7/6/25 Task List: javascript_of_the_day/task_list.md
-  - Known Issues: known-issues.md
+  - Known Issues: known_issues/index.md
   - Changelog: CHANGELOG.md
 
 extra:
