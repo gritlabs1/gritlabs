@@ -43,7 +43,7 @@ nav:                             # make your own nav order
       - RUBE Four-Point Design: articles/RUBE.md
       - Top 10 Website Features: articles/top_10_website_features.md
       - Program to an Interface: articles/program_to_an_interface.md
-  - Javascript of the Day:
+  - JavaScript of the Day:
     - Today's App: javascript_of_the_day/index.md
     - 7/8/25 Roulette: javascript_of_the_day/roulette.md
     - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
