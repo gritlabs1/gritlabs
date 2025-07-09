@@ -27,7 +27,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Component** | A reusable building block recorded in the **Component Catalog** (e.g., library, service, concept). |
 | **Dependency** | A directional “depends‑on” relationship recorded in **Component Dependencies**. |
 | **Dependency Type** | One of **White‑box**, **Black‑box**, or **Product**, defining how much internal knowledge is documented. |
-| **Directive** | Explicit instructions to the LLM governing a Rotation (see `DIRECTIVE.md`). |
+| **Directive** | A **directive** is a structured instruction or behavioral guideline that governs how an AI agent or system component should act, respond, or interact. Directives encode role definitions, constraints, reasoning patterns, or communication protocols, and are used to ensure consistency, safety, and intentionality in LLM-driven workflows. |
 | **Entry Point** | A dependency designated as a starting node that links to one or more **Use Cases**. |
 | **Fail Until It Works** | Mind‑set of iterating rapidly—accepting early failure and leveraging LLM creativity until validity emerges. |
 | **Goal / Sub‑goal** | An objective defined in `GOALS.md`, recursively decomposed until it is actionable and testable. |
@@ -38,6 +38,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Rotation** | The LLM‑driven loop that reviews Notes & Triggers, (re)generates the Action Schema, and increments its version. |
 | **Snapshot** | Any immutable, versioned artifact (Action Schema, GOALS.md version, etc.) produced during a Rotation. |
 | **Status** | Allowed progress states: **Not started**, **In progress ⏳**, **Done ✅**, **Pending**, **Optional**. |
+| **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
 | **Test Case / Validation Check** | Concrete proof (file, URL, automated test) that an Action Item or Goal is complete. |
 | **Use Case** | A description of what a **Product‑type Component** does; linked to an Entry Point in dependency modeling. |
 | **Version Line** | The single‑line PascalCase title followed by “— vX.Y” that prefixes every Action Schema snapshot. |
