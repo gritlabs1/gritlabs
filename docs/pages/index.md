@@ -30,10 +30,10 @@ Grit Labs optimizes for:
         
     
     
-1. Then send a message to say:  
+1. If you are ready to begin executing a directive, declare the template upload mode: 
     
     ```
-    Follow the rules in DIRECTIVE.md and use the current Action Schema.
+    We are switching the template upload mode to execution. Follow the rules in DIRECTIVE.md and use the current Action Schema.
     ```  
     
     - If you uploaded `GOALS.md`, also state:
@@ -97,7 +97,39 @@ Grit Labs optimizes for:
 
 ---
 
+## 🧭 Template Upload Mode
 
+**Template Upload Mode** defines the interaction context when uploading Grit Labs templates into a language model session.
+
+There are two allowed modes:
+
+- **Shared Language** (default)  
+  Templates are uploaded only to establish a common vocabulary and schema understanding. No directives are executed. No Rotations occur.
+
+- **Execution**  
+  Templates are uploaded with the intent to execute a directive, perform a Rotation, or emit a new snapshot (e.g., an updated Action Schema or a dependency mapping).
+
+> ⚠️  If no mode is declared, the system defaults to `Shared Language`.
+
+
+
+### 🔁 Switching Modes
+
+You may switch modes at any time with an inline declaration:
+
+```markdown
+Template Upload Mode: Shared Language
+```
+
+```markdown
+Template Upload Mode: Execution
+```
+
+This ensures clarity for both humans and language models, especially when templates are reused across multiple stages of a project.
+
+For terminology alignment, see `TERMINOLOGY.md`.
+
+---
 
 ## 🛠 Local Development
 
