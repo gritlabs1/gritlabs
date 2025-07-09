@@ -65,8 +65,8 @@ extra_javascript:
   - _static/control-scrollspy-nav.js
   - _static/mermaid-init.js  # Custom initialization script
   - https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js
-  - _static/simple-datatables.min.js
-  - _static/init-known-issues-tables.js
+  - js/simple-datatables.min.js
+  - js/init-known-issues-tables.js
 
 
   
