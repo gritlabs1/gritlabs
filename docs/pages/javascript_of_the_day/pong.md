@@ -17,11 +17,11 @@ To play **Pong** right here in your browser, click the link below:
 
 ### Overview
 
-The **Pong Game** is a minimalist recreation of the classic arcade game. Use the arrow keys to move your paddle on the left side of the screen while the computer controls the paddle on the right. First to score wins!
+The **Pong Game** is a minimalist recreation of the classic arcade game. Use the arrow keys or drag on the left side of the screen to move your paddle while the computer controls the paddle on the right. First to score wins!
 
 ### Features
 
-- **Keyboard Controls:** Move your paddle with the Up and Down arrow keys.
+- **Keyboard/Touch Controls:** Use the Up and Down arrow keys or drag on the canvas to move your paddle.
 - **Computer Opponent:** The AI paddle automatically tracks the ball.
 - **Score Display:** Points are shown below the canvas.
 - **Pure Client-Side:** Built entirely with HTML5 Canvas and vanilla JavaScript.

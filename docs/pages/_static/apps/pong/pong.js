@@ -99,5 +99,20 @@ window.addEventListener('keyup', (e) => {
     if (e.key === 'ArrowUp' || e.key === 'ArrowDown') player.dy = 0;
 });
 
+// touch/pointer input for mobile devices
+function movePaddleWithPointer(evt) {
+    const rect = canvas.getBoundingClientRect();
+    const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+    player.y = clientY - rect.top - paddleHeight / 2;
+    if (player.y < 0) player.y = 0;
+    if (player.y + paddleHeight > canvas.height) player.y = canvas.height - paddleHeight;
+    evt.preventDefault();
+}
+
+canvas.addEventListener('pointerdown', movePaddleWithPointer);
+canvas.addEventListener('pointermove', movePaddleWithPointer);
+canvas.addEventListener('touchstart', movePaddleWithPointer, { passive: false });
+canvas.addEventListener('touchmove', movePaddleWithPointer, { passive: false });
+
 ctx.fillStyle = '#fff';
 loop();
