@@ -52,7 +52,7 @@ nav:                             # make your own nav order
   - Known Issues:
       - Known Issues: known_issues/index.md
       - Archived: known_issues/archived_known_issues.md
-  - Changelog: CHANGELOG.md
+  - Changelog: changelog/index.md
 
 extra:
   generator: false          # ← hides the “Made with …” line
