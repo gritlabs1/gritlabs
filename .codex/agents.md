@@ -38,11 +38,11 @@ Inside the folder above, create exactly three files named:
 * **Description:** This is the landing page for App of the Day.
   You are **not** to change the content of this page, except to update the intro sentence and the existing button reference so that it opens the new app.
   It must follow the HTML, style, and script below, embedded directly into the `index.md` file.
-* **Example for **\`\`**:**
+* **Template:**
 
-  > The first featured project is a Task List application written in vanilla JavaScript. It stores tasks locally in your browser so no backend is required. Click the button below to try it without leaving the page.
+  > The featured project is a {app name} application written in vanilla JavaScript. It stores tasks locally in your browser so no backend is required. Click the button below to try it without leaving the page.
   >
-  > **Open Task List App**
+  > **Open {app name} App**
 
 ---
 
