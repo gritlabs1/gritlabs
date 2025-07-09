@@ -18,6 +18,7 @@ An LLM working in this folder should:
 - Treat all rules as **live prompt checks**, not memory
 - Enforce formatting consistency with Markdown tables and filenames
 - Use 5-digit padded issue IDs (e.g., `00042`) in all listings and links
+- Keep issue tables on both pages sorted by descending ID
 
 ---
 
