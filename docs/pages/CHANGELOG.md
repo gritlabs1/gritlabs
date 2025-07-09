@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.4.0 - 2025-07-08
 
 - Added a **Roulette** App of the Day featuring a playable game with improved animation and spin behavior.
 - Added the **RUBE - The Four-Point Design Approach** article and a navigation link.
