@@ -24,11 +24,12 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Action Item** | A discrete task to be completed. _(Example:_ “Request transcript delivery confirmation.”_)_ |
 | **Action Note** | New information (email, chat, news, etc.) that may change sequencing or validation of Action Items. |
 | **Action Trigger** | A specific event/input (e.g., a support‑ticket closure) that forces an Action Schema update. |
+| **AGENTS.md** | A Markdown file containing one or more **LLM-only prompt-executable directives**. Each `AGENTS.md` file defines automatic behaviors for language models operating within a given directory scope. These directives are always executed by LLMs, not humans. Root-level `AGENTS.md` files govern global rules; folder-level files govern local behavior. |
 | **Backlog** | All Action Items **not** marked **Done ✅**. No separate backlog artifact exists. |
 | **Component** | A reusable building block recorded in the **Component Catalog** (e.g., library, service, concept). |
 | **Dependency** | A directional “depends‑on” relationship recorded in **Component Dependencies**. |
 | **Dependency Type** | One of **White‑box**, **Black‑box**, or **Product**, defining how much internal knowledge is documented. |
-| **Directive** | A **directive** is a structured instruction or behavioral guideline that governs how an AI agent or system component should act, respond, or interact. Directives encode role definitions, constraints, reasoning patterns, or communication protocols, and are used to ensure consistency, safety, and intentionality in LLM-driven workflows. |
+| **Directive** | A **directive** is a structured instruction or behavioral guideline that governs how an AI agent or system component should act, respond, or interact. Directives encode role definitions, constraints, reasoning patterns, or communication protocols, and are used to ensure consistency, safety, and intentionality in LLM-driven workflows. <br /><br />Directives may be stored in various forms, including inline prompts, file-embedded tags, or dedicated `AGENTS.md` files (LLM-only). Not all directives require an `AGENTS.md`.|
 | **Entry Point** | A dependency designated as a starting node that links to one or more **Use Cases**. |
 | **Fail Until It Works** | Mind‑set of iterating rapidly—accepting early failure and leveraging LLM creativity until validity emerges. |
 | **Goal / Sub‑goal** | An objective defined in `GOALS.md`, recursively decomposed until it is actionable and testable. |
