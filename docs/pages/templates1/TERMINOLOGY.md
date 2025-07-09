@@ -13,6 +13,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Rotation Directive** | How to use the table | Instructs the LLM to process Notes & Triggers and emit a new Action Schema snapshot. |
 | **GOALS.md** | Traceable reasoning | Provides hierarchical Missions → Goals → Acceptance Tests that Action Items can reference. |
 | **DEPENDENCY_MODELING.md** | Structural context | Maps reusable Components and their explicit dependencies to support Goals & Actions. |
+| **Template Upload Mode** | Sets session intent | 	Sets intent for how templates should be interpreted: `Shared Language` or `Execution`. <br> `Shared Language` (default) = align terminology only;<br />`Execution` = apply directives and perform Rotations.  |
 
 * * *
 
@@ -38,7 +39,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Rotation** | The LLM‑driven loop that reviews Notes & Triggers, (re)generates the Action Schema, and increments its version. |
 | **Snapshot** | Any immutable, versioned artifact (Action Schema, GOALS.md version, etc.) produced during a Rotation. |
 | **Status** | Allowed progress states: **Not started**, **In progress ⏳**, **Done ✅**, **Pending**, **Optional**. |
-| **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
+| **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. <br /><br />Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
 | **Test Case / Validation Check** | Concrete proof (file, URL, automated test) that an Action Item or Goal is complete. |
 | **Use Case** | A description of what a **Product‑type Component** does; linked to an Entry Point in dependency modeling. |
 | **Version Line** | The single‑line PascalCase title followed by “— vX.Y” that prefixes every Action Schema snapshot. |
@@ -67,3 +68,4 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Present‑Focus Principle** | Prioritize solving the visible, current Problem Space; avoid speculative futures. |
 
 * * *
+
