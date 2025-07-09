@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added a **Roulette** App of the Day featuring a playable game with improved animation and spin behavior.
+- Added the **RUBE - The Four-Point Design Approach** article and a navigation link.
+- Clarified in the documentation that `GOALS.md` can express features.
+
 ## v0.3.0 - 2025-07-07
 
 - Implemented the **Mutex Buttons** App of the Day with an interactive demo.
