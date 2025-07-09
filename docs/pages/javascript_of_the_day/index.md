@@ -2,22 +2,22 @@
 
 Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The featured project is a Roulette application written in vanilla JavaScript. It simulates a simple spin of the wheel entirely on the client side. Click the button below to try it without leaving the page.
+The featured project is a Pong Game written in vanilla JavaScript. It brings the classic arcade experience right to your browser. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
-<button id="openModalButton" class="cta-btn">Open Roulette App</button>
+<button id="openModalButton" class="cta-btn">Open Pong Game</button>
 
 <!-- Modal -->
-<div id="rouletteModal">
+<div id="pongModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/roulette/roulette.html" title="Roulette App"></iframe>
+    <iframe src="../../_static/apps/pong/pong.html" title="Pong Game"></iframe>
   </div>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("rouletteModal");
+  const modal = document.getElementById("pongModal");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
   openBtn.addEventListener("click", () => {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
-#rouletteModal {
+#pongModal {
   position: fixed;
   top: 0;
   left: 0;
