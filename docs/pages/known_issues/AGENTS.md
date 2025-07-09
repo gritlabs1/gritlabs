@@ -48,12 +48,19 @@ When a user says **“Add an issue”**, the LLM should:
    - `# #00043 — [Title]`
    - `Status: Open`
    - `Date Reported: YYYY-MM-DD`
-   - Optional: Component, Description, Workaround
+   - Optional: Description, Workaround
 4. Add a corresponding row to `index.md`, sorted by descending ID
 
 ---
 
 ## 📋 Prompt Rules Summary
+
+Issue tables in both `index.md` and `archived_known_issues.md` must use this column order:
+
+```markdown
+| ID       | Title                          | Status      | Date Reported | Notes / Workaround |
+|----------|--------------------------------|-------------|---------------|--------------------|
+```
 
 ### Issue Table Synchronization
 
