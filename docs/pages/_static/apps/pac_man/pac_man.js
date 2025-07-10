@@ -41,6 +41,7 @@ const rows = levelMap.length;
 const cols = levelMap[0].length;
 
 const pacman = { x: 13, y: 23, dx: 0, dy: 0 };
+let nextDirection = { dx: 0, dy: 0 };
 const ghosts = [
     { x: 13, y: 14, color: 'red', homeTimer: 40 },
     { x: 14, y: 14, color: 'cyan', homeTimer: 80 }
@@ -136,8 +137,11 @@ function moveGhost(g) {
 }
 
 function update() {
+    if (!walls.has(`${pacman.x + nextDirection.dx},${pacman.y + nextDirection.dy}`)) {
+        pacman.dx = nextDirection.dx;
+        pacman.dy = nextDirection.dy;
+    }
     tryMove(pacman, pacman.dx, pacman.dy);
-    pacman.dx = pacman.dy = 0;
     ghosts.forEach(moveGhost);
     dots = dots.filter(d => {
         if (d.x === pacman.x && d.y === pacman.y) {
@@ -178,10 +182,10 @@ function loop() {
 }
 
 function handleKey(e) {
-    if (e.key === 'ArrowUp') { pacman.dy = -1; pacman.dx = 0; }
-    if (e.key === 'ArrowDown') { pacman.dy = 1; pacman.dx = 0; }
-    if (e.key === 'ArrowLeft') { pacman.dx = -1; pacman.dy = 0; }
-    if (e.key === 'ArrowRight') { pacman.dx = 1; pacman.dy = 0; }
+    if (e.key === 'ArrowUp') { nextDirection = { dx: 0, dy: -1 }; }
+    if (e.key === 'ArrowDown') { nextDirection = { dx: 0, dy: 1 }; }
+    if (e.key === 'ArrowLeft') { nextDirection = { dx: -1, dy: 0 }; }
+    if (e.key === 'ArrowRight') { nextDirection = { dx: 1, dy: 0 }; }
 }
 
 function handleTouchStart(e) {
@@ -194,11 +198,9 @@ function handleTouchEnd(e) {
     const dx = t.clientX - startX;
     const dy = t.clientY - startY;
     if (Math.abs(dx) > Math.abs(dy)) {
-        pacman.dx = dx > 0 ? 1 : -1;
-        pacman.dy = 0;
+        nextDirection = { dx: dx > 0 ? 1 : -1, dy: 0 };
     } else {
-        pacman.dy = dy > 0 ? 1 : -1;
-        pacman.dx = 0;
+        nextDirection = { dx: 0, dy: dy > 0 ? 1 : -1 };
     }
 }
 
@@ -208,6 +210,7 @@ function updateScore() {
 
 function startGame() {
     pacman.x = 13; pacman.y = 23; pacman.dx = pacman.dy = 0;
+    nextDirection = { dx: 0, dy: 0 };
     ghosts[0].x = 13; ghosts[0].y = 14; ghosts[0].homeTimer = 40;
     ghosts[1].x = 14; ghosts[1].y = 14; ghosts[1].homeTimer = 80;
     initLevel();
