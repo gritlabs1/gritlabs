@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Pac Man App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is a Pac Man game written in vanilla JavaScript. Munch all the dots while avoiding the ghost. Click the button below to try it without leaving the page.
+To play **Pac Man** right here in your browser, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Pac Man App</button>
@@ -14,6 +14,27 @@ The featured project is a Pac Man game written in vanilla JavaScript. Munch all 
     <iframe src="../../_static/apps/pac_man/pac_man.html" title="Pac Man App"></iframe>
   </div>
 </div>
+
+### Overview
+
+The **Pac Man App** is a simplified homage to the classic arcade game. Move Pac Man around the grid to eat all the dots while avoiding the roaming ghost.
+
+### Features
+
+- **Arrow Key Controls:** Use the arrow keys to navigate Pac Man.
+- **Random Ghost:** A red ghost moves unpredictably around the board.
+- **Dot Collection:** Clear the board by eating every dot.
+- **Pure Client-Side:** Built entirely with HTML5 Canvas and vanilla JavaScript.
+
+### Purpose
+
+This project demonstrates how Codex can generate an interactive game complete with basic AI and keyboard controls. Everything runs locally in your browser with no backend.
+
+### How It Works
+
+1. **Movement:** Pac Man moves one grid cell in the direction of the pressed arrow key.
+2. **Ghost AI:** The ghost randomly chooses a direction at intervals.
+3. **Win/Lose Conditions:** Clear all dots to win or collide with the ghost to end the game.
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
+/* Same styles as other JavaScript of the Day modals */
 #pac_manModal {
   position: fixed;
   top: 0;
