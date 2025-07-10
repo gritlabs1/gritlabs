@@ -75,23 +75,6 @@ Issue tables in both `index.md` and `archived_known_issues.md` must use this col
 | Rule ID | Trigger Condition | Target Action |
 |---------|-------------------|----------------|
 | **K-002** | An issue in `index.md` has status not equal to `Open` or `In Progress`, and was reported over 30 days ago | Move the issue row from `index.md` to `archived_known_issues.md`. |
-
---- 
-
-| Rule ID   | Trigger Condition                                                                                           | Target Action                                                                                                                                            |
-| --------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **K-003** | A table in `index.md` or `archived_known_issues.md` is initialized with paging, search, or entries controls | Reinitialize the table using `simple-datatables` with paging, search, and entries controls disabled, preserving Markdown structure and theme formatting. |
-
----
-
-### 📋 New Rule for Table Behavior
-
-| Rule ID | Trigger Condition | Target Action |
-| --- | --- | --- |
-| **K-003** | A table in `index.md` or `archived_known_issues.md` is initialized with paging, search, or entries controls | Reinitialize the table using `simple-datatables` with paging, search, and entries controls disabled, preserving Markdown structure and theme formatting. |
-
-
-
 ---
 
 ## Notes
