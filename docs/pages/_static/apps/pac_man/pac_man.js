@@ -1,168 +1,223 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
+const newGameBtn = document.getElementById('newGameBtn');
 
-const cellSize = 20;
-const rows = canvas.width / cellSize;
-const cols = canvas.height / cellSize;
+let tileSize = 20;
+const levelMap = [
+    "1111111111111111111111111111",
+    "1............11............1",
+    "1.1111.11111.11.11111.1111.1",
+    "1o1111.11111.11.11111.1111o1",
+    "1.1111.11111.11.11111.1111.1",
+    "1..........................1",
+    "1.1111.11.11111111.11.1111.1",
+    "1.1111.11.11111111.11.1111.1",
+    "1......11....11....11......1",
+    "111111.11111 11 11111.111111",
+    "0    1.11111 11 11111.1    0",
+    "0    1.11          11.1    0",
+    "0    1.11 111--111 11.1    0",
+    "111111.11 1      1 11.111111",
+    "1........1 1      1 1........1",
+    "111111.11 1      1 11.111111",
+    "0    1.11 11111111 11.1    0",
+    "0    1.11          11.1    0",
+    "0    1.11 11111111 11.1    0",
+    "111111.11 11111111 11.111111",
+    "1............11............1",
+    "1.1111.11111.11.11111.1111.1",
+    "1o..11................11..o1",
+    "111.11.11.11111111.11.11.111",
+    "111.11.11.11111111.11.11.111",
+    "1......11....11....11......1",
+    "1.111111111.11.111111111.1",
+    "1.111111111.11.111111111.1",
+    "1..........................1",
+    "1111111111111111111111111111"
+];
 
-const pacman = { x: 10, y: 10, dx: 0, dy: 0 };
+const rows = levelMap.length;
+const cols = levelMap[0].length;
+
+const pacman = { x: 13, y: 23, dx: 0, dy: 0 };
 const ghosts = [
-  { x: 1, y: 1, color: 'red' },
-  { x: rows - 2, y: cols - 2, color: 'cyan' }
+    { x: 13, y: 14, color: 'red', homeTimer: 40 },
+    { x: 14, y: 14, color: 'cyan', homeTimer: 80 }
 ];
 
 let dots = [];
-let walls = new Set();
+let powerDots = [];
+const walls = new Set();
+let startX;
+let startY;
 let score = 0;
+let intervalId;
 
-function initWalls() {
-  for (let i = 0; i < rows; i++) {
-    walls.add(`${i},0`);
-    walls.add(`${i},${cols - 1}`);
-  }
-  for (let j = 0; j < cols; j++) {
-    walls.add(`0,${j}`);
-    walls.add(`${rows - 1},${j}`);
-  }
-  for (let i = 5; i < rows - 5; i++) {
-    walls.add(`${i},10`);
-    walls.add(`10,${i}`);
-  }
+function resizeCanvas() {
+    const size = document.querySelector('.game-wrapper').clientWidth;
+    canvas.width = canvas.height = size;
+    tileSize = size / cols;
 }
 
-function initDots() {
-  dots = [];
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
-      const key = `${i},${j}`;
-      if (!walls.has(key) && !(i === pacman.x && j === pacman.y)) {
-        dots.push({ x: i, y: j });
-      }
-    }
-  }
-  score = 0;
-  updateScore();
+function initLevel() {
+    walls.clear();
+    dots = [];
+    powerDots = [];
+    levelMap.forEach((row, y) => {
+        [...row].forEach((ch, x) => {
+            const key = `${x},${y}`;
+            if (ch === '1') walls.add(key);
+            else if (ch === '.') dots.push({ x, y });
+            else if (ch === 'o') powerDots.push({ x, y });
+        });
+    });
+    score = 0;
+    updateScore();
 }
 
-initWalls();
-initDots();
+function drawRect(x, y, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+}
 
-function drawCircle(x, y, color) {
+function drawCircle(x, y, r, color) {
     ctx.fillStyle = color;
     ctx.beginPath();
-    ctx.arc(x * cellSize + cellSize / 2, y * cellSize + cellSize / 2, cellSize / 2 - 2, 0, Math.PI * 2);
+    ctx.arc(x * tileSize + tileSize / 2, y * tileSize + tileSize / 2, r, 0, Math.PI * 2);
     ctx.fill();
 }
 
 function drawPacman() {
     ctx.fillStyle = 'yellow';
     ctx.beginPath();
-    const px = pacman.x * cellSize + cellSize / 2;
-    const py = pacman.y * cellSize + cellSize / 2;
-    ctx.arc(px, py, cellSize / 2 - 2, 0.25 * Math.PI, 1.75 * Math.PI);
+    const px = pacman.x * tileSize + tileSize / 2;
+    const py = pacman.y * tileSize + tileSize / 2;
+    ctx.arc(px, py, tileSize / 2 - 2, 0.25 * Math.PI, 1.75 * Math.PI);
     ctx.lineTo(px, py);
     ctx.fill();
 }
 
 function drawGhosts() {
-  ghosts.forEach(g => drawCircle(g.x, g.y, g.color));
+    ghosts.forEach(g => drawCircle(g.x, g.y, tileSize / 2 - 2, g.color));
 }
 
 function drawWalls() {
-  ctx.fillStyle = '#222';
-  walls.forEach(pos => {
-    const [x, y] = pos.split(',').map(Number);
-    ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
-  });
-}
-
-function updateScore() {
-  scoreEl.textContent = `Score: ${score}`;
-}
-
-function drawDots() {
-    ctx.fillStyle = 'white';
-    dots.forEach(d => {
-        ctx.beginPath();
-        ctx.arc(d.x * cellSize + cellSize / 2, d.y * cellSize + cellSize / 2, 3, 0, Math.PI * 2);
-        ctx.fill();
+    walls.forEach(pos => {
+        const [x, y] = pos.split(',').map(Number);
+        drawRect(x, y, '#222');
     });
 }
 
+function drawDots() {
+    dots.forEach(d => drawCircle(d.x, d.y, 3, 'white'));
+    powerDots.forEach(d => drawCircle(d.x, d.y, tileSize / 3, 'white'));
+}
+
 function tryMove(entity, dx, dy) {
-  const nx = Math.max(0, Math.min(rows - 1, entity.x + dx));
-  const ny = Math.max(0, Math.min(cols - 1, entity.y + dy));
-  if (!walls.has(`${nx},${ny}`)) {
-    entity.x = nx;
-    entity.y = ny;
-  }
+    const nx = entity.x + dx;
+    const ny = entity.y + dy;
+    if (!walls.has(`${nx},${ny}`)) {
+        entity.x = nx;
+        entity.y = ny;
+    }
 }
 
 function moveGhost(g) {
-  const options = [];
-  [[1,0],[-1,0],[0,1],[0,-1]].forEach(([dx,dy]) => {
-    const nx = g.x + dx;
-    const ny = g.y + dy;
-    if (!walls.has(`${nx},${ny}`)) options.push({dx,dy});
-  });
-  if (options.length === 0) return;
-  options.sort((a,b) => (
-    Math.abs(pacman.x-(g.x+a.dx))+Math.abs(pacman.y-(g.y+a.dy)) -
-    (Math.abs(pacman.x-(g.x+b.dx))+Math.abs(pacman.y-(g.y+b.dy)))
-  ));
-  const chase = Math.random() < 0.7;
-  const choice = chase ? options[0] : options[Math.floor(Math.random()*options.length)];
-  g.x += choice.dx;
-  g.y += choice.dy;
+    if (g.homeTimer > 0) { g.homeTimer--; return; }
+    const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
+    const options = dirs.filter(([dx,dy]) => !walls.has(`${g.x+dx},${g.y+dy}`));
+    if (options.length === 0) return;
+    options.sort((a,b) =>
+        Math.abs(pacman.x-(g.x+a[0])) + Math.abs(pacman.y-(g.y+a[1])) -
+        (Math.abs(pacman.x-(g.x+b[0])) + Math.abs(pacman.y-(g.y+b[1]))));
+    const [dx,dy] = Math.random() < 0.7 ? options[0] : options[Math.floor(Math.random()*options.length)];
+    g.x += dx; g.y += dy;
 }
 
 function update() {
-  tryMove(pacman, pacman.dx, pacman.dy);
-  pacman.dx = pacman.dy = 0;
-  ghosts.forEach(moveGhost);
-  dots = dots.filter(d => {
-    if (d.x === pacman.x && d.y === pacman.y) {
-      score += 10;
-      updateScore();
-      return false;
+    tryMove(pacman, pacman.dx, pacman.dy);
+    pacman.dx = pacman.dy = 0;
+    ghosts.forEach(moveGhost);
+    dots = dots.filter(d => {
+        if (d.x === pacman.x && d.y === pacman.y) {
+            score += 10;
+            return false;
+        }
+        return true;
+    });
+    powerDots = powerDots.filter(d => {
+        if (d.x === pacman.x && d.y === pacman.y) {
+            score += 50;
+            return false;
+        }
+        return true;
+    });
+    updateScore();
+    if (ghosts.some(g => g.x === pacman.x && g.y === pacman.y)) {
+        alert('Game Over!');
+        startGame();
     }
-    return true;
-  });
-  if (ghosts.some(g => g.x === pacman.x && g.y === pacman.y)) {
-    alert('Game Over!');
-    reset();
-  }
-  if (dots.length === 0) {
-    alert('You Win!');
-    reset();
-  }
-}
-
-function reset() {
-  pacman.x = 10; pacman.y = 10;
-  ghosts[0].x = 1; ghosts[0].y = 1;
-  ghosts[1].x = rows - 2; ghosts[1].y = cols - 2;
-  initDots();
+    if (dots.length === 0 && powerDots.length === 0) {
+        alert('You Win!');
+        startGame();
+    }
 }
 
 function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawWalls();
-  drawDots();
-  drawGhosts();
-  drawPacman();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawWalls();
+    drawDots();
+    drawGhosts();
+    drawPacman();
 }
 
 function loop() {
     update();
     draw();
 }
-setInterval(loop, 150);
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowUp') { pacman.dy = -1; pacman.dx = 0; }
-  if (e.key === 'ArrowDown') { pacman.dy = 1; pacman.dx = 0; }
-  if (e.key === 'ArrowLeft') { pacman.dx = -1; pacman.dy = 0; }
-  if (e.key === 'ArrowRight') { pacman.dx = 1; pacman.dy = 0; }
-});
+function handleKey(e) {
+    if (e.key === 'ArrowUp') { pacman.dy = -1; pacman.dx = 0; }
+    if (e.key === 'ArrowDown') { pacman.dy = 1; pacman.dx = 0; }
+    if (e.key === 'ArrowLeft') { pacman.dx = -1; pacman.dy = 0; }
+    if (e.key === 'ArrowRight') { pacman.dx = 1; pacman.dy = 0; }
+}
+
+function handleTouchStart(e) {
+    const t = e.touches[0];
+    startX = t.clientX; startY = t.clientY;
+}
+
+function handleTouchEnd(e) {
+    const t = e.changedTouches[0];
+    const dx = t.clientX - startX;
+    const dy = t.clientY - startY;
+    if (Math.abs(dx) > Math.abs(dy)) {
+        pacman.dx = dx > 0 ? 1 : -1;
+        pacman.dy = 0;
+    } else {
+        pacman.dy = dy > 0 ? 1 : -1;
+        pacman.dx = 0;
+    }
+}
+
+function updateScore() {
+    scoreEl.textContent = `Score: ${score}`;
+}
+
+function startGame() {
+    pacman.x = 13; pacman.y = 23; pacman.dx = pacman.dy = 0;
+    ghosts[0].x = 13; ghosts[0].y = 14; ghosts[0].homeTimer = 40;
+    ghosts[1].x = 14; ghosts[1].y = 14; ghosts[1].homeTimer = 80;
+    initLevel();
+    clearInterval(intervalId);
+    intervalId = setInterval(loop, 150);
+}
+
+document.addEventListener('keydown', handleKey);
+canvas.addEventListener('touchstart', handleTouchStart);
+canvas.addEventListener('touchend', handleTouchEnd);
+newGameBtn.addEventListener('click', startGame);
+window.addEventListener('resize', resizeCanvas);
+window.addEventListener('load', () => { resizeCanvas(); startGame(); });
