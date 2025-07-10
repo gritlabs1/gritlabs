@@ -20,11 +20,18 @@ Apply these principles, and your page won't just look organized—it will *feel*
 Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3 grid. The most engaging compositions place key elements along these lines or intersections — not dead center.
 
 
-<div style="text-align: center;">
-<br />
-<img class="rube-article" src="../RUBE_imgs/rule3_1.png" alt="Rule of Thirds – 1" />
-<br />
-</div>
+<figure class="rube-figure" style="text-align: center;">
+  <br />
+  <img class="rube-article" src="../RUBE_imgs/rule3_1.png" alt="Rule of Thirds – 1" />
+  <figcaption style="font-size: 0.85em; color: #555; margin-top: 8px;">
+    Image credit: “Rule of Thirds Illustration” by Cingre~commonswiki, licensed under 
+    <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">
+      CC BY-SA 3.0
+    </a>.
+  </figcaption>
+  <br />
+</figure>
+
 
 
 #### In web design:
@@ -42,14 +49,17 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 **Unity** means creating a cohesive experience where all parts of your site feel like they belong to the same design system. Great websites don’t just honor conventions—they make every element work together in harmony.
 
 <figure class="rube-figure">
-<br />
-<img class="rube-article" src="../RUBE_imgs/unity.png" alt="unity" />
-<figcaption>
-
-*Above: A multilingual UI design system from Wikipedia, showing consistent layouts, icons, and interface behavior across contexts — a perfect example of unity.*
-</figcaption>
+  <br />
+  <img class="rube-article" src="../RUBE_imgs/unity.png" alt="unity" />
+  <figcaption style="font-size: 0.85em; color: #555; margin-top: 8px;">
+    Image credit: “Democratizing Modern UI Design From The Bottom Up” by David A. M. Goldberg and Pau Giner, licensed under 
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+      CC BY-SA 4.0
+    </a>.
+  </figcaption>
 </figure>
 <br />
+
 
 
 #### In web design:
@@ -69,14 +79,17 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 A balanced layout brings calm. Whether through symmetry or deliberate asymmetry, visual weight should feel even and intentional.
 
 <figure class="rube-figure" style="max-width: 650px !important; margin-right: auto; margin-left: auto;">
-<br />
-<img class="rube-article" src="../RUBE_imgs/balance.png" alt="balance" style="max-width: 650px !important;" />
-<figcaption style="max-width: 650px !important;">
-
-*Above: A clear, symmetrical wireframe with navigation, hero, features, testimonial, and footer — illustrating balance through equal distribution and alignment.*
-</figcaption>
+  <br />
+  <img class="rube-article" src="../RUBE_imgs/emphasis.png" alt="emphasis" style="max-width: 650px !important;" />
+  <figcaption style="max-width: 650px !important; font-size: 0.85em; color: #555; margin-top: 8px;">
+    *Above: “Schachfiguren, Bauern -- 2022 -- 0022 (bw)” by 
+    <a href="https://commons.wikimedia.org/wiki/User:Dietmar_Rabich" target="_blank" rel="noopener noreferrer">Dietmar Rabich</a>, via 
+    <a href="https://commons.wikimedia.org/wiki/File:Schachfiguren,_Bauern_--_2022_--_0022_(bw).jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>. Licensed under 
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.*
+  </figcaption>
 </figure>
 <br />
+
 
 
 
