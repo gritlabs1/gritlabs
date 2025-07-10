@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const tables = document.querySelectorAll("table");
+  setTimeout(() => {
+    const tables = document.querySelectorAll("table");
 
-  tables.forEach((table) => {
-    if (table.querySelector("thead")) {
-      new simpleDatatables.DataTable(table, {
-        searchable: true,
-        fixedHeight: false,
-        perPage: 25,
-        perPageSelect: [10, 25, 50, 100],
-      });
-    }
-  });
+    tables.forEach((table) => {
+      if (table.querySelector("thead")) {
+        table.classList.add("known-issues-table");
+        table.style.fontSize = "0.8rem";
+        new simpleDatatables.DataTable(table, {
+          searchable: false,
+          perPage: 0,
+          paging: false,
+          perPageSelect: false,
+          fixedHeight: false,
+        });
+      }
+    });
+  }, 300);
 });
