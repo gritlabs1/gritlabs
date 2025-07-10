@@ -59,14 +59,14 @@ extra:
   
 extra_css:                  #  center copyright
   - _static/extra.css?v=20250515
-  - pages/_static/known-issues-table.css
+  - _static/known-issues-table.css
 extra_javascript:
   - _static/open-repo-in-new-tab.js
   - _static/control-scrollspy-nav.js
   - _static/mermaid-init.js  # Custom initialization script
   - https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js
-  - pages/_static/simple-datatables.min.js
-  - pages/_static/init-known-issues-tables.js
+  - _static/simple-datatables.min.js
+  - _static/init-known-issues-tables.js
 
 
   
