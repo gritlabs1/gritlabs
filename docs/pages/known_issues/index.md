@@ -4,7 +4,8 @@ Below is a list of bugs, limitations, and unresolved behaviors currently tracked
 
 | ID | Title | Status | Date Reported | Notes / Workaround |
 |----|-------|--------|---------------|--------------------|
-| [#00104](2025/07/00104.md) | Search results omit nested pages | Open | 2025-07-09 | Use sidebar navigation to reach pages not indexed. |
-| [#00103](2025/07/00103.md) | Theme fails to load offline | In Progress | 2025-07-08 | Reload once connection is restored. |
-| [#00102](2025/07/00102.md) | Scroll jitter when switching tabs | Won’t Fix | 2025-07-07 | Minor flicker due to library limitations. |
+| [#00004](2025/07/00004.md) | Site icon and fav icon need to be replaced | Open | 2025-07-10 | — |
+| [#00003](2025/07/00003.md) | Roulette wheel numbers hard to see | Closed | 2025-07-08 | — |
+| [#00002](2025/07/00002.md) | Roulette wheel was spinning oddly | Closed | 2025-07-08 | — |
+| [#00001](2025/07/00001.md) | Pong game paddle needed fix | Closed | 2025-07-09 | — |
 
