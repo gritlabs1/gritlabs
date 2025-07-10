@@ -48,6 +48,14 @@ An LLM working in this repo should:
 
 ---
 
+### Action Schema Versioning Rules
+
+* Every Action Schema must begin with a PascalCase title followed by a version identifier (`— vX.Y`).
+* Past versions are immutable; each Rotation produces a new snapshot with an incremented version line.
+* Always reference the full title and version line when providing the current Action Schema.
+
+---
+
 ## Notes
 
 * Do not include human workflow tracking in this file.

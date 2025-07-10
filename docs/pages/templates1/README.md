@@ -62,7 +62,7 @@ Grit Labs optimizes for:
 |-------------------|-----------------------------------------------------------------------------------------|
 | **README.md**     | One-screen introduction and quick-start guide                                           |
 | **TERMINOLOGY.md**| Template defining the shared vocabulary of Grit Labs                                                        |
-| **ACTION_SCHEMA.md** | Template specifying the Action Items table format & rules (PascalCase title + version)        |
+| **ACTION_SCHEMA.md** | Template specifying the Action Items table format & rules |
 | **DIRECTIVE.md** | Template instructing an LLM how to run a Rotation                                                  |                                  |
 | **GOALS.md** (optional)|  Template defining Missions, Goals, and Acceptance Tests. Provides traceable, testable structure for reasoning and documentation.|
 | **DEPENDENCY_MODELING.md** (optional)| Template specifying component relationships, dependencies, and use cases. |
@@ -84,13 +84,13 @@ Grit Labs optimizes for:
 * Defines the **Problem Space** for the current rotation  
 * Updates Action Items via **Notes** and **Triggers**  
 * Executes fully in the present moment  
-* Treats every Action Schema as an immutable, versionable snapshot  
+* Treats every Action Schema as an immutable snapshot
 
 ---
 
 ## 🔄 Running a Rotation
 
-1. Provide the current **Action Schema** (PascalCase title + version)  
+1. Provide the current **Action Schema**
 2. Add any new **Action Notes** or **Action Triggers**  
 3. Apply the **Rotation Directive** (`DIRECTIVE.md`)  
 4. Accept the updated table and act on the next visible work  
