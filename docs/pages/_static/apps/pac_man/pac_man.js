@@ -1,20 +1,52 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+const scoreEl = document.getElementById('score');
+
 const cellSize = 20;
 const rows = canvas.width / cellSize;
 const cols = canvas.height / cellSize;
 
 const pacman = { x: 10, y: 10, dx: 0, dy: 0 };
-const ghost = { x: 1, y: 1 };
-let dots = [];
+const ghosts = [
+  { x: 1, y: 1, color: 'red' },
+  { x: rows - 2, y: cols - 2, color: 'cyan' }
+];
 
-for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < cols; j++) {
-        if (!(i === pacman.x && j === pacman.y)) {
-            dots.push({ x: i, y: j });
-        }
-    }
+let dots = [];
+let walls = new Set();
+let score = 0;
+
+function initWalls() {
+  for (let i = 0; i < rows; i++) {
+    walls.add(`${i},0`);
+    walls.add(`${i},${cols - 1}`);
+  }
+  for (let j = 0; j < cols; j++) {
+    walls.add(`0,${j}`);
+    walls.add(`${rows - 1},${j}`);
+  }
+  for (let i = 5; i < rows - 5; i++) {
+    walls.add(`${i},10`);
+    walls.add(`10,${i}`);
+  }
 }
+
+function initDots() {
+  dots = [];
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      const key = `${i},${j}`;
+      if (!walls.has(key) && !(i === pacman.x && j === pacman.y)) {
+        dots.push({ x: i, y: j });
+      }
+    }
+  }
+  score = 0;
+  updateScore();
+}
+
+initWalls();
+initDots();
 
 function drawCircle(x, y, color) {
     ctx.fillStyle = color;
@@ -33,8 +65,20 @@ function drawPacman() {
     ctx.fill();
 }
 
-function drawGhost() {
-    drawCircle(ghost.x, ghost.y, 'red');
+function drawGhosts() {
+  ghosts.forEach(g => drawCircle(g.x, g.y, g.color));
+}
+
+function drawWalls() {
+  ctx.fillStyle = '#222';
+  walls.forEach(pos => {
+    const [x, y] = pos.split(',').map(Number);
+    ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+  });
+}
+
+function updateScore() {
+  scoreEl.textContent = `Score: ${score}`;
 }
 
 function drawDots() {
@@ -46,61 +90,79 @@ function drawDots() {
     });
 }
 
-function move(entity, dx, dy) {
-    entity.x = Math.max(0, Math.min(rows - 1, entity.x + dx));
-    entity.y = Math.max(0, Math.min(cols - 1, entity.y + dy));
+function tryMove(entity, dx, dy) {
+  const nx = Math.max(0, Math.min(rows - 1, entity.x + dx));
+  const ny = Math.max(0, Math.min(cols - 1, entity.y + dy));
+  if (!walls.has(`${nx},${ny}`)) {
+    entity.x = nx;
+    entity.y = ny;
+  }
+}
+
+function moveGhost(g) {
+  const options = [];
+  [[1,0],[-1,0],[0,1],[0,-1]].forEach(([dx,dy]) => {
+    const nx = g.x + dx;
+    const ny = g.y + dy;
+    if (!walls.has(`${nx},${ny}`)) options.push({dx,dy});
+  });
+  if (options.length === 0) return;
+  options.sort((a,b) => (
+    Math.abs(pacman.x-(g.x+a.dx))+Math.abs(pacman.y-(g.y+a.dy)) -
+    (Math.abs(pacman.x-(g.x+b.dx))+Math.abs(pacman.y-(g.y+b.dy)))
+  ));
+  const chase = Math.random() < 0.7;
+  const choice = chase ? options[0] : options[Math.floor(Math.random()*options.length)];
+  g.x += choice.dx;
+  g.y += choice.dy;
 }
 
 function update() {
-    move(pacman, pacman.dx, pacman.dy);
-    pacman.dx = pacman.dy = 0;
-    if (Math.random() < 0.3) {
-        const dir = Math.floor(Math.random() * 4);
-        if (dir === 0) move(ghost, 1, 0);
-        if (dir === 1) move(ghost, -1, 0);
-        if (dir === 2) move(ghost, 0, 1);
-        if (dir === 3) move(ghost, 0, -1);
+  tryMove(pacman, pacman.dx, pacman.dy);
+  pacman.dx = pacman.dy = 0;
+  ghosts.forEach(moveGhost);
+  dots = dots.filter(d => {
+    if (d.x === pacman.x && d.y === pacman.y) {
+      score += 10;
+      updateScore();
+      return false;
     }
-    dots = dots.filter(d => !(d.x === pacman.x && d.y === pacman.y));
-    if (pacman.x === ghost.x && pacman.y === ghost.y) {
-        alert('Game Over!');
-        reset();
-    }
-    if (dots.length === 0) {
-        alert('You Win!');
-        reset();
-    }
+    return true;
+  });
+  if (ghosts.some(g => g.x === pacman.x && g.y === pacman.y)) {
+    alert('Game Over!');
+    reset();
+  }
+  if (dots.length === 0) {
+    alert('You Win!');
+    reset();
+  }
 }
 
 function reset() {
-    pacman.x = 10; pacman.y = 10;
-    ghost.x = 1; ghost.y = 1;
-    dots = [];
-    for (let i = 0; i < rows; i++) {
-        for (let j = 0; j < cols; j++) {
-            if (!(i === pacman.x && j === pacman.y)) {
-                dots.push({ x: i, y: j });
-            }
-        }
-    }
+  pacman.x = 10; pacman.y = 10;
+  ghosts[0].x = 1; ghosts[0].y = 1;
+  ghosts[1].x = rows - 2; ghosts[1].y = cols - 2;
+  initDots();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawDots();
-    drawGhost();
-    drawPacman();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawWalls();
+  drawDots();
+  drawGhosts();
+  drawPacman();
 }
 
 function loop() {
     update();
     draw();
 }
-setInterval(loop, 200);
+setInterval(loop, 150);
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowUp') pacman.dy = -1;
-    if (e.key === 'ArrowDown') pacman.dy = 1;
-    if (e.key === 'ArrowLeft') pacman.dx = -1;
-    if (e.key === 'ArrowRight') pacman.dx = 1;
+  if (e.key === 'ArrowUp') { pacman.dy = -1; pacman.dx = 0; }
+  if (e.key === 'ArrowDown') { pacman.dy = 1; pacman.dx = 0; }
+  if (e.key === 'ArrowLeft') { pacman.dx = -1; pacman.dy = 0; }
+  if (e.key === 'ArrowRight') { pacman.dx = 1; pacman.dy = 0; }
 });
