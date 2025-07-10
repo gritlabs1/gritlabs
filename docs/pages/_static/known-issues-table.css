@@ -1,0 +1,32 @@
+/* Known Issues table: override DataTables styles to match MkDocs */
+.dataTable-table {
+  background-color: var(--md-default-bg-color);
+  border: 0.05rem solid var(--md-typeset-table-color);
+  border-radius: 0.1rem;
+  display: inline-block;
+  font-size: 0.64rem;
+  max-width: 100%;
+  overflow: auto;
+  border-collapse: initial;
+  border-spacing: 0;
+  table-layout: auto;
+}
+
+.dataTable-table th,
+.dataTable-table td {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.dataTable-wrapper .dataTable-container {
+  overflow-x: auto;
+}
+
+/* Hide default search and pagination controls */
+.dataTable-dropdown,
+.dataTable-top,
+.dataTable-bottom {
+  display: none !important;
+}
