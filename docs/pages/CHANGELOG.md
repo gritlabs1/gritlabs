@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.5.0 - 2025-07-09
+
+- 7/9/2025: Pong game paddle needed fix.
+- Pong game paddle lacked touch controls; commit 57162b8 enabled finger tracking. (#00001)
+
+## v0.4.0 - 2025-07-08
+
+- Introduced the Pong game as a new example.
+
 ## v0.3.0 - 2025-07-07
 
 - Implemented the **Mutex Buttons** App of the Day with an interactive demo.
