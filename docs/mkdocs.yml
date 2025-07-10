@@ -39,6 +39,7 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - AI-Generated Content and Attribution: articles/ai_generated_content_and_attribution.md
       - Best Practices for Closing Pull Requests: articles/closing_pull_requests.md
       - RUBE Four-Point Design: articles/RUBE.md
       - Top 10 Website Features: articles/top_10_website_features.md
