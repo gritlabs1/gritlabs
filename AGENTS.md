@@ -53,6 +53,10 @@ An LLM working in this repo should:
 * Every Action Schema must begin with a PascalCase title followed by a version identifier (`— vX.Y`).
 * Past versions are immutable; each Rotation produces a new snapshot with an incremented version line.
 * Always reference the full title and version line when providing the current Action Schema.
+### Release Tag Conventions
+
+* Release tags use the format `vX.Y.Z` (e.g., `v0.6.0`). Tags must reference the final commit of each release.
+
 
 ---
 
