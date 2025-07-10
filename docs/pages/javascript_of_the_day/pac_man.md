@@ -21,7 +21,8 @@ The **Pac Man App** is an enhanced homage to the classic arcade game. Move Pac M
 
 ### Features
 
-- **Arrow Key Controls:** Use the arrow keys to navigate Pac Man.
+- **Arrow Key Controls:** Use the arrow keys to navigate Pac Man. This game requires a physical keyboard.
+- **No Mobile Support:** Touch controls are not implemented, so smartphones and tablets aren't supported.
 - **Multiple Ghosts:** Two ghosts chase Pac Man with basic AI.
 - **Maze Walls:** Navigate around barriers just like the arcade original.
 - **Score Tracking:** Earn points for each dot you consume.
