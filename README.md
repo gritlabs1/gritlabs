@@ -177,7 +177,9 @@ Then open `http://localhost:8000` in your browser.
 > .\venv\Scripts\mkdocs.exe serve
 > ```
 
+## Versioning and Tags
 
+Release tags use the format `vX.Y.Z` (for example, `v0.5.0`). All existing tags have been updated to follow this convention.
 
 
 ---
