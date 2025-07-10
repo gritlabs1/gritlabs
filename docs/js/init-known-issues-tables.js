@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tables.forEach((table) => {
       if (table.querySelector("thead")) {
+        table.classList.add("known-issues-table");
+        table.style.fontSize = "0.8rem";
         new simpleDatatables.DataTable(table, {
           searchable: false,
           perPage: 0,
