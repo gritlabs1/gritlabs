@@ -35,7 +35,7 @@
 ### Fixes to Known Issues
 - None.
 
-## v0.1.0
+## v0.1.0 - 2025-07-05
 
 ### Features
 - Initial import of the Grit Labs documentation and templates.
