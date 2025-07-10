@@ -17,13 +17,14 @@ To play **Pac Man** right here in your browser, click the link below:
 
 ### Overview
 
-The **Pac Man App** is a simplified homage to the classic arcade game. Move Pac Man around the grid to eat all the dots while avoiding the roaming ghost.
+The **Pac Man App** is an enhanced homage to the classic arcade game. Move Pac Man through a simple maze to eat all the dots while avoiding the roaming ghosts.
 
 ### Features
 
 - **Arrow Key Controls:** Use the arrow keys to navigate Pac Man.
-- **Random Ghost:** A red ghost moves unpredictably around the board.
-- **Dot Collection:** Clear the board by eating every dot.
+- **Multiple Ghosts:** Two ghosts chase Pac Man with basic AI.
+- **Maze Walls:** Navigate around barriers just like the arcade original.
+- **Score Tracking:** Earn points for each dot you consume.
 - **Pure Client-Side:** Built entirely with HTML5 Canvas and vanilla JavaScript.
 
 ### Purpose
@@ -32,9 +33,10 @@ This project demonstrates how Codex can generate an interactive game complete wi
 
 ### How It Works
 
-1. **Movement:** Pac Man moves one grid cell in the direction of the pressed arrow key.
-2. **Ghost AI:** The ghost randomly chooses a direction at intervals.
-3. **Win/Lose Conditions:** Clear all dots to win or collide with the ghost to end the game.
+1. **Movement:** Pac Man moves one grid cell in the direction of the pressed arrow key, respecting maze walls.
+2. **Ghost AI:** Two ghosts attempt to chase Pac Man with a mix of random and directed moves.
+3. **Scoring:** Each dot eaten adds to your score, displayed above the canvas.
+4. **Win/Lose Conditions:** Clear all dots to win or collide with any ghost to end the game.
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

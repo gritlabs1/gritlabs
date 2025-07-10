@@ -18,3 +18,8 @@ canvas {
     display: block;
     margin: 0 auto;
 }
+
+#score {
+    font-weight: bold;
+    margin-bottom: 10px;
+}

@@ -2,7 +2,7 @@
 
 Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The featured project is a Pac Man game written in vanilla JavaScript. Munch all the dots while avoiding the ghost. Click the button below to try it without leaving the page.
+The featured project is a Pac Man game written in vanilla JavaScript. Navigate a simple maze, collect dots for points and dodge two pursuing ghosts. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Pac Man App</button>
