@@ -33,6 +33,7 @@ An LLM working in this repo should:
 * Treat all rules as **live prompt checks** — they must be re-evaluated during every LLM interaction
 * Follow each directive literally; **no speculative extrapolation**
 * **Place all JavaScript files in the `docs/pages/_static` directory**
+* Consult the templates in `docs/pages/templates1` to synchronize terminology and directive language with the human user
 
 ---
 
