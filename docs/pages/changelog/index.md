@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.6.0 - 2025-07-10
+
+#### Features
+- Added a **Pac Man** JavaScript of the Day with responsive gameplay and MIT-licensed code.
+- Documented how to start the game and improved movement mechanics.
+- Added an **AI-generated Content and Attribution** article with a navigation link.
+- Updated the **RUBE** article with improved framing and image attribution.
+- Clarified template usage rules in `AGENTS.md`.
+
+#### Fixes to Known Issues
+- None.
+
 ## v0.5.0 - 2025-07-09
 
 #### Features
