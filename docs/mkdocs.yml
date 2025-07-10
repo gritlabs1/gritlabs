@@ -45,6 +45,7 @@ nav:                             # make your own nav order
       - Program to an Interface: articles/program_to_an_interface.md
   - JavaScript of the Day:
       - Today's App: javascript_of_the_day/index.md
+      - 7/10/25 Pac Man: javascript_of_the_day/pac_man.md
       - 7/9/25 Pong Game: javascript_of_the_day/pong.md
       - 7/8/25 Roulette: javascript_of_the_day/roulette.md
       - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
