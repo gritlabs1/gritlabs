@@ -1,15 +1,16 @@
-# RUBE - The Four-Point Design Approach 
+# RUBE – Four-Point Page Layout
+*A Practical Framework for Structuring Web Pages*
 
-When it comes to designing professional-grade websites, aesthetics and usability go hand in hand. Yet, amidst trends, templates, and tooling, many designers lack a reliable foundation for layout, hierarchy, and flow.
+When it comes to structuring professional-grade web pages, layout and usability go hand in hand. Amidst trends, templates, and tooling, many designers lack a reliable foundation for organizing content, establishing hierarchy, and creating effective flow.
 
-**RUBE** changes that. It's a concise, four-point design philosophy based on:
+**RUBE** changes that. It's a concise, four-point page layout philosophy based on:
 
 - ##### Rule of Thirds
 - ##### Unity
 - ##### Balance  
 - ##### Emphasis  
 
-Follow these principles, and your site won’t just look good — it’ll *feel* intuitive and trustworthy.
+Apply these principles, and your page won't just look organized—it will *feel* intuitive and trustworthy.
 
 ---
 
