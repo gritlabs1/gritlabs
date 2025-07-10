@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.0 - 2025-07-10
+
+### Features
+- Moved all JavaScript assets to the `_static` directory.
+- Enabled interactive table sorting using the Tablesort library.
+- Backfilled known issues data and reorganized past releases.
+
+### Fixes to Known Issues
+- None.
+
 
 ## v0.4.0 - 2025-07-08
 
