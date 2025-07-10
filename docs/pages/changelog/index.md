@@ -3,6 +3,9 @@
 ## v0.5.0 - 2025-07-10
 
 ### Features
+- Introduced a **Known Issues** tracker with an archived issues page.
+- Renamed **App of the Day** to **JavaScript of the Day** and added a **Pong Game** example featured on the landing page.
+- Documented repository automation with `AGENTS.md` and a "Template Upload Mode" concept.
 - Moved all JavaScript assets to the `_static` directory.
 - Enabled interactive table sorting using the Tablesort library.
 - Backfilled known issues data and reorganized past releases.
