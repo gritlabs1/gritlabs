@@ -42,18 +42,20 @@ const cols = levelMap[0].length;
 
 const pacman = { x: 13, y: 23, dx: 0, dy: 0 };
 let nextDirection = { dx: 0, dy: 0 };
-const ghosts = [
+const startGhosts = [
     { x: 13, y: 14, color: 'red', homeTimer: 40 },
-    { x: 14, y: 14, color: 'cyan', homeTimer: 80 }
+    { x: 14, y: 14, color: 'cyan', homeTimer: 80 },
+    { x: 12, y: 14, color: 'pink', homeTimer: 120 },
+    { x: 15, y: 14, color: 'orange', homeTimer: 160 }
 ];
+let ghosts = startGhosts.map(g => ({ ...g }));
 
 let dots = [];
 let powerDots = [];
 const walls = new Set();
-let startX;
-let startY;
 let score = 0;
 let intervalId;
+let frightenedTimer = 0;
 
 function resizeCanvas() {
     const size = document.querySelector('.game-wrapper').clientWidth;
@@ -124,16 +126,22 @@ function tryMove(entity, dx, dy) {
     }
 }
 
-function moveGhost(g) {
+function moveGhost(g, index) {
     if (g.homeTimer > 0) { g.homeTimer--; return; }
     const dirs = [[1,0],[-1,0],[0,1],[0,-1]];
     const options = dirs.filter(([dx,dy]) => !walls.has(`${g.x+dx},${g.y+dy}`));
     if (options.length === 0) return;
-    options.sort((a,b) =>
-        Math.abs(pacman.x-(g.x+a[0])) + Math.abs(pacman.y-(g.y+a[1])) -
-        (Math.abs(pacman.x-(g.x+b[0])) + Math.abs(pacman.y-(g.y+b[1]))));
-    const [dx,dy] = Math.random() < 0.7 ? options[0] : options[Math.floor(Math.random()*options.length)];
-    g.x += dx; g.y += dy;
+    let choice;
+    if (frightenedTimer > 0) {
+        choice = options[Math.floor(Math.random()*options.length)];
+    } else {
+        options.sort((a,b) =>
+            Math.abs(pacman.x-(g.x+a[0])) + Math.abs(pacman.y-(g.y+a[1])) -
+            (Math.abs(pacman.x-(g.x+b[0])) + Math.abs(pacman.y-(g.y+b[1]))));
+        choice = Math.random() < 0.7 ? options[0] : options[Math.floor(Math.random()*options.length)];
+    }
+    g.x += choice[0];
+    g.y += choice[1];
 }
 
 function update() {
@@ -142,7 +150,7 @@ function update() {
         pacman.dy = nextDirection.dy;
     }
     tryMove(pacman, pacman.dx, pacman.dy);
-    ghosts.forEach(moveGhost);
+    ghosts.forEach((g, i) => moveGhost(g, i));
     dots = dots.filter(d => {
         if (d.x === pacman.x && d.y === pacman.y) {
             score += 10;
@@ -153,15 +161,24 @@ function update() {
     powerDots = powerDots.filter(d => {
         if (d.x === pacman.x && d.y === pacman.y) {
             score += 50;
+            frightenedTimer = 50;
             return false;
         }
         return true;
     });
+    if (frightenedTimer > 0) frightenedTimer--;
     updateScore();
-    if (ghosts.some(g => g.x === pacman.x && g.y === pacman.y)) {
-        alert('Game Over!');
-        startGame();
-    }
+    ghosts.forEach((g, idx) => {
+        if (g.x === pacman.x && g.y === pacman.y) {
+            if (frightenedTimer > 0) {
+                score += 200;
+                Object.assign(g, { x: startGhosts[idx].x, y: startGhosts[idx].y, homeTimer: 20 });
+            } else {
+                alert('Game Over!');
+                startGame();
+            }
+        }
+    });
     if (dots.length === 0 && powerDots.length === 0) {
         alert('You Win!');
         startGame();
@@ -188,21 +205,6 @@ function handleKey(e) {
     if (e.key === 'ArrowRight') { nextDirection = { dx: 1, dy: 0 }; }
 }
 
-function handleTouchStart(e) {
-    const t = e.touches[0];
-    startX = t.clientX; startY = t.clientY;
-}
-
-function handleTouchEnd(e) {
-    const t = e.changedTouches[0];
-    const dx = t.clientX - startX;
-    const dy = t.clientY - startY;
-    if (Math.abs(dx) > Math.abs(dy)) {
-        nextDirection = { dx: dx > 0 ? 1 : -1, dy: 0 };
-    } else {
-        nextDirection = { dx: 0, dy: dy > 0 ? 1 : -1 };
-    }
-}
 
 function updateScore() {
     scoreEl.textContent = `Score: ${score}`;
@@ -211,16 +213,14 @@ function updateScore() {
 function startGame() {
     pacman.x = 13; pacman.y = 23; pacman.dx = pacman.dy = 0;
     nextDirection = { dx: 0, dy: 0 };
-    ghosts[0].x = 13; ghosts[0].y = 14; ghosts[0].homeTimer = 40;
-    ghosts[1].x = 14; ghosts[1].y = 14; ghosts[1].homeTimer = 80;
+    ghosts = startGhosts.map(g => ({ ...g }));
+    frightenedTimer = 0;
     initLevel();
     clearInterval(intervalId);
     intervalId = setInterval(loop, 150);
 }
 
 document.addEventListener('keydown', handleKey);
-canvas.addEventListener('touchstart', handleTouchStart);
-canvas.addEventListener('touchend', handleTouchEnd);
 newGameBtn.addEventListener('click', startGame);
 window.addEventListener('resize', resizeCanvas);
 window.addEventListener('load', () => { resizeCanvas(); startGame(); });
