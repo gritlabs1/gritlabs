@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Dice Roller App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is a Dice Roller written in vanilla JavaScript. Roll two dice and track recent results. Click the button below to try it without leaving the page.
+To test the **Dice Roller App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Dice Roller App</button>
@@ -15,7 +15,29 @@ The featured project is a Dice Roller written in vanilla JavaScript. Roll two di
   </div>
 </div>
 
+### Overview
+
+The **Dice Roller App** is a lightweight web application that simulates rolling two dice. It records each result in your browser's `localStorage`, so the latest rolls persist even after you refresh.
+
+### Features
+
+- **Roll Two Dice:** Click a button to generate two random numbers from 1 to 6.
+- **Random Outcomes:** Dice faces change every roll.
+- **History Tracking:** Stores the last ten rolls in a list.
+- **Persistent Storage:** Keeps history using `localStorage` across reloads.
+
+### Purpose
+
+Demonstrates Codex's ability to generate a small, stateful game entirely in the browser.
+
+### How It Works
+
+1. **Rolling:** Press the "Roll Dice" button to generate new values for each die.
+2. **Updating History:** The combination and total are prepended to the history list.
+3. **Persisting:** History is saved in `localStorage` so previous rolls appear on reload.
+
 <script>
+// Modal behavior (same as landing page)
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("dice_rollerModal");
   const openBtn = document.getElementById("openModalButton");
@@ -33,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
+/* Same styles as other JavaScript of the Day modals */
 #dice_rollerModal {
   position: fixed;
   top: 0;
