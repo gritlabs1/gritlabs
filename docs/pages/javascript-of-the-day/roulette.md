@@ -11,7 +11,7 @@ To test the **Roulette App** yourself and see the functionality in action, click
 <div id="rouletteModal" style="display:none;">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/roulette/roulette.html" title="Roulette App"></iframe>
+    <iframe src="../../static/apps/roulette/roulette.html" title="Roulette App"></iframe>
   </div>
 </div>
 

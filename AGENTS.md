@@ -20,7 +20,7 @@ An `AGENTS.md` file contains **prompt-executable directives** meant **exclusivel
   Defines **global prompt-executable behaviors** that apply across the entire repository. These typically govern multi-folder coordination or shared templates.
 
 * **Folder-level `AGENTS.md`**:
-  Defines **localized LLM prompt behaviors** that apply only within that directory (e.g., `known_issues/AGENTS.md`).
+  Defines **localized LLM prompt behaviors** that apply only within that directory (e.g., `known-issues/AGENTS.md`).
 
 ---
 
@@ -32,7 +32,7 @@ An LLM working in this repo should:
 * Merge root-level rules with folder-specific ones, giving folder rules priority on conflict
 * Treat all rules as **live prompt checks** — they must be re-evaluated during every LLM interaction
 * Follow each directive literally; **no speculative extrapolation**
-* **Place all JavaScript files in the `docs/pages/_static` directory**
+* **Place all JavaScript files in the `docs/pages/static` directory**
 * Consult the templates in `docs/pages/templates1` to synchronize terminology and directive language with the human user
 
 ---

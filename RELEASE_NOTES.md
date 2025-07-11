@@ -19,7 +19,7 @@
 - Added touch support to the Pong Game so mobile users can control the paddle.
 
 #### 📘 Developer Notes
-- Upgraded CI/CD workflows and moved JavaScript assets to the `_static` directory.
+- Upgraded CI/CD workflows and moved JavaScript assets to the `static` directory.
 - Implemented a fallback notice for visitors without JavaScript enabled.
 
 #### 🧩 Breaking Changes

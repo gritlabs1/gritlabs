@@ -11,7 +11,7 @@ The featured project is a Dice Roller written in vanilla JavaScript. Roll two di
 <div id="dice_rollerModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/dice_roller/dice_roller.html" title="Dice Roller App"></iframe>
+    <iframe src="../../static/apps/dice-roller/dice-roller.html" title="Dice Roller App"></iframe>
   </div>
 </div>
 

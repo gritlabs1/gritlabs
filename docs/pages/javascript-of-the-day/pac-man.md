@@ -11,7 +11,7 @@ To play **Pac Man** right here in your browser, click the link below:
 <div id="pac_manModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/pac_man/pac_man.html" title="Pac Man App"></iframe>
+    <iframe src="../../static/apps/pac-man/pac-man.html" title="Pac Man App"></iframe>
   </div>
 </div>
 

@@ -1,45 +1,44 @@
-# Dice Roller App
+# Pong Game
 
 ### Try It Now
 
-To test the **Dice Roller App** yourself and see the functionality in action, click the link below:
+To play **Pong** right here in your browser, click the link below:
 
 <!-- Button to open modal -->
-<button id="openModalButton" class="cta-btn">Open Dice Roller App</button>
+<button id="openModalButton" class="cta-btn">Open Pong Game</button>
 
 <!-- Modal -->
-<div id="dice_rollerModal">
+<div id="pongModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/dice_roller/dice_roller.html" title="Dice Roller App"></iframe>
+    <iframe src="../../static/apps/pong/pong.html" title="Pong Game"></iframe>
   </div>
 </div>
 
 ### Overview
 
-The **Dice Roller App** is a lightweight web application that simulates rolling two dice. It records each result in your browser's `localStorage`, so the latest rolls persist even after you refresh.
+The **Pong Game** is a minimalist recreation of the classic arcade game. Use the arrow keys or drag on the left side of the screen to move your paddle while the computer controls the paddle on the right. First to score wins!
 
 ### Features
 
-- **Roll Two Dice:** Click a button to generate two random numbers from 1 to 6.
-- **Random Outcomes:** Dice faces change every roll.
-- **History Tracking:** Stores the last ten rolls in a list.
-- **Persistent Storage:** Keeps history using `localStorage` across reloads.
+- **Keyboard/Touch Controls:** Use the Up and Down arrow keys or drag on the canvas to move your paddle.
+- **Computer Opponent:** The AI paddle automatically tracks the ball.
+- **Score Display:** Points are shown below the canvas.
+- **Pure Client-Side:** Built entirely with HTML5 Canvas and vanilla JavaScript.
 
 ### Purpose
 
-Demonstrates Codex's ability to generate a small, stateful game entirely in the browser.
+This project demonstrates how Codex can generate a playable browser game with basic physics and input handling. The entire experience runs locally in your browser without any backend code.
 
 ### How It Works
 
-1. **Rolling:** Press the "Roll Dice" button to generate new values for each die.
-2. **Updating History:** The combination and total are prepended to the history list.
-3. **Persisting:** History is saved in `localStorage` so previous rolls appear on reload.
+1. **Ball Movement:** The ball bounces between the paddles and the top/bottom walls.
+2. **Paddle Collision:** When the ball hits a paddle, it reverses direction.
+3. **Scoring:** If the ball passes a paddle, the opposing player scores and the ball resets to the center.
 
 <script>
-// Modal behavior (same as landing page)
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("dice_rollerModal");
+  const modal = document.getElementById("pongModal");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
   openBtn.addEventListener("click", () => {
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <style>
 /* Same styles as other JavaScript of the Day modals */
-#dice_rollerModal {
+#pongModal {
   position: fixed;
   top: 0;
   left: 0;

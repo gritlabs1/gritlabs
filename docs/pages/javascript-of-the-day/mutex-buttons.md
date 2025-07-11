@@ -11,7 +11,7 @@ To test the **Mutex Buttons App** yourself and see the functionality in action, 
 <div id="mutex_buttonsModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/mutex_buttons/mutex_buttons.html" title="Mutex Buttons App"></iframe>
+    <iframe src="../../static/apps/mutex-buttons/mutex-buttons.html" title="Mutex Buttons App"></iframe>
   </div>
 </div>
 
