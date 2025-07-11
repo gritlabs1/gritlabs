@@ -23,7 +23,7 @@
 - Backfilled known issues data and reorganized past releases.
 
 #### Fixes to Known Issues
-- Pong game paddle lacked touch controls; commit [`57162b8`](https://github.com/gritlabs1/gritlabs/commit/57162b8) enabled finger tracking. ([#00001](../known_issues/2025/07/00001.md))
+- Pong game paddle lacked touch controls; commit [`57162b8`](https://github.com/gritlabs1/gritlabs/commit/57162b8) enabled finger tracking. ([#00001](../known-issues/2025/07/00001.md))
 
 
 ## v0.4.0 - 2025-07-08
@@ -34,8 +34,8 @@
 - Clarified in the documentation that `GOALS.md` can express features.
 
 #### Fixes to Known Issues
-- Roulette wheel numbers were hard to see; commit [`b83149b`](https://github.com/gritlabs1/gritlabs/commit/b83149b) changed them to white for better contrast. ([#00003](../known_issues/2025/07/00003.md))
-- Roulette wheel spin logic was erratic; commit [`535f019`](https://github.com/gritlabs1/gritlabs/commit/535f019) corrected the start and stop positions. ([#00002](../known_issues/2025/07/00002.md))
+- Roulette wheel numbers were hard to see; commit [`b83149b`](https://github.com/gritlabs1/gritlabs/commit/b83149b) changed them to white for better contrast. ([#00003](../known-issues/2025/07/00003.md))
+- Roulette wheel spin logic was erratic; commit [`535f019`](https://github.com/gritlabs1/gritlabs/commit/535f019) corrected the start and stop positions. ([#00002](../known-issues/2025/07/00002.md))
 
 
 ## v0.3.0 - 2025-07-07
