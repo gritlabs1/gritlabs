@@ -50,13 +50,15 @@ An LLM working in this repo should:
 
 ### MkDocs Ignored Folder Rule
 
-| Rule ID   | Trigger Condition                           | Target Action                                                             |
-| --------- | ------------------------------------------- | ------------------------------------------------------------------------- |
-| **R-003** | Folder is `mkdocs-ignore/` or a subdirectory | Do not index, modify, or analyze contents of `mkdocs-ignore/`.            |
-| **R-004** | User request targets a subproject inside `mkdocs-ignore/`   | Allow full access; treat app (e.g., Angular/React) as a standalone unit with its own project logic. |
+| Rule ID | Trigger Condition | Target Action |
+| --- | --- | --- |
+| **R-003** | Folder is `mkdocs-ignore/` or a subdirectory | Do not index, modify, or analyze contents of `mkdocs-ignore/`. |
+| **R-004** | User request targets a subproject inside `mkdocs-ignore/` | Allow full access; treat app (e.g., Angular/React) as a standalone unit with its own logic. |
+| **R-005** | Folder is `_static/` | Do not rename, move, or delete. Reserved for MkDocs static assets and must retain exact name. |
 
-> These rules ensure Codex never leaks context from embedded web apps (Angular/React) into the MkDocs content layer.
-> Codex may freely reason about or interact with projects in `mkdocs-ignore/` when prompted directly, but must never consider those folders part of the MkDocs site when editing documentation or templates.
+> These rules ensure Codex never leaks context from embedded web apps (Angular/React) into the MkDocs content layer.  
+> Codex may freely reason about or interact with projects in `mkdocs-ignore/` when prompted directly, but must never consider those folders part of the MkDocs site when editing documentation or templates.  
+> Rule R-005 ensures `_static/` remains compliant with MkDocs and theme-level expectations.
 
 
 ---
