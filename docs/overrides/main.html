@@ -95,12 +95,12 @@
     {% set accent  = palette.accent  | d("indigo", true) %}
     <body dir="{{ direction }}" data-md-color-scheme="{{ scheme | replace(' ', '-') }}" data-md-color-primary="{{ primary | replace(' ', '-') }}" data-md-color-accent="{{ accent | replace(' ', '-') }}">
     <noscript>
-      <meta http-equiv="refresh" content="0; url=/js_required.html">
+      <meta http-equiv="refresh" content="0; url=/_static/js_required.html">
     </noscript>
   {% else %}
     <body dir="{{ direction }}">
       <noscript>
-        <meta http-equiv="refresh" content="0; url=/js_required.html">
+        <meta http-equiv="refresh" content="0; url=/_static/js_required.html">
       </noscript>
   {% endif %}
     {% set features = config.theme.features or [] %}
