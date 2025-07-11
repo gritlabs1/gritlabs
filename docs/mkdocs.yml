@@ -39,12 +39,12 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - Continuous Integration: articles/continuous_integration.md
       - AI-Generated Content and Attribution: articles/ai_generated_content_and_attribution.md
       - Best Practices for Closing Pull Requests: articles/closing_pull_requests.md
       - RUBE Four-Point Design: articles/rube.md
       - Top 10 Website Features: articles/top_10_website_features.md
       - Program to an Interface: articles/program_to_an_interface.md
-      - Continuous Integration: articles/continuous_integration.md
   - JavaScript of the Day:
       - Today's App: javascript_of_the_day/index.md
       - 7/11/25 Dice Roller: javascript_of_the_day/dice_roller.md
