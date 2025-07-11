@@ -1,36 +1,36 @@
 # AGENTS.md
 
-## 1. `underscore_app_name`
+## 1. `kebab-app-name`
 
 ### 1.1. Definition
 
-The `underscore_app_name` is the literal text you assign when creating a new app.
+The `kebab-app-name` is the literal text you assign when creating a new app.
 
 * **Example:** For an app named “Task List”, you might set:
 
   ```yaml
-  underscore_app_name: task_list
+  kebab-app-name: task-list
   ```
 
 ### 1.2. Usage
 
-The `underscore_app_name` value must be used consistently for the following:
+The `kebab-app-name` value must be used consistently for the following:
 
 #### 1.2.1. Markdown file name
 
-* **Path:** `docs/pages/javascript-of-the-day/{underscore_app_name}.md`
+* **Path:** `docs/pages/javascript-of-the-day/{kebab-app-name}.md`
 
 #### 1.2.2. Static assets folder
 
-* **Path:** `docs/pages/_static/apps/{underscore_app_name}/`
+* **Path:** `docs/pages/_static/apps/{kebab-app-name}/`
 
 #### 1.2.3. Static asset filenames
 
 Inside the folder above, create exactly three files named:
 
-* `{underscore_app_name}.css`
-* `{underscore_app_name}.html`
-* `{underscore_app_name}.js`
+* `{kebab-app-name}.css`
+* `{kebab-app-name}.html`
+* `{kebab-app-name}.js`
 
 #### 1.2.4. Landing page file
 
@@ -48,8 +48,8 @@ Inside the folder above, create exactly three files named:
 
 ## 2. Historical page file
 
-* **Path:** `docs/pages/javascript-of-the-day/{underscore_app_name}.md`
-* **Description:** This file serves as the archive page for each featured app. It must be named `{underscore_app_name}.md` and follow the template below (replace `{underscore_app_name}` and `{Display Name}` accordingly):
+* **Path:** `docs/pages/javascript-of-the-day/{kebab-app-name}.md`
+* **Description:** This file serves as the archive page for each featured app. It must be named `{kebab-app-name}.md` and follow the template below (replace `{kebab-app-name}` and `{Display Name}` accordingly):
 
 ```markdown
 # {Display Name} App
@@ -62,10 +62,10 @@ To test the **{Display Name} App** yourself and see the functionality in action,
 <button id="openModalButton" class="cta-btn">Open {Display Name} App</button>
 
 <!-- Modal -->
-<div id="{underscore_app_name}Modal">
+<div id="{kebab-app-name}Modal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
-    <iframe src="../../_static/apps/{underscore_app_name}/{underscore_app_name}.html" title="{Display Name} App"></iframe>
+    <iframe src="../../_static/apps/{kebab-app-name}/{kebab-app-name}.html" title="{Display Name} App"></iframe>
   </div>
 </div>
 
@@ -93,7 +93,7 @@ Demonstrates Codex's ability to generate complete, deployable web applications w
 <script>
 // Modal behavior (same as landing page)
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("{underscore_app_name}Modal");
+  const modal = document.getElementById("{kebab-app-name}Modal");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
   openBtn.addEventListener("click", () => {
@@ -122,30 +122,30 @@ After the `"Today's App"` link in your MkDocs `nav`, include two entries for eac
 ### 3.1. Javascript of the Day Link
 
 * **Text:** `{MM/D/YY} {Display Name}` (e.g. `7/6/25 Task List`)
-* **Target:** `javascript-of-the-day/{underscore_app_name}.md`
+* **Target:** `javascript-of-the-day/{kebab-app-name}.md`
 * **Position:** Immediately below the `javascript-of-the-day/index.md` entry.
 
 ### 3.2. Detail Page Button
 
 * On the landing page (`index.md`), update the existing button to point at the app’s modal as usual.
 
-* On the archived detail page (`{underscore_app_name}.md`), include a button or link back to itself if desired, but the MkDocs nav entry serves as the primary access.
+* On the archived detail page (`{kebab-app-name}.md`), include a button or link back to itself if desired, but the MkDocs nav entry serves as the primary access.
 
 * **Example nav snippet for **\`\`**:**
 
   ```yaml
   nav:
     - "Today's App": javascript-of-the-day/index.md
-    - "7/6/25 Task List": javascript-of-the-day/task_list.md
+    - "7/6/25 Task List": javascript-of-the-day/task-list.md
   ```
 
 ---
 
 ## 4. App modal container requirements
 
-Each app must provide three static files in its folder—`{underscore_app_name}.css`, `{underscore_app_name}.html`, and `{underscore_app_name}.js`—designed for seamless embedding inside a modal on a web page. The files must follow these conventions:
+Each app must provide three static files in its folder—`{kebab-app-name}.css`, `{kebab-app-name}.html`, and `{kebab-app-name}.js`—designed for seamless embedding inside a modal on a web page. The files must follow these conventions:
 
-### 4.1. CSS file: `{underscore_app_name}.css`
+### 4.1. CSS file: `{kebab-app-name}.css`
 
 * Use a neutral, modern base (`font-family: Arial, sans-serif`, or equivalent).
 * Set a subtle body background and margin/padding.
@@ -175,10 +175,10 @@ body {
 
 ---
 
-### 4.2. HTML file: `{underscore_app_name}.html`
+### 4.2. HTML file: `{kebab-app-name}.html`
 
 * Must be a complete, minimal HTML5 document.
-* Loads its own CSS and JS with relative paths (`<link rel="stylesheet" href="{underscore_app_name}.css">`, `<script src="{underscore_app_name}.js"></script>`).
+* Loads its own CSS and JS with relative paths (`<link rel="stylesheet" href="{kebab-app-name}.css">`, `<script src="{kebab-app-name}.js"></script>`).
 * All app UI is contained within a `.container` `<div>`.
 * Use semantic HTML where possible.
 * Only the app’s UI should be present; no extra layout or nav.
@@ -191,20 +191,20 @@ body {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{Display Name} App</title>
-    <link rel="stylesheet" href="{underscore_app_name}.css">
+    <link rel="stylesheet" href="{kebab-app-name}.css">
 </head>
 <body>
     <div class="container">
         <!-- App-specific UI goes here -->
     </div>
-    <script src="{underscore_app_name}.js"></script>
+    <script src="{kebab-app-name}.js"></script>
 </body>
 </html>
 ```
 
 ---
 
-### 4.3. JS file: `{underscore_app_name}.js`
+### 4.3. JS file: `{kebab-app-name}.js`
 
 * Implements all interactive logic for the app.
 * Should be self-contained, relying only on the DOM within the `.container` (no assumptions about outer page context).
