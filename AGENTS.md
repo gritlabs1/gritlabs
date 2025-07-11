@@ -63,13 +63,19 @@ An LLM working in this repo should:
 
 ---
 
-### 🔤 Folder & File Naming Rules
+
+### 🔤 Folder & File Naming Rules — v1.2
 
 | Rule ID | Trigger Condition | Target Action |
 | --- | --- | --- |
-| **R-005** | Any new folder or content file is created/renamed | Use **dash-separated** (`kebab-case`) names — e.g., `getting-started/`, `api-docs.md`, etc. |
-| **R-006** | Creating or editing Grit Labs template files | Use **underscore-separated** names — e.g., `ACTION_SCHEMA.md`, `DEPENDENCY_MODELING.md`, `DIRECTIVE.md`. |
-| **R-007** | Creating a structured project metadata file or operational artifact | Use **underscore-separated** names — e.g., `RELEASE_NOTES.md`, `DEPLOYMENT_NOTES.md`. |
+| **R-005** | Any new **folder** or **content file** is created/renamed | Use **dash-separated** (`kebab-case`) names – e.g., `getting-started/`, `api-docs.md`. |
+| **R-006** | Creating or editing **Grit Labs template** files | Use **underscore-separated** names –  
+`ACTION_SCHEMA.md`, `DIRECTIVE.md`, `DEPENDENCY_MODELING.md`, `TERMINOLOGY.md`. |
+| **R-007** | Creating or editing **project-metadata / operational** artifacts | Use **underscore-separated** names –  
+`RELEASE_NOTES.md`, `DEPLOYMENT_NOTES.md`, `LICENSE`. |
+| **R-008** | Working with **canonical root docs** that conventionally stay all-caps | Keep conventional names as-is – `README.md`, `GOALS.md`. |
+| **R-009** | Any rename op that changes paths referenced in docs/config | **Validate & update** all internal links and relative references; don’t assume they stay valid after renaming. |
+| **R-010** | Encountering MkDocs **reserved folders** (e.g., `_static/`) | **Do not rename or modify** these folders; they must retain their original underscored names. |
 
 ---
 
