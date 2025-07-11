@@ -44,6 +44,7 @@ nav:                             # make your own nav order
       - RUBE Four-Point Design: articles/rube.md
       - Top 10 Website Features: articles/top_10_website_features.md
       - Program to an Interface: articles/program_to_an_interface.md
+      - Continuous Integration: articles/continuous_integration.md
   - JavaScript of the Day:
       - Today's App: javascript_of_the_day/index.md
       - 7/11/25 Dice Roller: javascript_of_the_day/dice_roller.md
