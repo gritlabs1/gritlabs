@@ -55,7 +55,7 @@ nav:                             # make your own nav order
       - 7/6/25 Task List: javascript-of-the-day/task_list.md
   - Known Issues:
       - Known Issues: known-issues/index.md
-      - Archived: known-issues/archived_known_issues.md
+      - Archived: known-issues/archived-known-issues.md
   - Changelog: changelog/index.md
 
 extra:

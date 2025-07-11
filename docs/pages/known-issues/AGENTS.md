@@ -14,7 +14,7 @@ This file governs how issues are created, routed, listed, and migrated based on 
 
 An LLM working in this folder must:
 
-- Read this `AGENTS.md` before modifying `index.md`, `archived_known_issues.md`, or any issue detail file (`YYYY/MM/NNNNN.md`)
+- Read this `AGENTS.md` before modifying `index.md`, `archived-known-issues.md`, or any issue detail file (`YYYY/MM/NNNNN.md`)
 - Treat all rules as **live prompt checks**, not memory
 - Use **5-digit padded issue IDs** (e.g., `00042`) in both filenames and links
 - Keep issue tables on both pages sorted by descending ID
@@ -55,7 +55,7 @@ When a user says **“Add an issue”**, the LLM should:
 
 ## 📋 Prompt Rules Summary
 
-Issue tables in both `index.md` and `archived_known_issues.md` must use this column order:
+Issue tables in both `index.md` and `archived-known-issues.md` must use this column order:
 
 ```markdown
 | ID       | Title                          | Status      | Date Reported | Notes / Workaround |
@@ -74,7 +74,7 @@ Issue tables in both `index.md` and `archived_known_issues.md` must use this col
 
 | Rule ID | Trigger Condition | Target Action |
 |---------|-------------------|----------------|
-| **K-002** | An issue in `index.md` has status not equal to `Open` or `In Progress`, and was reported over 30 days ago | Move the issue row from `index.md` to `archived_known_issues.md`. |
+| **K-002** | An issue in `index.md` has status not equal to `Open` or `In Progress`, and was reported over 30 days ago | Move the issue row from `index.md` to `archived-known-issues.md`. |
 ---
 
 ## Notes
