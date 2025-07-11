@@ -21,8 +21,8 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 
 
 <figure class="rube-figure" style="text-align: center;">
-  <br />
-  <img class="rube-article" src="../rube-imgs/rule3_1.png" alt="Rule of Thirds – 1" />
+  
+  <img class="rube-article" src="../rube-imgs/rule3-1.png" alt="Rule of Thirds – 1" />
   <figcaption style="font-size: 0.85em; color: #555; margin-top: 8px;">
     Image credit: “Rule of Thirds Illustration” by Cingre~commonswiki, licensed under 
     <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">
