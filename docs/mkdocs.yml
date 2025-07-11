@@ -39,23 +39,23 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
-      - Continuous Integration: articles/continuous_integration.md
-      - AI-Generated Content and Attribution: articles/ai_generated_content_and_attribution.md
-      - Best Practices for Closing Pull Requests: articles/closing_pull_requests.md
+      - Continuous Integration: articles/continuous-integration.md
+      - AI-Generated Content and Attribution: articles/ai-generated-content-and-attribution.md
+      - Best Practices for Closing Pull Requests: articles/closing-pull-requests.md
       - RUBE Four-Point Design: articles/rube.md
-      - Top 10 Website Features: articles/top_10_website_features.md
-      - Program to an Interface: articles/program_to_an_interface.md
+      - Top 10 Website Features: articles/top-10-website-features.md
+      - Program to an Interface: articles/program-to-an-interface.md
   - JavaScript of the Day:
-      - Today's App: javascript_of_the_day/index.md
-      - 7/11/25 Dice Roller: javascript_of_the_day/dice_roller.md
-      - 7/10/25 Pac Man: javascript_of_the_day/pac_man.md
-      - 7/9/25 Pong Game: javascript_of_the_day/pong.md
-      - 7/8/25 Roulette: javascript_of_the_day/roulette.md
-      - 7/7/25 Mutex Buttons: javascript_of_the_day/mutex_buttons.md
-      - 7/6/25 Task List: javascript_of_the_day/task_list.md
+      - Today's App: javascript-of-the-day/index.md
+      - 7/11/25 Dice Roller: javascript-of-the-day/dice_roller.md
+      - 7/10/25 Pac Man: javascript-of-the-day/pac_man.md
+      - 7/9/25 Pong Game: javascript-of-the-day/pong.md
+      - 7/8/25 Roulette: javascript-of-the-day/roulette.md
+      - 7/7/25 Mutex Buttons: javascript-of-the-day/mutex_buttons.md
+      - 7/6/25 Task List: javascript-of-the-day/task_list.md
   - Known Issues:
-      - Known Issues: known_issues/index.md
-      - Archived: known_issues/archived_known_issues.md
+      - Known Issues: known-issues/index.md
+      - Archived: known-issues/archived_known_issues.md
   - Changelog: changelog/index.md
 
 extra:

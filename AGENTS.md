@@ -20,7 +20,7 @@ An `AGENTS.md` file contains **prompt-executable directives** meant **exclusivel
   Defines **global prompt-executable behaviors** that apply across the entire repository. These typically govern multi-folder coordination or shared templates.
 
 * **Folder-level `AGENTS.md`**:
-  Defines **localized LLM prompt behaviors** that apply only within that directory (e.g., `known_issues/AGENTS.md`).
+  Defines **localized LLM prompt behaviors** that apply only within that directory (e.g., `known-issues/AGENTS.md`).
 
 ---
 

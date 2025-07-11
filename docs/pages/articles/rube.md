@@ -22,7 +22,7 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 
 <figure class="rube-figure" style="text-align: center;">
   <br />
-  <img class="rube-article" src="../RUBE_imgs/rule3_1.png" alt="Rule of Thirds – 1" />
+  <img class="rube-article" src="../rube-imgs/rule3-1.png" alt="Rule of Thirds – 1" />
   <figcaption style="font-size: 0.85em; color: #555; margin-top: 8px;">
     Image credit: “Rule of Thirds Illustration” by Cingre~commonswiki, licensed under 
     <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">
@@ -50,7 +50,7 @@ Borrowed from photography, the **Rule of Thirds** divides the canvas into a 3×3
 
 <figure class="rube-figure">
   <br />
-  <img class="rube-article" src="../RUBE_imgs/unity.png" alt="unity" />
+  <img class="rube-article" src="../rube-imgs/unity.png" alt="unity" />
   <figcaption style="font-size: 0.85em; color: #555; margin-top: 8px;">
     Image credit: “Democratizing Modern UI Design From The Bottom Up” by David A. M. Goldberg and Pau Giner, licensed under 
     <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
@@ -80,7 +80,7 @@ A balanced layout brings calm. Whether through symmetry or deliberate asymmetry,
 
 <figure class="rube-figure" style="max-width: 650px !important; margin-right: auto; margin-left: auto;">
   <br />
-  <img class="rube-article" src="../RUBE_imgs/emphasis.png" alt="emphasis" style="max-width: 650px !important;" />
+  <img class="rube-article" src="../rube-imgs/emphasis.png" alt="emphasis" style="max-width: 650px !important;" />
   <figcaption style="max-width: 650px !important; font-size: 0.85em; color: #555; margin-top: 8px;">
     *Above: “Schachfiguren, Bauern -- 2022 -- 0022 (bw)” by 
     <a href="https://commons.wikimedia.org/wiki/User:Dietmar_Rabich" target="_blank" rel="noopener noreferrer">Dietmar Rabich</a>, via 
@@ -112,7 +112,7 @@ Every page has a goal. Every screen should answer:
 
 <figure class="rube-figure" style="text-align: center;">
 <br />
-<img class="rube-article" src="../RUBE_imgs/emphasis.png" alt="emphasis" />
+<img class="rube-article" src="../rube-imgs/emphasis.png" alt="emphasis" />
 <figcaption>
 
 *Above: A single dark pawn standing out among lighter pawns, illustrating emphasis through contrast.*

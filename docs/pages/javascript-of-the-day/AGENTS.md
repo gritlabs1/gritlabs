@@ -18,7 +18,7 @@ The `underscore_app_name` value must be used consistently for the following:
 
 #### 1.2.1. Markdown file name
 
-* **Path:** `docs/pages/javascript_of_the_day/{underscore_app_name}.md`
+* **Path:** `docs/pages/javascript-of-the-day/{underscore_app_name}.md`
 
 #### 1.2.2. Static assets folder
 
@@ -34,7 +34,7 @@ Inside the folder above, create exactly three files named:
 
 #### 1.2.4. Landing page file
 
-* **Path:** `docs/pages/javascript_of_the_day/index.md`
+* **Path:** `docs/pages/javascript-of-the-day/index.md`
 * **Description:** This is the landing page for Javascript of the Day.
   You are **not** to change the content of this page, except to update the intro sentence and the existing button reference so that it opens the new app.
   It must follow the HTML, style, and script below, embedded directly into the `index.md` file.
@@ -48,7 +48,7 @@ Inside the folder above, create exactly three files named:
 
 ## 2. Historical page file
 
-* **Path:** `docs/pages/javascript_of_the_day/{underscore_app_name}.md`
+* **Path:** `docs/pages/javascript-of-the-day/{underscore_app_name}.md`
 * **Description:** This file serves as the archive page for each featured app. It must be named `{underscore_app_name}.md` and follow the template below (replace `{underscore_app_name}` and `{Display Name}` accordingly):
 
 ```markdown
@@ -122,8 +122,8 @@ After the `"Today's App"` link in your MkDocs `nav`, include two entries for eac
 ### 3.1. Javascript of the Day Link
 
 * **Text:** `{MM/D/YY} {Display Name}` (e.g. `7/6/25 Task List`)
-* **Target:** `javascript_of_the_day/{underscore_app_name}.md`
-* **Position:** Immediately below the `javascript_of_the_day/index.md` entry.
+* **Target:** `javascript-of-the-day/{underscore_app_name}.md`
+* **Position:** Immediately below the `javascript-of-the-day/index.md` entry.
 
 ### 3.2. Detail Page Button
 
@@ -135,8 +135,8 @@ After the `"Today's App"` link in your MkDocs `nav`, include two entries for eac
 
   ```yaml
   nav:
-    - "Today's App": javascript_of_the_day/index.md
-    - "7/6/25 Task List": javascript_of_the_day/task_list.md
+    - "Today's App": javascript-of-the-day/index.md
+    - "7/6/25 Task List": javascript-of-the-day/task_list.md
   ```
 
 ---
