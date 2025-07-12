@@ -1,5 +1,18 @@
 # Changelog
 
+## [Pending Version] – Updated: 2025-07-12
+
+#### Features
+- Added a **Dice Roller** JavaScript of the Day with an interactive modal.
+- Added a **Stopwatch** JavaScript of the Day.
+- Published a **Continuous Integration** article.
+- Added a **Code Review Best Practices** article.
+- Documented a **Known Issues** term in the terminology template.
+- Removed the proprietary GSL notice from documentation.
+
+#### Fixes to Known Issues
+- None.
+
 ## v0.6.0 - 2025-07-10
 
 #### Features
