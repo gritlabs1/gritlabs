@@ -47,6 +47,7 @@ nav:                             # make your own nav order
       - Program to an Interface: articles/program-to-an-interface.md
   - JavaScript of the Day:
       - Today's App: javascript-of-the-day/index.md
+      - 7/12/25 Stopwatch: javascript-of-the-day/stopwatch.md
       - 7/11/25 Dice Roller: javascript-of-the-day/dice_roller.md
       - 7/10/25 Pac Man: javascript-of-the-day/pac_man.md
       - 7/9/25 Pong Game: javascript-of-the-day/pong.md
