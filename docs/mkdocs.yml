@@ -45,6 +45,7 @@ nav:                             # make your own nav order
       - RUBE Four-Point Design: articles/rube.md
       - Top 10 Website Features: articles/top-10-website-features.md
       - Program to an Interface: articles/program-to-an-interface.md
+      - Code Review Best Practices: articles/code-review-best-practices.md
   - JavaScript of the Day:
       - Today's App: javascript-of-the-day/index.md
       - 7/12/25 Stopwatch: javascript-of-the-day/stopwatch.md
