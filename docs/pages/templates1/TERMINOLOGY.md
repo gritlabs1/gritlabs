@@ -33,6 +33,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Entry Point** | A dependency designated as a starting node that links to one or more **Use Cases**. |
 | **Fail Until It Works** | Mind‑set of iterating rapidly—accepting early failure and leveraging LLM creativity until validity emerges. |
 | **Goal / Sub‑goal** | An objective defined in `GOALS.md`, recursively decomposed until it is actionable and testable. |
+| **Known Issues** | A curated list of significant, user‑reported or internally identified problems that warrant tracking. This does **not** represent all bugs — only issues important enough to monitor publicly or resolve deliberately. |
 | **LLM Precision Expectation** | Reminder: LLM output may contain errors; treat versions/outputs as approximations, validate critical details manually. |
 | **Mission** | The top‑level purpose statement that all Goals roll up to. |
 | **Optional Task** | A non‑blocking Action Item that can enhance a Rotation but is not strictly required. |
