@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Stopwatch App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is a Stopwatch application written in vanilla JavaScript. It measures elapsed time and persists between page reloads. Click the button below to try it without leaving the page.
+To test the **Stopwatch App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Stopwatch App</button>
@@ -14,6 +14,27 @@ The featured project is a Stopwatch application written in vanilla JavaScript. I
     <iframe src="../../_static/apps/stopwatch/stopwatch.html" title="Stopwatch App"></iframe>
   </div>
 </div>
+
+### Overview
+
+The **Stopwatch App** is a lightweight, interactive web application designed to help users measure elapsed time. It persists data locally using the browser's `localStorage`, eliminating the need for a backend.
+
+### Features
+
+- **Start the Timer:** Begin counting elapsed time.
+- **Stop the Timer:** Pause the current run.
+- **Reset:** Clear the timer back to zero.
+- **Persistent Storage:** Utilizes `localStorage` so the timer value survives page reloads.
+
+### Purpose
+
+Demonstrates Codex's ability to generate complete, deployable web applications with client-side storage and minimal setup.
+
+### How It Works
+
+1. **Starting:** Press the "Start" button to begin counting; the timestamp is stored.
+2. **Stopping:** Press "Stop" to pause and save the elapsed time to `localStorage`.
+3. **Resetting:** Clear the stored value and display using the "Reset" button.
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
