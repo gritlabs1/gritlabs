@@ -40,7 +40,7 @@ Inside the folder above, create exactly three files named:
   It must follow the HTML, style, and script below, embedded directly into the `index.md` file.
 * **Template:**
 
-  > The featured project is a {app name} application written in vanilla JavaScript. It stores tasks locally in your browser so no backend is required. Click the button below to try it without leaving the page.
+  > The featured project is a {app name} application written in vanilla JavaScript. Click the button below to try it without leaving the page.
   >
   > **Open {app name} App**
 
