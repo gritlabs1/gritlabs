@@ -25,7 +25,8 @@ function renderTasks(tasks) {
         const editBtn = document.createElement('button');
         editBtn.textContent = 'Edit';
         editBtn.className = 'edit';
-        editBtn.addEventListener('click', () => editTask(t.id));
+        editBtn.dataset.taskId = t.id;
+        editBtn.addEventListener('click', startEdit);
         const delBtn = document.createElement('button');
         delBtn.textContent = 'Delete';
         delBtn.className = 'delete';
@@ -34,6 +35,11 @@ function renderTasks(tasks) {
         li.appendChild(delBtn);
         listEl.appendChild(li);
     });
+}
+
+function startEdit(e) {
+    const id = e.currentTarget.dataset.taskId;
+    editTask(id);
 }
 
 async function createTask() {
