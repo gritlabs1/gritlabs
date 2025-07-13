@@ -39,6 +39,7 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
       - Continuous Integration: articles/continuous-integration.md
       - AI-Generated Content and Attribution: articles/ai-generated-content-and-attribution.md
       - Best Practices for Closing Pull Requests: articles/closing-pull-requests.md
