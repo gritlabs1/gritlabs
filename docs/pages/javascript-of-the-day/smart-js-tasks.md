@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Smart JS Tasks App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is a Smart JS Tasks application written in vanilla JavaScript. Click the button below to try it without leaving the page.
+To test the **Smart JS Tasks App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Smart JS Tasks App</button>
@@ -14,6 +14,28 @@ The featured project is a Smart JS Tasks application written in vanilla JavaScri
     <iframe src="../../_static/apps/smart-js-tasks/smart-js-tasks.html" title="Smart JS Tasks App"></iframe>
   </div>
 </div>
+
+### Overview
+
+The **Smart JS Tasks App** is a lightweight, interactive web application designed to manage tasks via a backend service. It persists data server-side, surviving browser cache clears.
+
+### Features
+
+- **Add Tasks:** Create a task with a required title and optional description.
+- **View Tasks:** Display all tasks stored on the server.
+- **Edit Tasks:** Update a task's title or description.
+- **Delete Tasks:** Remove tasks from the backend.
+
+### Purpose
+
+This app showcases a step up from the 7/6 Task List demo by storing data on the server rather than in `localStorage`. Anyone can view and modify tasks—no login required.
+
+### How It Works
+
+1. **Listing Tasks:** On load, the app fetches tasks from `/tasks/list` and displays them.
+2. **Adding Tasks:** Enter a title and optional description, then click "Add" to send a POST request to `/tasks/create`.
+3. **Editing Tasks:** Each task has an Edit button that triggers a prompt and updates the entry with a PUT request.
+4. **Deleting Tasks:** Remove a task with the Delete button, which calls the DELETE endpoint.
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
