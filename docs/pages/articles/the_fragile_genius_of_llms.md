@@ -58,8 +58,11 @@ You may need to re-run the task multiple times, check results manually, or add r
 ### Stability vs. Stochasticity: The Human Need for Certainty
 
 Humans don’t just prefer stability—we *depend* on it. Our decisions, our predictions, and our institutions are built on unshakable foundations:
+
 - The sun rises in the east.
+
 - 1 + 1 = 2.
+
 - 87 days from now is a deterministic date on the calendar.
 
 These are *axioms*.
