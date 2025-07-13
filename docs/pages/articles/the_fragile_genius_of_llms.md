@@ -77,6 +77,7 @@ When it comes to tax reports, compliance audits, investor statements, or fraud d
 ### Where We Go From Here
 
 To responsibly deploy LLMs in data-sensitive contexts, we need:
+
 1. **Deterministic wrappers**: Tools like LangChain, Guardrails, or DSPy that constrain generation pathways or enforce schemas.
 2. **Hybrid pipelines**: Use LLMs for classification or reasoning, and hand off the aggregation to traditional code or spreadsheet engines.
 3. **Transparent logs**: Capturing and storing intermediate steps for every inference run.
