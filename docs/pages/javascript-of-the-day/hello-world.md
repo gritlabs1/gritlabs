@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Hello World App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is a Hello World application written in vanilla JavaScript. It stores tasks locally in your browser so no backend is required. Click the button below to try it without leaving the page.
+To test the **Hello World App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Hello World App</button>
@@ -14,6 +14,24 @@ The featured project is a Hello World application written in vanilla JavaScript.
     <iframe src="../../_static/apps/hello-world/hello-world.html" title="Hello World App"></iframe>
   </div>
 </div>
+
+### Overview
+
+The **Hello World App** is a lightweight, interactive web application designed to demonstrate a simple GET request. It retrieves a greeting from `https://www.gritlabs.net/api/hello` and displays it.
+
+### Features
+
+- **Fetch Greeting:** Automatically retrieves the greeting message when loaded.
+- **Display Result:** Shows the message directly in the page.
+
+### Purpose
+
+Demonstrates Codex's ability to generate complete, deployable web applications with minimal setup.
+
+### How It Works
+
+1. **Load App:** When the iframe content loads, the JavaScript fetches the greeting from the API.
+2. **Display Message:** The returned message appears within the app's container.
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
