@@ -75,6 +75,7 @@ Issue tables in both `index.md` and `archived-known-issues.md` must use this col
 | Rule ID | Trigger Condition | Target Action |
 |---------|-------------------|----------------|
 | **K-002** | An issue in `index.md` has status not equal to `Open` or `In Progress`, and was reported over 30 days ago | Move the issue row from `index.md` to `archived-known-issues.md`. |
+
 ---
 
 ## Notes
