@@ -84,7 +84,7 @@ Grit Labs optimizes for:
 * Defines the **Problem Space** for the current rotation  
 * Updates Action Items via **Notes** and **Triggers**  
 * Executes fully in the present moment  
-* Treats every Action Schema as an immutable snapshot
+* Treats the **Action Items table** as an immutable snapshot
 
 ---
 
