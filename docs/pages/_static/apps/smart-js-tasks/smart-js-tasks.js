@@ -25,12 +25,14 @@ function renderTasks(tasks) {
         const editBtn = document.createElement('button');
         editBtn.textContent = 'Edit';
         editBtn.className = 'edit';
-        editBtn.dataset.taskId = t.id;
+        const taskId = t.id !== undefined ? t.id : t.taskId;
+        editBtn.dataset.taskId = taskId;
+        console.log('Rendered Edit button for task', taskId);
         editBtn.addEventListener('click', startEdit);
         const delBtn = document.createElement('button');
         delBtn.textContent = 'Delete';
         delBtn.className = 'delete';
-        delBtn.addEventListener('click', () => deleteTask(t.id));
+        delBtn.addEventListener('click', () => deleteTask(taskId));
         li.appendChild(editBtn);
         li.appendChild(delBtn);
         listEl.appendChild(li);
@@ -39,6 +41,7 @@ function renderTasks(tasks) {
 
 function startEdit(e) {
     const id = e.currentTarget.dataset.taskId;
+    console.log('Editing task with ID:', id);
     editTask(id);
 }
 
@@ -65,8 +68,11 @@ async function editTask(id) {
     const newTitle = prompt('Edit title');
     if (newTitle === null) return; // cancel
     const newDesc = prompt('Edit description');
+    const url = `/tasks/${id}/details`;
+    console.log('PUT URL:', url);
+    console.log('PUT body:', { title: newTitle, description: newDesc });
     try {
-        const resp = await fetch(`/tasks/${id}/details`, {
+        const resp = await fetch(url, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ title: newTitle, description: newDesc })
