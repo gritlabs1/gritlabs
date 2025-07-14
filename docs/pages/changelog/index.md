@@ -1,12 +1,13 @@
 # Changelog
 
-## [Pending Version] – Updated: 2025-07-14
+## [Pending Version] – Updated: 2025-07-15
 
 #### Features
 - Added a **Dice Roller** JavaScript of the Day with an interactive modal.
 - Added a **Stopwatch** JavaScript of the Day.
 - Added a **Hello World** JavaScript of the Day demo.
 - Added a **Smart JS Tasks** JavaScript of the Day with server-side persistence.
+- Added an **Angular Tasks** JavaScript of the Day that embeds a remote widget.
 - Published a **Continuous Integration** article.
 - Added a **Code Review Best Practices** article.
 - Documented a **Known Issues** term in the terminology template.
