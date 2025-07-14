@@ -16,22 +16,22 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ## ✨ 2. Benefits of DBDD
 
-### 2.1 Simpler for CRUD-heavy Applications
+#### 2.1 Simpler for CRUD-heavy Applications
 
 * For apps with heavy **Create, Read, Update, Delete** operations, DBDD allows quick iteration.
 * Ideal for **admin panels**, **reporting tools**, and **data dashboards**.
 
-### 2.2 Easier to Onboard
+#### 2.2 Easier to Onboard
 
 * Developers and analysts can often understand the system by reading the schema.
 * Aligns well with SQL-centric teams.
 
-### 2.3 Strong Data Integrity
+#### 2.3 Strong Data Integrity
 
 * Heavily uses **normalized schemas**, **foreign keys**, and **stored procedures** to enforce rules.
 * Validations often live in the database.
 
-### 2.4 Better for Data Warehousing and Reporting
+#### 2.4 Better for Data Warehousing and Reporting
 
 * Schema-first designs are easier to integrate with BI tools, ETL pipelines, and reporting engines.
 
@@ -39,22 +39,22 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ## ⚠️ 3. Drawbacks of DBDD
 
-### 3.1 Rigid and Inflexible
+#### 3.1 Rigid and Inflexible
 
 * Application changes often require **database migrations**.
 * Schema changes can cause cascading changes in code, making refactoring painful.
 
-### 3.2 Anemic Domain Model
+#### 3.2 Anemic Domain Model
 
 * Business logic ends up in service layers or stored procedures, not the model itself.
 * Leads to **procedural code** with poor encapsulation.
 
-### 3.3 Coupling to Persistence
+#### 3.3 Coupling to Persistence
 
 * Objects are tightly bound to table structures, making **testing and abstraction difficult**.
 * Violates the **Separation of Concerns** principle.
 
-### 3.4 Poor Fit for Complex Business Logic
+#### 3.4 Poor Fit for Complex Business Logic
 
 * Modeling aggregates, business rules, or workflows around tables leads to scattered logic.
 * Hard to implement concepts like **ubiquitous language** or **bounded contexts**.
@@ -63,22 +63,22 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ## ⚙️ 4. Key Patterns in DBDD
 
-### 4.1 Table-Centric Modeling
+#### 4.1 Table-Centric Modeling
 
 * Tables map directly to classes or structs.
 * Foreign keys become object references.
 
-### 4.2 Stored Procedures for Logic
+#### 4.2 Stored Procedures for Logic
 
 * Business rules and workflows are encoded into SQL stored procedures.
 * Reduces duplication, but makes testing and version control harder.
 
-### 4.3 ORM-First Development
+#### 4.3 ORM-First Development
 
 * Tools like Hibernate, EF Core, or Sequelize are used to auto-generate models.
 * Migrations often driven by schema diffs.
 
-### 4.4 Repository as Table Wrapper
+#### 4.4 Repository as Table Wrapper
 
 * Repositories act more like **table access utilities**, with minimal domain understanding.
 * Methods like `findAll()`, `save()`, and `deleteById()` dominate.
@@ -125,24 +125,24 @@ Many teams start with DBDD and eventually hit its limits. Signs it's time to evo
 
 Yes — DBDD and DDD *can* coexist when each is used in its appropriate layer and role.
 
-### 8.1 Different Layers, Different Priorities
+#### 8.1 Different Layers, Different Priorities
 
 * Use **DDD** in the domain and application layers where business logic lives.
 * Use **DBDD** in the infrastructure and persistence layers to model storage and reporting.
 
 > Example: A rich `Order` aggregate can be stored using a normalized SQL schema, with translation layers in between.
 
-### 8.2 Gradual Adoption with Anti-Corruption Layers
+#### 8.2 Gradual Adoption with Anti-Corruption Layers
 
 * In legacy systems, wrap the database schema with an ACL so that domain logic evolves independently.
 * This allows a progressive transition from DBDD to DDD.
 
-### 8.3 Combine for Read/Write Optimization (CQRS)
+#### 8.3 Combine for Read/Write Optimization (CQRS)
 
 * Use **DDD** for commands and complex workflows.
 * Use **DBDD** for simple read models or reporting views.
 
-### 8.4 Apply DBDD to Generic Subdomains
+#### 8.4 Apply DBDD to Generic Subdomains
 
 * Use DBDD in parts of the system like authentication, logging, or permissions.
 * Focus DDD modeling efforts on the **Core Domain**.

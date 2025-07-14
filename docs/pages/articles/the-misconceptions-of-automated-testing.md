@@ -10,7 +10,7 @@ This article aims to clear up the confusion around automated testing: what it is
 
 Automated testing refers to the practice of writing code that verifies the correctness of other code. These tests are run automatically and repeatedly — during development, on every commit, and before deployments — to ensure that behavior remains correct over time.
 
-### Key Categories of Automated Tests:
+#### Key Categories of Automated Tests:
 
 * **Unit Tests** – test small, isolated units of logic (functions, methods)
 * **Integration Tests** – test the interaction between components or systems
@@ -34,7 +34,7 @@ TDD encourages thoughtful design, fast feedback, and a robust safety net for fut
 
 ## 🚫 What Automated Testing *Is Not*
 
-### Misconception: “If something broke in production, you didn’t test it.”
+#### Misconception: “If something broke in production, you didn’t test it.”
 
 A real example: A language model (LLM) mistakenly placed a link in the wrong menu. A manager noticed it and asked, “Didn’t you test?”
 
@@ -101,13 +101,13 @@ They should be fast, isolated, and deterministic. Good unit tests help prevent r
 
 Two popular mental models exist to guide test strategy:
 
-### The Testing Pyramid:
+#### The Testing Pyramid:
 
 * Base: **Unit tests** (fast, numerous)
 * Middle: **Integration tests** (fewer, broader scope)
 * Top: **E2E tests** (few, slowest)
 
-### The Testing Trophy:
+#### The Testing Trophy:
 
 * Emphasizes **more integration tests** than unit tests
 * Still includes E2E at the top, but acknowledges the growing ease and value of integration-level testing in modern apps
@@ -132,22 +132,22 @@ Focus your testing effort on **your business logic, data transformations, and ed
 
 ## 🧰 Writing Better Tests
 
-### 1. **Name tests clearly**
+#### 1. **Name tests clearly**
 
 * Good: `it('should update a user's email when confirmed')`
 * Bad: `it('does something')`
 
-### 2. **Avoid over-mocking**
+#### 2. **Avoid over-mocking**
 
 * Mocks are powerful but can lead to brittle, misleading tests
 * Prefer real collaborators where possible, especially in integration tests
 
-### 3. **Keep tests focused**
+#### 3. **Keep tests focused**
 
 * One behavior per test
 * Don’t assert on every UI element in one mega-test
 
-### 4. **Use test data factories**
+#### 4. **Use test data factories**
 
 * Avoid repetitive fixtures or hardcoded data
 
@@ -155,18 +155,18 @@ Focus your testing effort on **your business logic, data transformations, and ed
 
 ## 🔍 Types of Higher-Level Tests
 
-### End-to-End (E2E) Tests
+#### End-to-End (E2E) Tests
 
 * Simulate user flows (e.g., login, checkout)
 * Validate app behavior from front to back
 * Can be slow but invaluable for confidence
 
-### Acceptance Tests
+#### Acceptance Tests
 
 * Written to reflect business requirements
 * Answer the question: *Does this do what the business/user expects?*
 
-### Stress Tests
+#### Stress Tests
 
 * Push the app beyond its normal load
 * Uncover memory leaks, concurrency issues, or performance bottlenecks

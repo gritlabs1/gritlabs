@@ -10,7 +10,7 @@ This guide covers the **core strategic and tactical patterns** you need to imple
 
 Strategic DDD focuses on **organizational and architectural structure** — how to align software boundaries with business reality.
 
-### 1.1 Bounded Contexts
+#### 1.1 Bounded Contexts
 
 A *bounded context* defines a **semantic boundary** within which a particular domain model applies. Different bounded contexts can use the same terms to mean different things.
 
@@ -24,7 +24,7 @@ A *bounded context* defines a **semantic boundary** within which a particular do
 
 ---
 
-### 1.2 Ubiquitous Language
+#### 1.2 Ubiquitous Language
 
 Inside each bounded context, developers and domain experts **use the same terminology** — in conversation, code, and documentation.
 
@@ -38,7 +38,7 @@ Inside each bounded context, developers and domain experts **use the same termin
 
 ---
 
-### 1.3 Subdomains
+#### 1.3 Subdomains
 
 Not all parts of the system are equally important.
 
@@ -53,7 +53,7 @@ Not all parts of the system are equally important.
 
 ---
 
-### 1.4 Context Mapping
+#### 1.4 Context Mapping
 
 Defines the **relationships** between different bounded contexts.
 
@@ -72,7 +72,7 @@ Defines the **relationships** between different bounded contexts.
 
 Once you've defined your bounded contexts, DDD provides **tactical tools** to model the internals.
 
-### 2.1 Entities
+#### 2.1 Entities
 
 Objects with:
 
@@ -83,7 +83,7 @@ Objects with:
 
 ---
 
-### 2.2 Value Objects
+#### 2.2 Value Objects
 
 * **Immutable**
 * No identity
@@ -94,7 +94,7 @@ Objects with:
 
 ---
 
-### 2.3 Aggregates and Aggregate Roots
+#### 2.3 Aggregates and Aggregate Roots
 
 Aggregates are **clusters of related entities and value objects** that are treated as a single unit of consistency.
 
@@ -105,7 +105,7 @@ Aggregates are **clusters of related entities and value objects** that are treat
 
 ---
 
-### 2.4 Domain Services
+#### 2.4 Domain Services
 
 Some domain logic doesn’t fit into a single entity or value object.
 
@@ -119,7 +119,7 @@ Domain services:
 
 ---
 
-### 2.5 Repositories
+#### 2.5 Repositories
 
 Repositories **abstract the persistence layer**, providing access to aggregates without leaking data storage concerns.
 
@@ -130,7 +130,7 @@ Repositories **abstract the persistence layer**, providing access to aggregates 
 
 ---
 
-### 2.6 Factories
+#### 2.6 Factories
 
 Factories handle **complex creation logic** when constructors are insufficient.
 
@@ -141,7 +141,7 @@ Factories handle **complex creation logic** when constructors are insufficient.
 
 ---
 
-### 2.7 Domain Events
+#### 2.7 Domain Events
 
 Domain events **capture significant business occurrences**.
 
@@ -155,7 +155,7 @@ Domain events **capture significant business occurrences**.
 
 ## 📼 3. Architectural Implications
 
-### 3.1 Layered Architecture
+#### 3.1 Layered Architecture
 
 Typical layering in DDD:
 
@@ -167,7 +167,7 @@ Typical layering in DDD:
 
 ---
 
-### 3.2 Anti-Corruption Layers (ACL)
+#### 3.2 Anti-Corruption Layers (ACL)
 
 ACLs sit at the **boundary between contexts** to **translate models** and protect your internal domain from leaking in external constraints or inconsistencies.
 
@@ -175,7 +175,7 @@ ACLs sit at the **boundary between contexts** to **translate models** and protec
 
 ---
 
-### 3.3 Integration and Messaging
+#### 3.3 Integration and Messaging
 
 In modern systems (microservices, event-driven), DDD aligns well with asynchronous messaging:
 

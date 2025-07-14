@@ -16,6 +16,7 @@ An LLM managing the navigation menu must:
 
 - Sort articles listed in `docs/mkdocs.yml` under the **Articles** section by commit date, newest first and oldest last.
 - Ensure the article **The Fragile Genius of LLMs** remains the third item listed under the **Articles** section of `docs/mkdocs.yml`.
+- Articles must not contain `<h3>` HTML heading tags. Replace any detected `<h3>` elements with `<h4>`.
 
 ---
 
