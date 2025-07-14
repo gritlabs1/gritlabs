@@ -20,7 +20,7 @@ The **Angular Tasks App** demonstrates embedding a remote Angular widget inside 
 
 ### Features
 
-- **Remote Loading:** The Angular application is loaded from `https://widgets.gritlabs.net/` only when the modal opens.
+- **Remote Loading:** The Angular application is loaded from `https://widgets.gritlabs.net/task-list` only when the modal opens.
 - **Resource Cleanup:** The iframe is removed when the modal closes.
 - **Error Handling:** Displays a friendly message if the widget fails to load.
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function showIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
-      iframe.src = "https://widgets.gritlabs.net/";
+      iframe.src = "https://widgets.gritlabs.net/task-list";
       iframe.title = "Angular Tasks App";
       iframe.onload = () => {
         const err = modalContent.querySelector(".error-msg");
