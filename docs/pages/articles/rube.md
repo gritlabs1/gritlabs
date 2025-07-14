@@ -80,7 +80,7 @@ A balanced layout brings calm. Whether through symmetry or deliberate asymmetry,
 
 <figure class="rube-figure" style="max-width: 650px !important; margin-right: auto; margin-left: auto;">
   <br />
-  <img class="rube-article" src="../rube-imgs/emphasis.png" alt="emphasis" style="max-width: 650px !important;" />
+  <img class="rube-article" src="../rube-imgs/balance.png" alt="balance" style="max-width: 650px !important;" />
   <figcaption style="max-width: 650px !important; font-size: 0.85em; color: #555; margin-top: 8px;">
     *Above: “Schachfiguren, Bauern -- 2022 -- 0022 (bw)” by 
     <a href="https://commons.wikimedia.org/wiki/User:Dietmar_Rabich" target="_blank" rel="noopener noreferrer">Dietmar Rabich</a>, via 
