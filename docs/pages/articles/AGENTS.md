@@ -14,6 +14,7 @@ These rules apply only within the `articles/` folder. They govern navigation ord
 
 An LLM managing the navigation menu must:
 
+- Sort articles listed in `docs/mkdocs.yml` under the **Articles** section by commit date, newest first and oldest last.
 - Ensure the article **The Fragile Genius of LLMs** remains the third item listed under the **Articles** section of `docs/mkdocs.yml`.
 
 ---

@@ -34,6 +34,8 @@ An LLM working in this repo should:
 * Follow each directive literally; **no speculative extrapolation**
 * **Place all JavaScript files in the `docs/pages/_static` directory**
 * Consult the templates in `docs/pages/templates1` to synchronize terminology and directive language with the human user
+* Keep article links out of the top-level navigation; list them within the "Articles" vertical menu in `docs/mkdocs.yml`.
+* Sort articles in that menu by commit date, newest first, unless a folder-specific rule overrides the order.
 
 ---
 
