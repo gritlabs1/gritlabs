@@ -39,12 +39,13 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - The Misconceptions of Automated Testing: articles/the-misconceptions-of-automated-testing.md
       - Domain-Driven Design: articles/domain-driven-design.md
-      - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
       - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
+      - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
       - Code Review Best Practices: articles/code-review-best-practices.md
-      - Continuous Integration: articles/continuous-integration.md
       - RUBE Four-Point Design: articles/rube.md
+      - Continuous Integration: articles/continuous-integration.md
       - AI-Generated Content and Attribution: articles/ai-generated-content-and-attribution.md
       - Best Practices for Closing Pull Requests: articles/closing-pull-requests.md
       - Top 10 Website Features: articles/top-10-website-features.md
