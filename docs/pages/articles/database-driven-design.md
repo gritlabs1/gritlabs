@@ -14,7 +14,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## ✨ 2. Benefits of DBDD
+## ✨ 2. Benefits
 
 #### 2.1 Simpler for CRUD-heavy Applications
 
@@ -37,7 +37,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## ⚠️ 3. Drawbacks of DBDD
+## ⚠️ 3. Drawbacks 
 
 #### 3.1 Rigid and Inflexible
 
@@ -61,7 +61,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## ⚙️ 4. Key Patterns in DBDD
+## ⚙️ 4. Key Patterns 
 
 #### 4.1 Table-Centric Modeling
 
@@ -100,7 +100,7 @@ DBDD is not inherently bad — it shines in certain contexts:
 
 ## ❌ 6. When NOT to Use DBDD
 
-Avoid DBDD when:
+Avoid when:
 
 * You're modeling **complex business processes**, decisions, or rules
 * You want **encapsulated domain models** with behavior
