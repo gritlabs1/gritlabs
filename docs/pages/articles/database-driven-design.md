@@ -1,4 +1,4 @@
-# \ud83d\udcca A Database-Driven Design
+# 📊 A Database-Driven Design
 
 While Domain-Driven Design (DDD) puts the business domain at the center of software modeling, **Database-Driven Design (DBDD)** flips the perspective: the structure and behavior of the application are **modeled around the database schema**. This approach is common in legacy systems, CRUD-heavy applications, and teams that prioritize data persistence and reporting.
 
@@ -6,7 +6,7 @@ This article explores what Database-Driven Design is, its benefits and drawbacks
 
 ---
 
-## \ud83e\udd1d 1. What is Database-Driven Design?
+## 🤝 1. What is Database-Driven Design?
 
 In Database-Driven Design, the **relational database schema** becomes the source of truth. Application logic is designed **around tables**, foreign key constraints, and SQL queries. Object models are usually generated or manually mapped to match the schema.
 
@@ -14,7 +14,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## \u2728 2. Benefits of DBDD
+## ✨ 2. Benefits of DBDD
 
 ### 2.1 Simpler for CRUD-heavy Applications
 
@@ -37,7 +37,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## \u26a0\ufe0f 3. Drawbacks of DBDD
+## ⚠️ 3. Drawbacks of DBDD
 
 ### 3.1 Rigid and Inflexible
 
@@ -61,7 +61,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## \u2699\ufe0f 4. Key Patterns in DBDD
+## ⚙️ 4. Key Patterns in DBDD
 
 ### 4.1 Table-Centric Modeling
 
@@ -85,7 +85,7 @@ In Database-Driven Design, the **relational database schema** becomes the source
 
 ---
 
-## \ud83d\udcdd 5. When to Use Database-Driven Design
+## 📝 5. When to Use Database-Driven Design
 
 DBDD is not inherently bad — it shines in certain contexts:
 
@@ -94,11 +94,11 @@ DBDD is not inherently bad — it shines in certain contexts:
 * **Legacy environments**: Where the schema already exists and can’t change easily
 * **Tight SQL workflows**: Apps that rely heavily on performant queries or direct BI consumption
 
-> \u2709\ufe0f Tip: In reporting or warehouse-focused systems, the schema *is* the domain.
+> ✉️ Tip: In reporting or warehouse-focused systems, the schema *is* the domain.
 
 ---
 
-## \u274c 6. When NOT to Use DBDD
+## ❌ 6. When NOT to Use DBDD
 
 Avoid DBDD when:
 
@@ -109,7 +109,7 @@ Avoid DBDD when:
 
 ---
 
-## \ud83d\udd27 7. Transitioning to Domain-Centric Thinking
+## 🔧 7. Transitioning to Domain-Centric Thinking
 
 Many teams start with DBDD and eventually hit its limits. Signs it's time to evolve:
 
@@ -121,7 +121,7 @@ Many teams start with DBDD and eventually hit its limits. Signs it's time to evo
 
 ---
 
-## \u2696\ufe0f 8. Can DBDD and DDD Be Used Together?
+## ⚖️ 8. Can DBDD and DDD Be Used Together?
 
 Yes — DBDD and DDD *can* coexist when each is used in its appropriate layer and role.
 
@@ -147,11 +147,11 @@ Yes — DBDD and DDD *can* coexist when each is used in its appropriate layer an
 * Use DBDD in parts of the system like authentication, logging, or permissions.
 * Focus DDD modeling efforts on the **Core Domain**.
 
-> \u26a0\ufe0f Avoid forcing domain models to map 1:1 to schemas. Let the domain model reflect business needs; let the database support it.
+> ⚠️ Avoid forcing domain models to map 1:1 to schemas. Let the domain model reflect business needs; let the database support it.
 
 ---
 
-## \ud83e\udd14 Final Thoughts
+## 🤔 Final Thoughts
 
 Database-Driven Design remains a useful and pragmatic approach for **data-centric systems**. It excels in predictable CRUD scenarios but struggles with **evolving business logic** and **domain complexity**.
 
