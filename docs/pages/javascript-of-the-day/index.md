@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function loadIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
-      iframe.src = "https://widgets.gritlabs.net/";
+      iframe.src = "https://widgets.gritlabs.net/task-list";
       iframe.title = "Angular Tasks App";
       iframe.onload = () => {
         const err = modalContent.querySelector(".error-msg");
