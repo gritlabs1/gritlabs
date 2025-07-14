@@ -30,6 +30,7 @@ markdown_extensions:
   - codehilite
   
 nav:                             # make your own nav order
+  - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
   
   - Templates: 
       - README.md: templates1/README.md # cannot use "templates"
@@ -39,8 +40,9 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
-      - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
+      - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
       - Continuous Integration: articles/continuous-integration.md
+      - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
       - AI-Generated Content and Attribution: articles/ai-generated-content-and-attribution.md
       - Best Practices for Closing Pull Requests: articles/closing-pull-requests.md
       - RUBE Four-Point Design: articles/rube.md
