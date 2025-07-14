@@ -23,3 +23,6 @@ An LLM managing the navigation menu must:
 
 - Do not rename `articles/the_fragile_genius_of_llms.md`.
 - Count menu entries from top to bottom when validating its position.
+- Articles must display Unicode characters directly rather than using escape
+  sequences. Ensure saved files use UTF-8 encoding so emoji and other symbols
+  appear correctly.
