@@ -39,9 +39,10 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - A Database-Driven Design: articles/database-driven-design.md
       - The Misconceptions of Automated Testing: articles/the-misconceptions-of-automated-testing.md
-      - Domain-Driven Design: articles/domain-driven-design.md
       - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
+      - Domain-Driven Design: articles/domain-driven-design.md
       - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
       - Code Review Best Practices: articles/code-review-best-practices.md
       - RUBE Four-Point Design: articles/rube.md
