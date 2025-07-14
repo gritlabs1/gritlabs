@@ -53,6 +53,7 @@ nav:                             # make your own nav order
       - Program to an Interface: articles/program-to-an-interface.md
   - JavaScript of the Day:
       - Today's App: javascript-of-the-day/index.md
+      - 7/16/25 Angular Mutex Buttons: javascript-of-the-day/angular-mutex-buttons.md
       - 7/15/25 Angular Tasks: javascript-of-the-day/angular-tasks.md
       - 7/14/25 Smart JS Tasks: javascript-of-the-day/smart-js-tasks.md
       - 7/13/25 Hello World: javascript-of-the-day/hello-world.md
