@@ -1,8 +1,8 @@
-# JavaScript of the Day
+# Angular Grid App
 
-Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
+### Try It Now
 
-The featured project is an Angular Grid application written in TypeScript and compiled to JavaScript. Click the button below to try it without leaving the page.
+To test the **Angular Grid App** yourself and see the functionality in action, click the link below:
 
 <!-- Button to open modal -->
 <button id="openModalButton" class="cta-btn">Open Angular Grid App</button>
@@ -14,6 +14,16 @@ The featured project is an Angular Grid application written in TypeScript and co
   </div>
 </div>
 
+### Overview
+
+The **Angular Grid App** demonstrates embedding a remote AG Grid widget inside a modal. The widget comes from an external source and runs entirely in an iframe.
+
+### Features
+
+- **Remote Loading:** The Angular application is loaded from `https://widgets.gritlabs.net/ag-grid-demo` only when the modal opens.
+- **Resource Cleanup:** The iframe is removed when the modal closes.
+- **Error Handling:** Displays a friendly message if the widget fails to load.
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("angular-gridModal");
@@ -21,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
 
-  function loadIframe() {
+  function showIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
       iframe.src = "https://widgets.gritlabs.net/ag-grid-demo";
@@ -49,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   openBtn.addEventListener("click", () => {
-    loadIframe();
+    showIframe();
     modal.style.display = "flex";
   });
   closeBtn.addEventListener("click", closeModalFn);
