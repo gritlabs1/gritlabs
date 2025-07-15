@@ -29,7 +29,6 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Dependency** | A directional “depends‑on” relationship recorded in **Component Dependencies**. |
 | **Dependency Type** | One of **White‑box**, **Black‑box**, or **Product**, defining how much internal knowledge is documented. |
 | **Directive** | A specific, structured instruction, rule, or behavioral constraint that guides or governs how an LLM or agent should act, respond, or format its output. Directives may define roles, constraints, protocols, or reasoning strategies. They can be embedded within prompts, referenced from external files (such as agent configs or documentation), or managed separately for reuse and consistency. Directives are often persistent or reusable across multiple prompts or sessions. |
-| **Fail Until It Works** | Mind‑set of iterating rapidly—accepting early failure and leveraging LLM creativity until validity emerges. |
 | **Known Issues** | A curated list of significant, user‑reported or internally identified problems that warrant tracking. This does **not** represent all bugs — only issues important enough to monitor publicly or resolve deliberately. |
 | **LLM Precision Expectation** | Reminder: LLM output may contain errors; treat versions/outputs as approximations, validate critical details manually. |
 | **Notes** | The cumulative set of Action Notes gathered for context during a Rotation. |
@@ -37,9 +36,8 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Prompt** | The complete, structured input delivered to a language model (LLM) or AI agent to initiate a response or action. A prompt may include user instructions, contextual information, queries, or other data. Prompts often incorporate one or more directives, but are not limited to them. Prompts are typically transient, constructed for each LLM interaction, and may embed directives, user questions, context, and references to system artifacts. |
 | **Rotation** | The LLM‑driven loop that reviews Notes & Triggers, (re)generates the Action Schema, and increments its version. |
 | **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. <br /><br />Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
-| **Test Case / Validation Check** | Concrete proof (file, URL, automated test) that an Action Item or Goal is complete. |
+| **Test Case / Validation Check** | Concrete proof—typically an artifact or its output (file, URL, automated test results)—that an Action Item or Goal meets its acceptance criteria and is complete. |
 | **Triggers** | The set of Action Triggers indicating events that drive updates or validations during a Rotation. |
-| **We Only Know What We’re Doing Now** | Acceptance that only the next action is trusted; future plans are discarded unless re‑validated. |
 
 
 ## 🔑 Guiding Principles (A → Z)

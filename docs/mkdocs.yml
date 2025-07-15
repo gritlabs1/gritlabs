@@ -11,10 +11,15 @@ theme:
     - scheme: default            # ── light mode ──
       primary: indigo
       accent: indigo
-    - scheme: slate              # ── dark mode ──
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+    - scheme: slate              # ── dark mode ──
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
@@ -39,14 +44,19 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - "Event-Driven Architecture (EDA)": articles/event-driven-architecture.md
+      - "Navigation Properties in .NET: When, Why, and How": articles/navigation-properties-in-dot-net.md
+      - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
+      - CQRS (Command Query Responsibility Segregation): articles/cqrs-command-query-responsibility-segregation.md
+      - Cherry Picking Only What's Safe: articles/cherry-picking-only-whats-safe.md
+      - Vertical Slice Architecture: articles/vertical-slice-architecture.md
+      - Program to an Interface: articles/program-to-an-interface.md
       - Module Federation: articles/module-federation.md
       - Clean Architecture: articles/clean-architecture.md
       - RUBE Four-Point Design: articles/rube.md
-      - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
       - A Database-Driven Design: articles/database-driven-design.md
       - The Misconceptions of Automated Testing: articles/the-misconceptions-of-automated-testing.md
       - Domain-Driven Design: articles/domain-driven-design.md
-      - Program to an Interface: articles/program-to-an-interface.md
       - Code Review Best Practices: articles/code-review-best-practices.md
       - Top 10 Website Features: articles/top-10-website-features.md
       - Using Puppeteer to Simulate User Interaction: articles/using-puppeteer-to-simulate-user-interaction.md
