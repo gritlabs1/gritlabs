@@ -1,7 +1,7 @@
 # 🌟 Program to an Interface
 
 
-#### Overview
+## Overview
 
 **"Program to an interface, not an implementation" isn’t just some dry software mantra — it’s a timeless design philosophy with real bite.** It helps your code stay nimble, modular, and ready for whatever weird feature request comes flying your way at 4 PM on a Friday.
 
@@ -9,9 +9,9 @@
 
 ---
 
-#### 💡 Design Philosophy vs. Language Feature
+## 💡 Design Philosophy vs. Language Feature
 
-##### ✅ **Design Philosophy**
+#### ✅ **Design Philosophy**
 
 This principle isn’t about syntax; it’s about **how you think**. Programming to an interface means writing code that depends on *what something does*, not *how it does it*. And that leads to:
 
@@ -22,7 +22,7 @@ This principle isn’t about syntax; it’s about **how you think**. Programming
 
 Any language that supports abstraction — interfaces, traits, duck typing, protocols, vibes — can ride this train.
 
-##### ⚙️ **Language Feature**
+#### ⚙️ **Language Feature**
 
 Languages help in different ways:
 
@@ -35,7 +35,7 @@ Languages help in different ways:
 
 ---
 
-#### 📦 Real-World Example
+## 📦 Real-World Example
 
 ```java
 interface PaymentProcessor {
@@ -53,7 +53,7 @@ Your app doesn’t care which one it’s using. It just calls `charge()` and get
 
 ---
 
-#### 🔑 Takeaway
+## 🔑 Takeaway
 
 Think of this principle as your software design compass:
 
