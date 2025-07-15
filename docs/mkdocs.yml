@@ -11,10 +11,15 @@ theme:
     - scheme: default            # ── light mode ──
       primary: indigo
       accent: indigo
-    - scheme: slate              # ── dark mode ──
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+    - scheme: slate              # ── dark mode ──
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
