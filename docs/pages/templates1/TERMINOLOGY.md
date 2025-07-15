@@ -36,7 +36,7 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Prompt** | The complete, structured input delivered to a language model (LLM) or AI agent to initiate a response or action. A prompt may include user instructions, contextual information, queries, or other data. Prompts often incorporate one or more directives, but are not limited to them. Prompts are typically transient, constructed for each LLM interaction, and may embed directives, user questions, context, and references to system artifacts. |
 | **Rotation** | The LLM‑driven loop that reviews Notes & Triggers, (re)generates the Action Schema, and increments its version. |
 | **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. <br /><br />Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
-| **Test Case / Validation Check** | Concrete proof (file, URL, automated test) that an Action Item or Goal is complete. |
+| **Test Case / Validation Check** | Concrete proof—typically an artifact or its output (file, URL, automated test results)—that an Action Item or Goal is complete. |
 | **Triggers** | The set of Action Triggers indicating events that drive updates or validations during a Rotation. |
 
 
