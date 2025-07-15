@@ -2,13 +2,13 @@
 
 Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The featured project is an Angular Grid application written in TypeScript and compiled to JavaScript. Click the button below to try it without leaving the page.
+The featured project is an Angular Tasks application written in vanilla JavaScript. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
-<button id="openModalButton" class="cta-btn">Open Angular Grid App</button>
+<button id="openModalButton" class="cta-btn">Open Angular Tasks App</button>
 
 <!-- Modal -->
-<div id="angular-gridModal">
+<div id="angular-tasksModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
   </div>
@@ -16,23 +16,23 @@ The featured project is an Angular Grid application written in TypeScript and co
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("angular-gridModal");
+  const modal = document.getElementById("angular-tasksModal");
   const modalContent = document.getElementById("modalContent");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
 
-  function loadIframe() {
+  function showIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
-      iframe.src = "https://widgets.gritlabs.net/ag-grid-demo";
-      iframe.title = "Angular Grid App";
+      iframe.src = "https://widgets.gritlabs.net/task-list";
+      iframe.title = "Angular Tasks App";
       iframe.onload = () => {
         const err = modalContent.querySelector(".error-msg");
         if (err) err.remove();
       };
       iframe.onerror = () => {
         const err = document.createElement("div");
-        err.textContent = "Failed to load Angular Grid app.";
+        err.textContent = "Failed to load Angular Tasks app.";
         err.className = "error-msg";
         modalContent.appendChild(err);
       };
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   openBtn.addEventListener("click", () => {
-    loadIframe();
+    showIframe();
     modal.style.display = "flex";
   });
   closeBtn.addEventListener("click", closeModalFn);
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
-#angular-gridModal {
+#angular-tasksModal {
   position: fixed;
   top: 0;
   left: 0;
