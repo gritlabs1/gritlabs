@@ -44,7 +44,7 @@ You will be given:
 
 5. **Do not overwrite past Action Schemas.** Each Rotation must produce a new, separately versioned schema.
 
-   > :memo: **NOTE:** Because past Action Schemas must not be overwritten, managing Action Items using Canvas is strictly prohibited.
+   > 📝 **NOTE:** Because past Action Schemas must not be overwritten, managing Action Items using Canvas is prohibited.
 
 6. Return **only** the updated Action Schema table (with updated title/version line)—no narrative explanations or commentary.
 

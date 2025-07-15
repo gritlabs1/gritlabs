@@ -10,7 +10,7 @@ jobs:
     runs-on: self-hosted
 
     env:
-      DEPLOY_PATH: "C:/gritlabs"          # adjust once you decide the IIS path
+      DEPLOY_PATH: "C:/gritlabs/wwwroot"          # adjust once you decide the IIS path
 
     steps:
     - uses: actions/checkout@v4

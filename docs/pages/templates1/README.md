@@ -1,7 +1,7 @@
 # Grit Labs 
 
 Grit Labs is a structured framework that guides language models through iterative execution.  
-It focuses on clear, immediate tasks—avoiding speculative planning—and relies on concise Markdown templates with strictly defined language to steer the model’s reasoning. When projects require explicit tracking, Grit Labs can generate verifiable artifacts such as `GOALS.md` to express features and `DEPENDENCY_MODELING.md` for component relationships.
+It focuses on clear, immediate tasks—avoiding speculative planning—and relies on concise Markdown templates with strictly defined language to steer the model’s reasoning. When projects require explicit tracking, Grit Labs can generate verifiable artifacts such as using `GOALS.md` to express features and using `DEPENDENCY_MODELING.md` to build component relationships.
 
 
 Grit Labs optimizes for:
@@ -84,7 +84,7 @@ Grit Labs optimizes for:
 * Defines the **Problem Space** for the current rotation  
 * Updates Action Items via **Notes** and **Triggers**  
 * Executes fully in the present moment  
-* Treats every Action Schema as an immutable snapshot
+* Treats the **Action Items table** as an immutable snapshot
 
 ---
 
@@ -184,7 +184,6 @@ Then open `http://localhost:8000` in your browser.
 
 All content in this repository is licensed under the **GNU Affero General Public License v3.0 (AGPL)**.
 
-> The Grit Structured Language (GSL), including its syntax, structure, and semantics, is proprietary to Grit Labs. Any reuse, adaptation, or integration requires express permission unless covered by AGPL compliance.
 
 See [`LICENSE`](https://github.com/gritlabs1/gritlabs/blob/main/LICENSE) for full terms.
 

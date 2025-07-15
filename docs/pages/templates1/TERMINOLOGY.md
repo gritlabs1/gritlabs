@@ -8,11 +8,9 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 
 | Directive / Artifact | Primary Role | Plain‑Language Purpose |
 | --- | --- | --- |
-| **Grit Labs Action Schema** | Defines the table | Specifies how Action Items are formatted, versioned, and validated. |
+| **Action Schema** | Defines the table | Specifies how Action Items are formatted, versioned, and validated. |
 | **Grit Labs Terminology** | Defines the language | Keeps meanings stable so schemas & directives stay interpretable. |
 | **Rotation Directive** | How to use the table | Instructs the LLM to process Notes & Triggers and emit a new Action Schema snapshot. |
-| **GOALS.md** | Traceable reasoning | Provides hierarchical Missions → Goals → Acceptance Tests that Action Items can reference. |
-| **DEPENDENCY_MODELING.md** | Structural context | Maps reusable Components and their explicit dependencies to support Goals & Actions. |
 | **Template Upload Mode** | Sets session intent | 	Sets intent for how templates should be interpreted: `Shared Language` or `Execution`. <br> `Shared Language` (default) = align terminology only;<br />`Execution` = apply directives and perform Rotations.  |
 
 * * *
@@ -24,41 +22,25 @@ _A curated vocabulary that lets humans **and** language models interpret every G
 | **Action Item** | A discrete task to be completed. _(Example:_ “Request transcript delivery confirmation.”_)_ |
 | **Action Note** | New information (email, chat, news, etc.) that may change sequencing or validation of Action Items. |
 | **Action Trigger** | A specific event/input (e.g., a support‑ticket closure) that forces an Action Schema update. |
-| **AGENTS.md** | A Markdown file containing one or more **LLM-only prompt-executable directives**. Each `AGENTS.md` file defines automatic behaviors for language models operating within a given directory scope. These directives are always executed by LLMs, not humans. Root-level `AGENTS.md` files govern global rules; folder-level files govern local behavior. |
+| **Agent** | An autonomous entity—most often a language model or automated process—that interprets and executes structured directives. Agents operate by reading instructions (such as those found in `AGENTS.md` files), making decisions, and performing actions without direct human intervention. Their behavior is governed by explicit prompts, rules, or protocols designed for consistency and reproducibility. |
+| **AGENTS.md** | A Markdown configuration file containing one or more persistent directives designed to guide LLM or agent behavior within a defined directory scope. Directives in AGENTS.md are always executed by language models (not humans) and may define roles, constraints, or behavioral protocols. Root-level AGENTS.md files specify global rules; folder-level files provide context-specific or localized behavioral instructions. Prompts generated or executed within a directory may reference, inherit, or embed these directives to ensure consistent and intentional LLM-driven actions. |
 | **Backlog** | All Action Items **not** marked **Done ✅**. No separate backlog artifact exists. |
 | **Component** | A reusable building block recorded in the **Component Catalog** (e.g., library, service, concept). |
 | **Dependency** | A directional “depends‑on” relationship recorded in **Component Dependencies**. |
 | **Dependency Type** | One of **White‑box**, **Black‑box**, or **Product**, defining how much internal knowledge is documented. |
-| **Directive** | A **directive** is a structured instruction or behavioral guideline that governs how an AI agent or system component should act, respond, or interact. Directives encode role definitions, constraints, reasoning patterns, or communication protocols, and are used to ensure consistency, safety, and intentionality in LLM-driven workflows. <br /><br />Directives may be stored in various forms, including inline prompts, file-embedded tags, or dedicated `AGENTS.md` files (LLM-only). Not all directives require an `AGENTS.md`.|
-| **Entry Point** | A dependency designated as a starting node that links to one or more **Use Cases**. |
+| **Directive** | A specific, structured instruction, rule, or behavioral constraint that guides or governs how an LLM or agent should act, respond, or format its output. Directives may define roles, constraints, protocols, or reasoning strategies. They can be embedded within prompts, referenced from external files (such as agent configs or documentation), or managed separately for reuse and consistency. Directives are often persistent or reusable across multiple prompts or sessions. |
 | **Fail Until It Works** | Mind‑set of iterating rapidly—accepting early failure and leveraging LLM creativity until validity emerges. |
-| **Goal / Sub‑goal** | An objective defined in `GOALS.md`, recursively decomposed until it is actionable and testable. |
+| **Known Issues** | A curated list of significant, user‑reported or internally identified problems that warrant tracking. This does **not** represent all bugs — only issues important enough to monitor publicly or resolve deliberately. |
 | **LLM Precision Expectation** | Reminder: LLM output may contain errors; treat versions/outputs as approximations, validate critical details manually. |
-| **Mission** | The top‑level purpose statement that all Goals roll up to. |
-| **Optional Task** | A non‑blocking Action Item that can enhance a Rotation but is not strictly required. |
+| **Notes** | The cumulative set of Action Notes gathered for context during a Rotation. |
 | **Problem Space** | The portion of reality relevant, visible, and solvable **now**. Plans beyond this horizon are ignored until re‑validated. |
+| **Prompt** | The complete, structured input delivered to a language model (LLM) or AI agent to initiate a response or action. A prompt may include user instructions, contextual information, queries, or other data. Prompts often incorporate one or more directives, but are not limited to them. Prompts are typically transient, constructed for each LLM interaction, and may embed directives, user questions, context, and references to system artifacts. |
 | **Rotation** | The LLM‑driven loop that reviews Notes & Triggers, (re)generates the Action Schema, and increments its version. |
-| **Snapshot** | Any immutable, versioned artifact (Action Schema, GOALS.md version, etc.) produced during a Rotation. |
-| **Status** | Allowed progress states: **Not started**, **In progress ⏳**, **Done ✅**, **Pending**, **Optional**. |
 | **Templates** | A **template** is a structured artifact that encodes the rules, language, and expected behaviors for both humans and language models within the Grit Labs system. Templates include prescriptive formats (such as action schemas), shared vocabularies (terminology), and behavioral protocols (directives), enabling aligned execution, traceable reasoning, and reproducible decision-making. <br /><br />Templates may be human-authored, LLM-generated, or collaboratively maintained—and serve as versioned source-of-truth references for performing Rotations, tracking goals, managing dependencies, or updating actions. |
 | **Test Case / Validation Check** | Concrete proof (file, URL, automated test) that an Action Item or Goal is complete. |
-| **Use Case** | A description of what a **Product‑type Component** does; linked to an Entry Point in dependency modeling. |
-| **Version Line** | The single‑line PascalCase title followed by “— vX.Y” that prefixes every Action Schema snapshot. |
+| **Triggers** | The set of Action Triggers indicating events that drive updates or validations during a Rotation. |
 | **We Only Know What We’re Doing Now** | Acceptance that only the next action is trusted; future plans are discarded unless re‑validated. |
 
-* * *
-
-## 🛠 Auxiliary Terms (A → Z)
-
-| Term | Definition |
-| --- | --- |
-| **Application Case** | A practical demonstration that exercises a Use Case, showing problem → solution. |
-| **Component Catalog** | Table (or DB) listing every unique Component. No self‑references allowed. |
-| **Component Dependencies** | Table capturing explicit dependency rows among Components (directional). |
-| **Conventional‑Commit Tag** | The `Tag` column value in the Action Schema (e.g., `feat`, `fix`, `docs`, `meta`). |
-| **PascalCase** | Capitalize each word without spaces (e.g., `MyActionList`). Required in every Version Line. |
-
-* * *
 
 ## 🔑 Guiding Principles (A → Z)
 
