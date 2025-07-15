@@ -38,7 +38,7 @@ flowchart TD
 </pre>
 </div>
 
-### Key Rule:
+#### Key Rule:
 
 > **Dependencies must point inward** — outer layers can depend on inner layers, but never the reverse.
 
@@ -46,7 +46,7 @@ flowchart TD
 
 ## 🏛️ 2. Core Layers Explained
 
-### 2.1 Domain Layer (Entities)
+#### 2.1 Domain Layer (Entities)
 
 * Contains **business objects and rules**
 * Should have **no dependencies** on other layers
@@ -56,7 +56,7 @@ flowchart TD
 
 ---
 
-### 2.2 Application Layer (Use Cases)
+#### 2.2 Application Layer (Use Cases)
 
 * Contains **application-specific business rules**
 * Coordinates the flow of data to/from entities and external services
@@ -66,7 +66,7 @@ flowchart TD
 
 ---
 
-### 2.3 Interface Adapters (Controllers, Presenters, Gateways)
+#### 2.3 Interface Adapters (Controllers, Presenters, Gateways)
 
 * Converts data between formats: from UI/database into something the application layer understands
 * Implements interfaces defined in the inner layers
@@ -75,7 +75,7 @@ flowchart TD
 
 ---
 
-### 2.4 Frameworks & Drivers (Infrastructure)
+#### 2.4 Frameworks & Drivers (Infrastructure)
 
 * External tools and services: UI frameworks, ORMs, databases, messaging systems
 * Can be swapped out without affecting core logic

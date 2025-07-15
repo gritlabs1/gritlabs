@@ -2,13 +2,13 @@
 
 ---
 
-#### Introduction: The Paradox of LLMs
+## Introduction: The Paradox of LLMs
 
 LLMs are among the most powerful tools in today’s digital toolkit. They translate languages, write essays, summarize books, brainstorm marketing ideas, generate code—and yes, analyze bank statements. But they come with a fundamental flaw that often goes under-discussed: **inconsistent accuracy**. When it comes to deterministic tasks, like computing total balances from years of financial data or categorizing expenses, LLMs can be surprisingly effective—**until they aren't.**
 
 ---
 
-#### Use Case 1: Uploading Years of Bank Records
+## Use Case 1: Uploading Years of Bank Records
 
 Let’s say you feed an LLM several years' worth of bank transactions in tabular format. You ask it: *“What’s my total net inflow or current balance?”*
 
@@ -24,7 +24,7 @@ Because LLMs are **stochastic by design**. Unlike spreadsheets or Python scripts
 
 ---
 
-#### Use Case 2: Categorizing Expenses
+## Use Case 2: Categorizing Expenses
 
 Expense categorization plays more to an LLM's strengths:
 - Understanding contextual nuances of vendors and descriptions.
@@ -40,7 +40,7 @@ In this domain, LLMs often outperform traditional rules-based systems.
 
 ---
 
-#### The Achilles' Heel: Auditing and Verifiability
+## The Achilles' Heel: Auditing and Verifiability
 
 If you ask: *“Why did you get this number?”* or *“Which rows did you include in this category?”*—you may get a nice-sounding answer, but not a verifiable trace.
 
@@ -55,7 +55,7 @@ You may need to re-run the task multiple times, check results manually, or add r
 
 ---
 
-#### Stability vs. Stochasticity: The Human Need for Certainty
+## Stability vs. Stochasticity: The Human Need for Certainty
 
 Humans don’t just prefer stability—we *depend* on it. Our decisions, our predictions, and our institutions are built on unshakable foundations:
 
@@ -77,7 +77,7 @@ When it comes to tax reports, compliance audits, investor statements, or fraud d
 
 ---
 
-#### Where We Go From Here
+## Where We Go From Here
 
 To responsibly deploy LLMs in data-sensitive contexts, we need:
 
@@ -88,7 +88,7 @@ To responsibly deploy LLMs in data-sensitive contexts, we need:
 
 ---
 
-#### Conclusion: Amazing… with a Caveat
+## Conclusion: Amazing… with a Caveat
 
 LLMs are miraculous, but not magical. Their strength lies in reasoning, language, and pattern recognition—not numerical accuracy or repeatability.
 
