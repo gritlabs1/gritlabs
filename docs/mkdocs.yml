@@ -44,9 +44,10 @@ nav:                             # make your own nav order
       - DEPENDENCY_MODELING.md: templates1/DEPENDENCY_MODELING.md
       - DIRECTIVE.md: templates1/DIRECTIVE.md
   - Articles:
+      - Cherry Picking Only What's Safe: articles/cherry-picking-only-whats-safe.md
       - Vertical Slice Architecture: articles/vertical-slice-architecture.md
-      - Program to an Interface: articles/program-to-an-interface.md
       - The Fragile Genius of LLMs: articles/the_fragile_genius_of_llms.md
+      - Program to an Interface: articles/program-to-an-interface.md
       - Module Federation: articles/module-federation.md
       - Clean Architecture: articles/clean-architecture.md
       - RUBE Four-Point Design: articles/rube.md
