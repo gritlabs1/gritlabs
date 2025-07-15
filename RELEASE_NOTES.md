@@ -1,3 +1,25 @@
+### v1.0.0 - 2025-07-15
+
+#### 🚀 New Features
+- **Expanded JavaScript of the Day** with new demos: Dice Roller, Stopwatch, Hello World, Smart JS Tasks, Angular Tasks, Angular Mutex Buttons, and Angular Grid.
+- Added numerous articles covering Continuous Integration, Code Review Best Practices, Clean Architecture, Module Federation, Domain-Driven Design, Database-Driven Design, Automated Testing Misconceptions, and Puppeteer User Interaction.
+- Added a Visitor Tracking snippet and documented the "Known Issues" term in the terminology template.
+
+#### 🔧 Improvements
+- Reorganized article headings and updated navigation rules.
+- Removed the proprietary GSL notice and improved diagrams and build notices.
+
+#### 🛠️ Bug Fixes
+- Fixed deployment pipeline connection issues.
+- Corrected images and updated Angular Tasks links.
+
+#### 📘 Developer Notes
+- Introduced Angular Grid and Mutex Buttons widgets with sample prompts.
+- Updated AGENTS rules for daily JavaScript entries.
+
+#### 🧩 Breaking Changes
+- None
+
 ### v0.5.0 - 2025-07-09
 
 #### 🚀 New Features
