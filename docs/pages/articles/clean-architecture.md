@@ -12,15 +12,31 @@ Clean Architecture organizes software into concentric layers, each with a **clea
 
 At a high level, the architecture looks like this:
 
-```
-+-----------------------------+
-|       External Interfaces   |  (UI, APIs, DB, Frameworks)
-+-----------------------------+
-|        Application Layer    |  (Use cases, Interactors)
-+-----------------------------+
-|         Domain Layer        |  (Entities, Business rules)
-+-----------------------------+
-```
+<div style="text-align: center;">
+
+<pre class="mermaid" style="margin-left: auto; margin-right: auto;">
+
+flowchart TD
+  ext[External Interfaces] -- "(UI, APIs, DB, Frameworks)" --> extdesc[ ]
+  app[Application Layer] -- "(Use cases, Interactors)" --> appdesc[ ]
+  dom[Domain Layer] -- "(Entities, Business rules)" --> domdesc[ ]
+
+  %% Hide "desc" boxes to only show labels:
+  style extdesc fill:transparent,stroke:transparent
+  style appdesc fill:transparent,stroke:transparent
+  style domdesc fill:transparent,stroke:transparent
+
+  %% Rainbow node styles:
+  style ext fill:#FF5E5B,stroke:#FF5E5B,stroke-width:3px,color:#fff
+  style app fill:#FFB25B,stroke:#FFB25B,stroke-width:3px,color:#333
+  style dom fill:#41C7A7,stroke:#41C7A7,stroke-width:3px,color:#fff
+
+  %% Arrange vertically for clarity:
+  ext
+  app
+  dom
+</pre>
+</div>
 
 ### Key Rule:
 
