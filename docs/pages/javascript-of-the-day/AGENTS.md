@@ -232,3 +232,14 @@ All app assets must work seamlessly inside an `<iframe>` in a modal overlay. Avo
 ---
 
 *Additional sections such as delivery rules can follow below.*
+
+## 🗓️ Build Day Notice
+
+During any automated build, the agent must:
+
+- Check whether a new `JavaScript of the Day` entry exists for the current UTC date.
+- If no entry is found, replace the intro sentence in `index.md` with the following text:
+
+  > There is no app today for 'JavaScript of the Day'.
+
+- Leave all other content in `index.md` unchanged.
