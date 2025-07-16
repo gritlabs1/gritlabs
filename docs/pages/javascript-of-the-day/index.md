@@ -2,13 +2,13 @@
 
 Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The featured project is an Angular Tasks application written in vanilla JavaScript. Click the button below to try it without leaving the page.
+The featured project is a Number Guesser application written in vanilla JavaScript. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
-<button id="openModalButton" class="cta-btn">Open Angular Tasks App</button>
+<button id="openModalButton" class="cta-btn">Open Number Guesser App</button>
 
 <!-- Modal -->
-<div id="angular-tasksModal">
+<div id="number-guesserModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
   </div>
@@ -16,7 +16,7 @@ The featured project is an Angular Tasks application written in vanilla JavaScri
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("angular-tasksModal");
+  const modal = document.getElementById("number-guesserModal");
   const modalContent = document.getElementById("modalContent");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function showIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
-      iframe.src = "https://widgets.gritlabs.net/task-list";
-      iframe.title = "Angular Tasks App";
+      iframe.src = "../_static/apps/number-guesser/number-guesser.html";
+      iframe.title = "Number Guesser App";
       iframe.onload = () => {
         const err = modalContent.querySelector(".error-msg");
         if (err) err.remove();
       };
       iframe.onerror = () => {
         const err = document.createElement("div");
-        err.textContent = "Failed to load Angular Tasks app.";
+        err.textContent = "Failed to load Number Guesser app.";
         err.className = "error-msg";
         modalContent.appendChild(err);
       };
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
-#angular-tasksModal {
+#number-guesserModal {
   position: fixed;
   top: 0;
   left: 0;
