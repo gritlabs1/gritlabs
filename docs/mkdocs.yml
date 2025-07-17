@@ -65,6 +65,7 @@ nav:                             # make your own nav order
       - Best Practices for Closing Pull Requests: articles/closing-pull-requests.md
   - JavaScript of the Day:
       - Today's App: javascript-of-the-day/index.md
+      - 7/19/25 Kanban Board: javascript-of-the-day/kanban-board.md
       - 7/18/25 Number Guesser: javascript-of-the-day/number-guesser.md
       - 7/17/25 Angular Grid: javascript-of-the-day/angular-grid.md
       - 7/16/25 Angular Mutex Buttons: javascript-of-the-day/angular-mutex-buttons.md
