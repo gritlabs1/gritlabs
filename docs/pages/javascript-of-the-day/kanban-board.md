@@ -21,7 +21,7 @@ The **Kanban Board App** is a simple yet powerful task management tool that lets
 
 ### Features
 
-- **Add Tasks:** Enter a description and press **Add** to create a new task in the **To Do** column.
+- **Add Tasks:** Enter a description and press **Add** or hit **Enter** to create a new task in the **To Do** column.
 - **Drag and Drop:** Move tasks between columns to track progress.
 - **Persistent Storage:** The board state is saved in `localStorage`.
 
@@ -31,7 +31,7 @@ Demonstrates Codex's ability to build a more sophisticated application with drag
 
 ### How It Works
 
-1. **Create Tasks:** Type a task description and click **Add**. The task appears in the **To Do** column.
+1. **Create Tasks:** Type a task description, press **Enter** or click **Add**. The task appears in the **To Do** column.
 2. **Move Tasks:** Drag a task card to a different column to update its status.
 3. **Reload:** Refreshing the page restores your tasks from `localStorage`.
 

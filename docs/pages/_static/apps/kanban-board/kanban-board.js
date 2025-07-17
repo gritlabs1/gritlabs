@@ -28,13 +28,22 @@ function render() {
     });
 }
 
-addBtn.addEventListener('click', () => {
+function addTask() {
     const text = taskInput.value.trim();
     if (!text) return;
     tasks.push({ id: Date.now().toString(), text, status: 'todo' });
     taskInput.value = '';
     saveTasks();
     render();
+}
+
+addBtn.addEventListener('click', addTask);
+
+taskInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        addTask();
+    }
 });
 
 [todoCol, progressCol, doneCol].forEach(col => {
