@@ -39,8 +39,11 @@ function addTask() {
 
 addBtn.addEventListener('click', addTask);
 
-taskInput.addEventListener('keyup', e => {
+document.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.keyCode === 13) {
+        const tag = e.target.tagName.toLowerCase();
+        if (tag === 'textarea') return;
+        if (tag === 'input' && e.target !== taskInput) return;
         e.preventDefault();
         addTask();
     }
