@@ -2,13 +2,13 @@
 
 Welcome to **JavaScript of the Day**, a small corner of Grit Labs where we ask Codex to build a tiny, self contained JavaScript application. Each entry showcases how a language model can turn a short specification into runnable code. These projects are not meant to be production ready—instead they serve as simple, reproducible examples you can explore or extend on your own.
 
-The featured project is a Number Guesser application written in vanilla JavaScript. Click the button below to try it without leaving the page.
+The featured project is a Kanban Board application written in vanilla JavaScript. Click the button below to try it without leaving the page.
 
 <!-- Button to open modal -->
-<button id="openModalButton" class="cta-btn">Open Number Guesser App</button>
+<button id="openModalButton" class="cta-btn">Open Kanban Board App</button>
 
 <!-- Modal -->
-<div id="number-guesserModal">
+<div id="kanban-boardModal">
   <div id="modalContent">
     <span id="closeModal" class="close">&times;</span>
   </div>
@@ -16,7 +16,7 @@ The featured project is a Number Guesser application written in vanilla JavaScri
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("number-guesserModal");
+  const modal = document.getElementById("kanban-boardModal");
   const modalContent = document.getElementById("modalContent");
   const openBtn = document.getElementById("openModalButton");
   const closeBtn = document.getElementById("closeModal");
@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function showIframe() {
     if (!modalContent.querySelector("iframe")) {
       const iframe = document.createElement("iframe");
-      iframe.src = "../_static/apps/number-guesser/number-guesser.html";
-      iframe.title = "Number Guesser App";
+      iframe.src = "../_static/apps/kanban-board/kanban-board.html";
+      iframe.title = "Kanban Board App";
       iframe.onload = () => {
         const err = modalContent.querySelector(".error-msg");
         if (err) err.remove();
       };
       iframe.onerror = () => {
         const err = document.createElement("div");
-        err.textContent = "Failed to load Number Guesser app.";
+        err.textContent = "Failed to load Kanban Board app.";
         err.className = "error-msg";
         modalContent.appendChild(err);
       };
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
-#number-guesserModal {
+#kanban-boardModal {
   position: fixed;
   top: 0;
   left: 0;
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   border-radius: 8px;
   position: relative;
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
 }
 #modalContent iframe {
   width: 100%;
