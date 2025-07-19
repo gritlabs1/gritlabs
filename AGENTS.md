@@ -97,3 +97,6 @@ An LLM working in this repo should:
 
 * Do not include human workflow tracking in this file.
 * These rules apply universally and should run on every prompt.
+* 
+test - ignore
+
